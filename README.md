@@ -1,2 +1,2 @@
-# styleguide
-Digital Styleguide der Kampmann Group
+# Digital Styleguide der Kampmann Group
+
