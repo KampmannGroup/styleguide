@@ -1,0 +1,45 @@
+I"S<p><span class="sg_label planned">Planned</span></p>
+
+<ul>
+  <li>The user need has been identified, but the approach to solving the problem has not yet been decided.</li>
+  <li>The team has decided to tackle this UI pattern.</li>
+  <li>Pattern has been listed in the <a href="/docs/about/roadmap.html">Roadmap</a>.</li>
+</ul>
+
+<hr />
+
+<p><span class="sg_label draft">Draft</span></p>
+
+<p>Includes everything from the Planned phase, as well as:</p>
+
+<ul>
+  <li>Pattern is actively being defined. Use at risk, and with caution.</li>
+  <li>Pattern may be generally usable for people with relatively “normal” digital literacy.</li>
+  <li>Pattern is not approved for for use in production.</li>
+  <li>Documentation may/may not be complete.</li>
+</ul>
+
+<hr />
+
+<p><span class="sg_label ready">Ready</span></p>
+
+<p>Includes everything in the Planned and Draft phases, as well as:</p>
+
+<ul>
+  <li>Pattern works in multiple configurations, and with other patterns in the Style Guide.</li>
+  <li>Pattern is usable, on multiple devices/browsers.</li>
+  <li>Pattern considers people with multiple disabilities (blind, low vision, cognitive disabilities, motor disabilities, low language skills, low digital literacy, etc.).</li>
+  <li>Pattern has been reviewed by internal/external teams.</li>
+  <li>The pattern has passed any heuristic assessments.</li>
+  <li>Documentation is complete.</li>
+</ul>
+
+<hr />
+
+<p><span class="sg_label retired">Retired</span>
+.</p>
+<ul>
+  <li>Pattern is no longer fit for purpose</li>
+  <li>It should be removed from production, and will be removed from the Style Guide in due course.</li>
+</ul>
+:ET

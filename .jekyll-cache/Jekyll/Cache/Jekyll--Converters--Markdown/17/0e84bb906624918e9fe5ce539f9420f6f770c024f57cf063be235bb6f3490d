@@ -1,0 +1,51 @@
+I"ã<style>
+.set {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+}
+li {
+  flex: 1 0 20%;
+  margin: 1rem;
+}
+.color {
+  width: 100%;
+  min-width: 160px;
+  height: 80px;
+  color: white;
+  border: 1px solid whitesmoke;
+  margin-bottom: 1rem;
+}
+p {
+  margin: 0;
+}
+</style>
+
+<ul class="set">
+ 
+  <li>
+    <div class="color" style="background:#ffffff"></div> 
+    <p>$white</p>
+    <p>#ffffff</p>
+    <p>rgb(255,255,255)</p>
+  </li>
+ 
+  <li>
+    <div class="color" style="background:#222222"></div> 
+    <p>$black</p>
+    <p>#222222</p>
+    <p>rgb(0,0,0)</p>
+  </li>
+ 
+  <li>
+    <div class="color" style="background:hotpink"></div> 
+    <p>$pink</p>
+    <p>hotpink</p>
+    
+  </li>
+
+</ul>
+:ET
