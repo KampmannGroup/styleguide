@@ -1,0 +1,22 @@
+I"³<h1 id="four-guiding-principles">Four Guiding Principles</h1>
+
+<h3 id="1-simple-build">1. Simple Build.</h3>
+
+<p>This style guide has been created ready for expansion and customisation, it provides a simple interface to browse patterns, and only requires Jekyll.</p>
+
+<p><img src="/styleguide/images/html.png" alt="HTML First" /></p>
+
+<h3 id="2-html-first">2. HTML First.</h3>
+
+<p>The components created in this styleguide are built with HTML first - this process encourages developers to build progressively with the most versatile front-end development language.</p>
+
+<h3 id="3-design-for-flexibility">3. Design for Flexibility.</h3>
+
+<p>Using a style guide ensures patterns adapt correctly to meet user needs, offering variation, and yet, providing design consistency and familiarity. It also allows us to build components that work well in multiple digital channels.</p>
+
+<p><img src="/styleguide/images/flexible.png" alt="Flexible" /></p>
+
+<h3 id="4-reuseable-best-practices">4. Reuseable Best Practices</h3>
+
+<p>Design, develop, test, review, and repurpose patterns, code, and design. That results in a comprehensive collection of tried-and-tested assets that reflect industry best practices.</p>
+:ET

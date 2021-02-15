@@ -1,0 +1,44 @@
+I"]<style>
+.set {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+}
+li {
+  flex: 1 0 20%;
+  margin: 1rem;
+}
+.color {
+  width: 100%;
+  min-width: 160px;
+  height: 80px;
+  color: white;
+  border: 1px solid whitesmoke;
+  margin-bottom: 1rem;
+}
+p {
+  margin: 0;
+}
+</style>
+
+<ul class="set">
+ 
+  <li>
+    <div class="color" style="background:lightskyblue"></div> 
+    <p>$black</p>
+    <p>lightskyblue</p>
+    
+  </li>
+ 
+  <li>
+    <div class="color" style="background:lightseagreen"></div> 
+    <p>$green</p>
+    <p>lightseagreen</p>
+    
+  </li>
+
+</ul>
+:ET

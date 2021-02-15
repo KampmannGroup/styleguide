@@ -1,0 +1,77 @@
+I"a<h1>👋 Hi! </h1>
+
+<p>My name’s <a href="https://matthewelsom.com">Matthew</a>, and I built this <a href="http://jekyllrb.com/">Jekyll-based</a> tool that you can use to generate and document product or system user interface (UI) patterns in a simple <a href="https://jekyllstyleguide.com">Style Guide</a>.</p>
+
+<h2 id="why">Why?</h2>
+
+<p>There are a lot of really great style guide methods, tools and <a href="http://styleguides.io">examples</a> out there… but, I struggled to find one that was:</p>
+
+<ul>
+  <li>easy and quick to use,</li>
+  <li>simple to maintain,</li>
+  <li>a match for my current workflow,</li>
+  <li>flexible enough to use on a wide variety of projects.</li>
+</ul>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>I decided that the following requirements would meet my needs:</p>
+
+<ul>
+  <li>Use only <a href="https://jekyll.rb">Jekyll</a> as a pre-requisit</li>
+  <li>Use HMTL/CSS/JS to build a web component, template, etc. (I called these ‘patterns’)</li>
+  <li>Track the ‘maturity’ of a pattern - i.e. is it ready to use, or not?</li>
+  <li>Automatically add all patterns into a ‘Roadmap’</li>
+  <li>Enable simple documentation for developers, designers and product owners to use</li>
+  <li>Provide a style guide container or ‘shell’ that is unobtrusive and easy to visually customize</li>
+</ul>
+
+<h2 id="help">Help</h2>
+
+<p>To get started using this tool check out these useful pages:</p>
+
+<ul>
+  <li>Read the <a href="/docs/about/02-design-principle.html">design principles</a></li>
+  <li>Setup and <a href="/docs/about/01-getting-started.html">installation</a> info</li>
+  <li>Learn how to <a href="/docs/about/01-getting-started.html#adding-patterns">add patterns</a>, and <a href="/docs/about/01-getting-started.html#adding-documentation">documentation</a></li>
+  <li>Understand the pattern <a href="/docs/about/03-maturity.html">maturity</a> scale</li>
+  <li>View all patterns in the <a href="/docs/about/04-roadmap.html">Roadmap</a></li>
+</ul>
+
+<hr />
+
+<p><strong>This tool was originally published in the public domain as ‘Living Styleguide’ on 12 September 2016 by <a href="https://matthewelsom.com">Matthew Elsom</a></strong></p>
+
+<p>It’s name was changed to ‘Jekyll Style Guide’ in 2018, and it’s license was updated.</p>
+
+<p>It was last updated on Feb 15, 2021 by Matthew Elsom.</p>
+
+<p>Copyright © 2016 - 2018 &amp; Beyond. All Rights Reserved.</p>
+
+<blockquote>
+  <p><i class="icon red" data-icon="warning"></i>This tool has been tested for Google Chrome (Mac) v67+ and iOS Safari. Use with Caution.</p>
+</blockquote>
+
+<h1 id="license">License</h1>
+
+<p>This tool is free for everyone to use, and modify, but don’t try and sell it.
+Available under <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache license version 2.0</a>.</p>
+
+<p>It was built using <a href="https://jekyll.rb">Jekyll</a>, it’s <a href="/docs/about/02-design-principle.html">design principle</a> is based on the <a href="https://designsystem.digital.gov/design-principles/">US Design Standards</a>, and the css architecture is based on the <a href="https://matthewelsom.com/blog/simple-scss-playbook.html">Simple SCSS Playbook</a>.</p>
+
+<p><a href="https://github.com/matthewelsom/jekyll-style-guide/blob/master/LICENSE">View License File</a></p>
+
+<hr />
+
+<p>A few parts of this project are not in the public domain:</p>
+
+<ul>
+  <li><a href="https://material.io/tools/icons/">Material Icons</a> font files included in the <code class="language-plaintext highlighter-rouge">styleguide/fonts</code> directory were extracted from <a href="https://github.com/google/material-design-icons">Github</a>.</li>
+  <li><a href="https://hanken.co/product/hk-grotesk/">HK Grotesk</a> font files included in the <code class="language-plaintext highlighter-rouge">styleguide/fonts</code> directory were extracted from <a href="https://hanken.co/product/hk-grotesk/">Hanken</a>, copyright Alfredo Marco Pradil and Stefan Peev.</li>
+  <li>jQuery <code class="language-plaintext highlighter-rouge">[jquery-2.1.4.min.js]</code> was extracted from <a href="https://jquery.com/">jQuery</a>, copyright The jQuery Foundation.</li>
+  <li>Roboto font files in <code class="language-plaintext highlighter-rouge">fonts/roboto</code> were extracted from <a href="https://fonts.google.com/">Google Fonts</a>, copyright Christian Robertson.</li>
+  <li>Normalize <code class="language-plaintext highlighter-rouge">[_normalize.scss]</code> was extrcted from <a href="https://github.com/necolas/normalize.css">Normalize.css</a>, copyright Nicolas Gallagher and Jonathan Neal.</li>
+</ul>
+
+<p><strong>Please check with the respective rights holders for license details.</strong></p>
+:ET

@@ -1,0 +1,116 @@
+I""
+<section class="sg_pattern" id="icons">
+  <div class="title">
+    <a class="permalink" href="#icons"><i class="icon" data-icon="link"></i></a><div class="header typo_eagle">Icons</div> 
+    <div class="sg_label draft">draft</div>
+  </div>
+  
+  <div class="sg_viewport">
+    <iframe frameborder="0" scrolling="no" src="/src/patterns/foundations/branding/icons.html" allowfullscreen=""></iframe>
+  </div>
+  <div class="sg_code" data-styles="Not Assigned">
+<!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;style&gt;</span>
+<span class="nc">.set</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">flex-wrap</span><span class="p">:</span> <span class="n">wrap</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="m">-1rem</span><span class="p">;</span>
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">list-style</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">li</span> <span class="p">{</span>
+  <span class="nl">flex</span><span class="p">:</span> <span class="m">1</span> <span class="m">0</span> <span class="m">20%</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.image</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
+  <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">min-width</span><span class="p">:</span> <span class="m">280px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">whitesmoke</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">whitesmoke</span><span class="p">;</span>
+  <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">img</span> <span class="p">{</span>
+  <span class="nl">max-height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"set"</span><span class="nt">&gt;</span>
+{% for item in page.items %} 
+  <span class="nt">&lt;li&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"image"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"{{ site.baseurl }}/{{ item.path }}"</span><span class="nt">/&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"header"</span><span class="nt">&gt;</span>{{ item.name }}<span class="nt">&lt;/p&gt;</span>
+    {% if item.path %}<span class="nt">&lt;p&gt;</span>{{ item.path }}<span class="nt">&lt;/p&gt;</span>{% endif %}
+  <span class="nt">&lt;/li&gt;</span>
+{% endfor %}
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+
+  </div>
+</section>
+
+<section class="sg_pattern" id="heros">
+  <div class="title">
+    <a class="permalink" href="#heros"><i class="icon" data-icon="link"></i></a><div class="header typo_eagle">Heros</div> 
+    <div class="sg_label planned">planned</div>
+  </div>
+  
+  <div class="sg_viewport">
+    <iframe frameborder="0" scrolling="no" src="/src/patterns/foundations/branding/heros.html" allowfullscreen=""></iframe>
+  </div>
+  <div class="sg_code" data-styles="Not Assigned">
+<!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;style&gt;</span>
+<span class="nc">.set</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">flex-wrap</span><span class="p">:</span> <span class="n">wrap</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="m">-1rem</span><span class="p">;</span>
+  <span class="nl">margin-top</span><span class="p">:</span>  <span class="m">0</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">list-style</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">li</span> <span class="p">{</span>
+  <span class="nl">flex</span><span class="p">:</span> <span class="m">1</span> <span class="m">0</span> <span class="m">20%</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.image</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
+  <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">min-width</span><span class="p">:</span> <span class="m">280px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">whitesmoke</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">whitesmoke</span><span class="p">;</span>
+  <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">img</span> <span class="p">{</span>
+  <span class="nl">max-height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"set"</span><span class="nt">&gt;</span>
+{% for item in page.items %} 
+  <span class="nt">&lt;li&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"image"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"{{ site.baseurl }}/{{ item.path }}"</span><span class="nt">/&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"header"</span><span class="nt">&gt;</span>{{ item.name }}<span class="nt">&lt;/p&gt;</span>
+    {% if item.path %}<span class="nt">&lt;p&gt;</span>{{ item.path }}<span class="nt">&lt;/p&gt;</span>{% endif %}
+  <span class="nt">&lt;/li&gt;</span>
+{% endfor %}
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+
+  </div>
+</section>
+
+:ET

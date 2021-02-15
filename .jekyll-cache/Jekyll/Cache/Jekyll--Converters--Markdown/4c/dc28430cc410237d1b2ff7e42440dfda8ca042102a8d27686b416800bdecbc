@@ -1,0 +1,95 @@
+I"£<h1 id="basic-buttons">Basic Buttons</h1>
+
+<p>A button can contain text. Although any tag can be used for a button, it will only be keyboard focusable if you use a <code class="language-plaintext highlighter-rouge">button</code> tag or you add the property <code class="language-plaintext highlighter-rouge">tabindex="0"</code>.</p>
+
+<section class="sg_pattern" id="default-button">
+  <div class="title">
+    <a class="permalink" href="#default-button"><i class="icon" data-icon="link"></i></a><div class="header typo_eagle">Default Button</div> 
+    <div class="sg_label draft">draft</div>
+  </div>
+  <div class="sg_pattern_control" data-styles="components/button.scss">
+    <a href="javascript:void(0)" title="View Source Code" class="sg_helper_code button"><i class="icon" data-icon="code"></i></a>  
+    <a href="" title="Open in new window" class="sg_helper_open button" target="_blank"><i class="icon" data-icon="screen_share"></i></a>
+  </div>
+  <div class="sg_viewport">
+    <iframe frameborder="0" scrolling="no" src="/src/patterns/components/button/default_button.html" allowfullscreen=""></iframe>
+  </div>
+  <div class="sg_code" data-styles="components/button.scss">
+<!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>Default Button<span class="nt">&lt;/a&gt;</span></code></pre></figure>
+
+  </div>
+</section>
+
+<section class="sg_pattern" id="disabled-button">
+  <div class="title">
+    <a class="permalink" href="#disabled-button"><i class="icon" data-icon="link"></i></a><div class="header typo_eagle">Disabled Button</div> 
+    <div class="sg_label draft">draft</div>
+  </div>
+  <div class="sg_pattern_control" data-styles="components/button.scss">
+    <a href="javascript:void(0)" title="View Source Code" class="sg_helper_code button"><i class="icon" data-icon="code"></i></a>  
+    <a href="" title="Open in new window" class="sg_helper_open button" target="_blank"><i class="icon" data-icon="screen_share"></i></a>
+  </div>
+  <div class="sg_viewport">
+    <iframe frameborder="0" scrolling="no" src="/src/patterns/components/button/disabled_button.html" allowfullscreen=""></iframe>
+  </div>
+  <div class="sg_code" data-styles="components/button.scss">
+<!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span> <span class="na">class=</span><span class="s">"button button_disabled"</span><span class="nt">&gt;</span>Disabled Button<span class="nt">&lt;/a&gt;</span></code></pre></figure>
+
+  </div>
+</section>
+
+<p>A button can be disabled, pointer events will not occur.</p>
+
+<section class="sg_pattern" id="button-block">
+  <div class="title">
+    <a class="permalink" href="#button-block"><i class="icon" data-icon="link"></i></a><div class="header typo_eagle">Button Block</div> 
+    <div class="sg_label draft">draft</div>
+  </div>
+  <div class="sg_pattern_control" data-styles="components/button.scss">
+    <a href="javascript:void(0)" title="View Source Code" class="sg_helper_code button"><i class="icon" data-icon="code"></i></a>  
+    <a href="" title="Open in new window" class="sg_helper_open button" target="_blank"><i class="icon" data-icon="screen_share"></i></a>
+  </div>
+  <div class="sg_viewport">
+    <iframe frameborder="0" scrolling="no" src="/src/patterns/components/button/block_button.html" allowfullscreen=""></iframe>
+  </div>
+  <div class="sg_code" data-styles="components/button.scss">
+<!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span> <span class="na">class=</span><span class="s">"button button_block"</span><span class="nt">&gt;</span>Block Button<span class="nt">&lt;/a&gt;</span></code></pre></figure>
+
+  </div>
+</section>
+
+<p>A button can be made to fill its parent.</p>
+
+<h1 id="advanced-buttons">Advanced Buttons</h1>
+
+<section class="sg_pattern" id="animated-button">
+  <div class="title">
+    <a class="permalink" href="#animated-button"><i class="icon" data-icon="link"></i></a><div class="header typo_eagle">Animated Button</div> 
+    <div class="sg_label planned">planned</div>
+  </div>
+  <div class="sg_pattern_control" data-styles="components/button.scss">
+    <a href="javascript:void(0)" title="View Source Code" class="sg_helper_code button"><i class="icon" data-icon="code"></i></a>  
+    <a href="" title="Open in new window" class="sg_helper_open button" target="_blank"><i class="icon" data-icon="screen_share"></i></a>
+  </div>
+  <div class="sg_viewport">
+    <iframe frameborder="0" scrolling="no" src="/src/patterns/components/button/animated_button.html" allowfullscreen=""></iframe>
+  </div>
+  <div class="sg_code" data-styles="components/button.scss">
+<!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span> <span class="na">class=</span><span class="s">"button button_animated alt"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"visible-content"</span><span class="nt">&gt;</span>Checkout<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hidden-content"</span><span class="nt">&gt;</span>Buy Now<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/a&gt;</span></code></pre></figure>
+
+  </div>
+</section>
+
+<p>A button can be animated to show hidden content. Note the button will be sized according to the visible content. Make sure there is enough room for the hidden content to show.</p>
+:ET
