@@ -1,3 +1,15 @@
+# Fast Docs
+
+
+```shell
+jekyll serve
+```
+
+- src/patterns: Seiten einfügen
+- src/assets: Stylings etc.
+- _docs: Navigation ändern
+
+
 # Jekyll Style Guide 
 
 👋 Hi! My name's [Matthew](https://matthewelsom.com), and I built this Jekyll-based tool that you can use to generate and document product or system user interface (UI) patterns in a simple [Style Guide](https://jekyllstyleguide.com).
