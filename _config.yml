@@ -13,8 +13,8 @@ kramdown:
 port: 4000
 
 ## Output
-siteurl: ## Optional
-baseurl: ## Optional
+siteurl: https://kampmanngroup.github.io/styleguide
+baseurl: /styleguide
 destination: _site ## Output folder
 
 ###################################
