@@ -12,7 +12,7 @@ $right_rail: 300px;
 $sans-serif: 'HKGrotesk', sans-serif;
 $base-font-family: 'HKGrotesk', sans-serif;
 $icon: 'Material Icons';
-$code: Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;
+$code: Menlo, Consolas, 'Courier New', Courier, 'Liberation Mono', monospace;
 
 // Font Sizing
 $base-font-size: 16px;
@@ -26,7 +26,7 @@ $typo_eagle: 1.8rem;
 $typo_hawk: 1.5rem;
 $typo_crow: 1.25rem;
 $typo_sparrow: 1rem;
-$typo_hummingbird: .875rem;
+$typo_hummingbird: 0.875rem;
 
 // Mobile Font Sizes
 $m_typo_ostrich: 2rem;
@@ -39,6 +39,7 @@ $micro-font-size: 70%;
 $small-font-size: 80%;
 
 // Brand Colors
+$kampmann_blue: rgba(14, 34, 73, 1);
 $white: #fff;
 $smoke: whitesmoke;
 $black: #000;
@@ -49,7 +50,7 @@ $amber: orange;
 $grey: lightgrey;
 
 // Animations
-$base-duration: .2s;
+$base-duration: 0.2s;
 $base-timing: ease;
 
 // Base Colors
@@ -67,11 +68,10 @@ $base-border: 1px solid $smoke;
 
 // Margins
 $margin: 1rem;
-$margin_small: .5rem;
+$margin_small: 0.5rem;
 $margin_large: 1.5rem;
 $margin_huge: 3rem;
 $margin_massive: 4.5rem;
-
 
 // Mobile Margins
 $m_margin_huge: 1.5rem;

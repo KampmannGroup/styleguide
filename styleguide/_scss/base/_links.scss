@@ -1,9 +1,9 @@
 // Links
 a {
-  color: $blue;
-  
+  color: $kampmann_blue;
+
   &:hover,
   &:focus {
-    color: darken($blue, 12%);
+    color: lighten($kampmann_blue, 12%);
   }
 }

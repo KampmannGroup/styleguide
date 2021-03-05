@@ -1,10 +1,6 @@
 ---
 title: Kampmann Digital Styleguide
 layout: doc
-info: Welcome to the Kampmann Digital Styleguide.
+info: This Digital Styleguide has been created to help designers, developers and product owners create and maintain user interface for Kampmann. Documenting the user interface (UI) of a digital product or system reduces hand-over time and helps to ensure new UI additions deliver a consistent experience to users.
 nav: false
 ---
-
-<h1>Willkommen beim Kampmann Digital Styleguide</h1>
-
-Wir arbeiten dran. Grüße von MUUUH!
