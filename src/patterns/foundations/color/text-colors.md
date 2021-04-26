@@ -1,13 +1,17 @@
 ---
-title: Test Colors
+title: Text Colors
 styles: base/variables.scss
 maturity: draft
 control: exclude
 colors: 
-  - name: $black
-    hex: 'lightskyblue'  
-  - name: $green
-    hex: 'lightseagreen'  
+  - name: $dark
+    hex: '#8A8882'
+    rgb: 'rgba(138,136,130,1)'
+    hsl: 'hsla(48,3%,53%,1)'
+  - name: $light
+    hex: '#FFFFFF'
+    rgb: 'rgba(255,255,255,1)'
+    hsl: 'hsla(0,0%,100%,1)'
 ---
 <style>
 .set {
@@ -37,10 +41,11 @@ p {
 <ul class="set">
 {% for item in page.colors %} 
   <li>
-    <div class="color" style="background:{{ item.hex }}"></div> 
+    <div class="color" style="background:{{ item.hsl }}"></div> 
     <p>{{ item.name }}</p>
     {% if item.hex %}<p>{{ item.hex }}</p>{% endif %}
     {% if item.rgb %}<p>{{ item.rgb }}</p>{% endif %}
+    {% if item.hsl %}<p>{{ item.hsl }}</p>{% endif %}
   </li>
 {% endfor %}
 </ul>

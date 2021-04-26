@@ -1,12 +1,12 @@
 ---
-title: Roboto Slab
+title: Circular
 styles: abstracts/fonts.scss
 maturity: ready
 control: exclude
 ---
 <style>
   * {
-    font-family: 'Roboto Slab' !important;
+    font-family: 'Circular' !important;
     word-wrap: break-word;
   }
   p {
@@ -14,7 +14,6 @@ control: exclude
     margin-bottom: 0;
     padding-bottom: 1rem;
     font-size: 18px !important;
-    
   }
 </style>
 
