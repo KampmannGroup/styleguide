@@ -1,6 +1,6 @@
 ---
 title: Circular
-styles: abstracts/fonts.scss
+styles: assets/_scss/abstracts/_fonts.scss
 maturity: ready
 control: exclude
 ---

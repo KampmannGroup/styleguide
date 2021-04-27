@@ -1,6 +1,6 @@
 ---
 title: Primary Colors
-styles: base/variables.scss
+styles: assets/_scss/abstracts/_variables.scss
 maturity: ready
 control: exclude
 colors: 

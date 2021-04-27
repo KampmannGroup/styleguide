@@ -2,6 +2,7 @@
 title: Heros
 maturity: planned
 control: exclude
+styles: ''
 items: 
   - name: Banner A
     path: src/assets/images/hero.png 

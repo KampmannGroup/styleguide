@@ -105,9 +105,9 @@
   <div class="sg_viewport">
     <iframe frameborder="0" scrolling="no" src="/styleguide/src/patterns/foundations/color/primary-colors.html" allowfullscreen=""></iframe>
   </div>
-  <div class="sg_code" data-styles="base/variables.scss">
-<!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
-
+  <div class="sg_code" data-styles="assets/_scss/abstracts/_variables.scss">
+    <!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
+    
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;style&gt;</span>
 <span class="nc">.set</span> <span class="p">{</span>
   <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
@@ -145,6 +145,50 @@
 {% endfor %}
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
+
+
+  
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss">  <span class="c1">// Devices</span>
+<span class="nv">$medium-screen</span><span class="p">:</span> <span class="m">1080px</span><span class="p">;</span>
+<span class="nv">$tablet-screen</span><span class="p">:</span> <span class="m">768px</span><span class="p">;</span>
+<span class="nv">$mobile-screen</span><span class="p">:</span> <span class="m">480px</span><span class="p">;</span>
+
+<span class="c1">// Type Systems</span>
+<span class="nv">$circular</span><span class="p">:</span> <span class="s1">'Circular'</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+
+<span class="c1">// Font Size</span>
+<span class="nv">$typo_lion</span><span class="p">:</span> <span class="m">2</span><span class="mi">.6rem</span><span class="p">;</span>
+<span class="nv">$typo_panther</span><span class="p">:</span> <span class="m">1</span><span class="mi">.8rem</span><span class="p">;</span>
+<span class="nv">$typo_leopard</span><span class="p">:</span> <span class="m">1</span><span class="mi">.3rem</span><span class="p">;</span>
+<span class="nv">$typo_cat</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="nv">$typo_kitten</span><span class="p">:</span> <span class="m">0</span><span class="mi">.8rem</span><span class="p">;</span>
+
+<span class="c1">// Primary Colors</span>
+<span class="nv">$white</span><span class="p">:</span> <span class="mh">#ffffff</span><span class="p">;</span>
+<span class="nv">$black</span><span class="p">:</span> <span class="mh">#222222</span><span class="p">;</span>
+<span class="nv">$pink</span><span class="p">:</span> <span class="no">hotpink</span><span class="p">;</span>
+
+<span class="c1">// Accent Colors</span>
+<span class="nv">$blue</span><span class="p">:</span> <span class="no">lightskyblue</span><span class="p">;</span>
+<span class="nv">$green</span><span class="p">:</span> <span class="no">lightseagreen</span><span class="p">;</span>
+
+<span class="c1">// Base Fonts</span>
+<span class="nv">$base-font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
+<span class="nv">$base-line-height</span><span class="p">:</span> <span class="m">1</span><span class="mi">.6</span><span class="p">;</span>
+<span class="nv">$base-font-color</span><span class="p">:</span> <span class="no">orange</span><span class="p">;</span>
+
+<span class="c1">// Headline Fonts</span>
+<span class="nv">$headline-line-height</span><span class="p">:</span> <span class="m">1</span><span class="mi">.3</span><span class="p">;</span>
+<span class="nv">$headline-font-color</span><span class="p">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$base-font-color</span><span class="o">,</span> <span class="m">10%</span><span class="p">);</span>
+
+<span class="c1">// Padding</span>
+<span class="nv">$large-pad</span><span class="p">:</span> <span class="m">1</span><span class="mi">.5rem</span><span class="p">;</span>
+<span class="nv">$base-pad</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="nv">$small-pad</span><span class="p">:</span> <span class="nv">$large-pad</span> <span class="o">/</span> <span class="m">2</span><span class="p">;</span> <span class="c1">//0.75rem</span>
+
+  </code></pre></figure>
+
+
   </div>
 </section>
 
@@ -157,9 +201,9 @@
   <div class="sg_viewport">
     <iframe frameborder="0" scrolling="no" src="/styleguide/src/patterns/foundations/color/text-colors.html" allowfullscreen=""></iframe>
   </div>
-  <div class="sg_code" data-styles="base/variables.scss">
-<!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
-
+  <div class="sg_code" data-styles="assets/_scss/abstracts/_variables.scss">
+    <!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
+    
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;style&gt;</span>
 <span class="nc">.set</span> <span class="p">{</span>
   <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
@@ -197,6 +241,50 @@
 {% endfor %}
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
+
+
+  
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss">  <span class="c1">// Devices</span>
+<span class="nv">$medium-screen</span><span class="p">:</span> <span class="m">1080px</span><span class="p">;</span>
+<span class="nv">$tablet-screen</span><span class="p">:</span> <span class="m">768px</span><span class="p">;</span>
+<span class="nv">$mobile-screen</span><span class="p">:</span> <span class="m">480px</span><span class="p">;</span>
+
+<span class="c1">// Type Systems</span>
+<span class="nv">$circular</span><span class="p">:</span> <span class="s1">'Circular'</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+
+<span class="c1">// Font Size</span>
+<span class="nv">$typo_lion</span><span class="p">:</span> <span class="m">2</span><span class="mi">.6rem</span><span class="p">;</span>
+<span class="nv">$typo_panther</span><span class="p">:</span> <span class="m">1</span><span class="mi">.8rem</span><span class="p">;</span>
+<span class="nv">$typo_leopard</span><span class="p">:</span> <span class="m">1</span><span class="mi">.3rem</span><span class="p">;</span>
+<span class="nv">$typo_cat</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="nv">$typo_kitten</span><span class="p">:</span> <span class="m">0</span><span class="mi">.8rem</span><span class="p">;</span>
+
+<span class="c1">// Primary Colors</span>
+<span class="nv">$white</span><span class="p">:</span> <span class="mh">#ffffff</span><span class="p">;</span>
+<span class="nv">$black</span><span class="p">:</span> <span class="mh">#222222</span><span class="p">;</span>
+<span class="nv">$pink</span><span class="p">:</span> <span class="no">hotpink</span><span class="p">;</span>
+
+<span class="c1">// Accent Colors</span>
+<span class="nv">$blue</span><span class="p">:</span> <span class="no">lightskyblue</span><span class="p">;</span>
+<span class="nv">$green</span><span class="p">:</span> <span class="no">lightseagreen</span><span class="p">;</span>
+
+<span class="c1">// Base Fonts</span>
+<span class="nv">$base-font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
+<span class="nv">$base-line-height</span><span class="p">:</span> <span class="m">1</span><span class="mi">.6</span><span class="p">;</span>
+<span class="nv">$base-font-color</span><span class="p">:</span> <span class="no">orange</span><span class="p">;</span>
+
+<span class="c1">// Headline Fonts</span>
+<span class="nv">$headline-line-height</span><span class="p">:</span> <span class="m">1</span><span class="mi">.3</span><span class="p">;</span>
+<span class="nv">$headline-font-color</span><span class="p">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$base-font-color</span><span class="o">,</span> <span class="m">10%</span><span class="p">);</span>
+
+<span class="c1">// Padding</span>
+<span class="nv">$large-pad</span><span class="p">:</span> <span class="m">1</span><span class="mi">.5rem</span><span class="p">;</span>
+<span class="nv">$base-pad</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="nv">$small-pad</span><span class="p">:</span> <span class="nv">$large-pad</span> <span class="o">/</span> <span class="m">2</span><span class="p">;</span> <span class="c1">//0.75rem</span>
+
+  </code></pre></figure>
+
+
   </div>
 </section>
 
@@ -209,9 +297,9 @@
   <div class="sg_viewport">
     <iframe frameborder="0" scrolling="no" src="/styleguide/src/patterns/foundations/color/accent-colors.html" allowfullscreen=""></iframe>
   </div>
-  <div class="sg_code" data-styles="base/variables.scss">
-<!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
-
+  <div class="sg_code" data-styles="assets/_scss/abstracts/_variables.scss">
+    <!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
+    
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;style&gt;</span>
 <span class="nc">.set</span> <span class="p">{</span>
   <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
@@ -248,6 +336,50 @@
   <span class="nt">&lt;/li&gt;</span>
 {% endfor %}
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+
+
+
+  
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss">  <span class="c1">// Devices</span>
+<span class="nv">$medium-screen</span><span class="p">:</span> <span class="m">1080px</span><span class="p">;</span>
+<span class="nv">$tablet-screen</span><span class="p">:</span> <span class="m">768px</span><span class="p">;</span>
+<span class="nv">$mobile-screen</span><span class="p">:</span> <span class="m">480px</span><span class="p">;</span>
+
+<span class="c1">// Type Systems</span>
+<span class="nv">$circular</span><span class="p">:</span> <span class="s1">'Circular'</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+
+<span class="c1">// Font Size</span>
+<span class="nv">$typo_lion</span><span class="p">:</span> <span class="m">2</span><span class="mi">.6rem</span><span class="p">;</span>
+<span class="nv">$typo_panther</span><span class="p">:</span> <span class="m">1</span><span class="mi">.8rem</span><span class="p">;</span>
+<span class="nv">$typo_leopard</span><span class="p">:</span> <span class="m">1</span><span class="mi">.3rem</span><span class="p">;</span>
+<span class="nv">$typo_cat</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="nv">$typo_kitten</span><span class="p">:</span> <span class="m">0</span><span class="mi">.8rem</span><span class="p">;</span>
+
+<span class="c1">// Primary Colors</span>
+<span class="nv">$white</span><span class="p">:</span> <span class="mh">#ffffff</span><span class="p">;</span>
+<span class="nv">$black</span><span class="p">:</span> <span class="mh">#222222</span><span class="p">;</span>
+<span class="nv">$pink</span><span class="p">:</span> <span class="no">hotpink</span><span class="p">;</span>
+
+<span class="c1">// Accent Colors</span>
+<span class="nv">$blue</span><span class="p">:</span> <span class="no">lightskyblue</span><span class="p">;</span>
+<span class="nv">$green</span><span class="p">:</span> <span class="no">lightseagreen</span><span class="p">;</span>
+
+<span class="c1">// Base Fonts</span>
+<span class="nv">$base-font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
+<span class="nv">$base-line-height</span><span class="p">:</span> <span class="m">1</span><span class="mi">.6</span><span class="p">;</span>
+<span class="nv">$base-font-color</span><span class="p">:</span> <span class="no">orange</span><span class="p">;</span>
+
+<span class="c1">// Headline Fonts</span>
+<span class="nv">$headline-line-height</span><span class="p">:</span> <span class="m">1</span><span class="mi">.3</span><span class="p">;</span>
+<span class="nv">$headline-font-color</span><span class="p">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$base-font-color</span><span class="o">,</span> <span class="m">10%</span><span class="p">);</span>
+
+<span class="c1">// Padding</span>
+<span class="nv">$large-pad</span><span class="p">:</span> <span class="m">1</span><span class="mi">.5rem</span><span class="p">;</span>
+<span class="nv">$base-pad</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="nv">$small-pad</span><span class="p">:</span> <span class="nv">$large-pad</span> <span class="o">/</span> <span class="m">2</span><span class="p">;</span> <span class="c1">//0.75rem</span>
+
+  </code></pre></figure>
+
 
   </div>
 </section>

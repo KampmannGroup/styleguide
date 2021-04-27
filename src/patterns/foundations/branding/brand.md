@@ -2,6 +2,7 @@
 title: Brand
 maturity: draft
 control: exclude
+styles: ''
 items: 
   - name: Brand
     path: styleguide/branding/logo-styleguide.svg

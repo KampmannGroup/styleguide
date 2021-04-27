@@ -1,6 +1,6 @@
 ---
 title: Accent Colors
-styles: base/variables.scss
+styles: assets/_scss/abstracts/_variables.scss
 maturity: draft
 control: exclude
 colors: 

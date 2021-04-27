@@ -13,10 +13,16 @@
     <iframe frameborder="0" scrolling="no" src="{{ site.baseurl }}{{ include.url }}" allowfullscreen></iframe>
   </div>
   <div class="sg_code" data-styles="{{ pattern.styles }}">
-<!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
-{% highlight html %}
+    <!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
+    {% highlight html %}
 {{ pattern.content }}
 {% endhighlight %}
+
+{% if pattern.styles != "" %}
+  {% highlight scss %}
+  {% include {{pattern.styles}} %}
+  {% endhighlight %}
+{% endif %}
   </div>
 </section>
 {% endif %}
