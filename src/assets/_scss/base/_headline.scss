@@ -1,0 +1,41 @@
+
+.headline {
+  color: $primary;
+  font-family: $font-family-base;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1em;
+
+  &--h1 {
+    font-size: $h1-font-size;
+    margin-bottom: 2.5rem;
+  }
+
+  &--h2 {
+    font-size: $h2-font-size;
+    margin-bottom: 1.5rem;
+  }
+
+  &--h3 {
+    font-size: $h3-font-size;
+    margin-bottom: 1.125rem;
+  }
+
+  &--h4 {
+    font-size: $h4-font-size;
+  }
+
+  &--h5 {
+    font-size: $h5-font-size;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+
+  &--h6 {
+    font-size: $h6-font-size;
+    color: $green;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.38px;
+  }
+}

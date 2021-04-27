@@ -14,13 +14,15 @@
   </div>
   <div class="sg_code" data-styles="{{ pattern.styles }}">
     <!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
+    {% if pattern.content != '' %}
     {% highlight html %}
 {{ pattern.content }}
 {% endhighlight %}
+{% endif %}
 
 {% if pattern.styles != "" %}
   {% highlight scss %}
-  {% include {{pattern.styles}} %}
+  {% include {{pattern.styles}}%}
   {% endhighlight %}
 {% endif %}
   </div>
