@@ -28,7 +28,7 @@ li {
   width: 100%;
   min-width: 280px;
   height: 300px;
-  background-color: whitesmoke;
+  background-color: #ababab;
   border: 1px solid whitesmoke;
   margin-bottom: 1rem;
 }
