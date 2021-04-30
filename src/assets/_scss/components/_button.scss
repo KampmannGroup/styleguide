@@ -19,10 +19,12 @@
   border-color: $primary;
   border-radius: $border-radius-sm;
 
+  box-shadow: none !important;
+
   &:before {
     content: '';
-    width: calc(100% + 6px);
-    height: calc(100% + 6px);
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
     position: absolute;
     border-radius: $border-radius-lg;
     display: none;
@@ -38,7 +40,7 @@
 
   &--primary {
     background-color: $primary;
-    color: $secondary;
+    color: $secondary !important;
     border-color: transparent;
 
     &:hover:not(:focus),
@@ -49,7 +51,7 @@
 
   &--secondary {
     background-color: $secondary;
-    color: $primary;
+    color: $primary !important;
     border-color: transparent;
 
     &:hover:not(:focus),
@@ -67,6 +69,7 @@
     color: $white;
     border-color: transparent;
     pointer-events: none;
+    opacity:1 !important;
   }
 
   &--outline {
@@ -74,15 +77,21 @@
       border-color: $primary;
       color: $primary;
 
+      &:focus:not(:active), &:focus:not(:active):hover{
+        background-color: transparent;
+        color: $primary;
+      }
+
       &:hover:not(:focus),
       &:active {
         background-color: rgba($primary, 0.1);
+        color: $primary;
       }
     }
 
     &-secondary {
       border-color: $secondary;
-      color: $secondary;
+      color: $secondary !important;
 
       &:hover:not(:focus),
       &:active {
@@ -98,6 +107,7 @@
       color: $gray;
       border-color: $gray;
       pointer-events: none;
+      opacity:1 !important;
     }
   }
 }

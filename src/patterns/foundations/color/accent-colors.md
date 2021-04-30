@@ -1,7 +1,7 @@
 ---
 title: Accent Colors
 styles: assets/_scss/abstracts/_variables.scss
-maturity: draft
+maturity: ready
 control: exclude
 colors: 
   - name: $blue

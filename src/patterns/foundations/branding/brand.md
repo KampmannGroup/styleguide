@@ -1,6 +1,6 @@
 ---
 title: Brand
-maturity: draft
+maturity: ready
 control: exclude
 styles: ''
 items: 
