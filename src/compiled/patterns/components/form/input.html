@@ -1,0 +1,45 @@
+<div class="form">
+  <div class="formelement__wrapper">
+    <input id="input" class="formelement formelement--input" type="text" placeholder="Placeholder">
+    <label for="input" class="formelement__label">Label</label>
+  </div>
+</div>
+
+<div class="form">
+  <div class="formelement__wrapper formelement__wrapper--search">
+    <input id="serach" class="formelement formelement--input formelement--search" type="text" placeholder="Search">
+    <label for="serach" class="formelement__label">Search</label>
+  </div>
+</div>
+
+<script>
+  const wrappers = document.querySelectorAll('.formelement__wrapper')
+
+  if(wrappers){
+    //Remove active class on body click
+    document.querySelector('body').addEventListener('click',(e)=>{
+      const wrapper = e.target.closest('.formelement__wrapper')
+
+      if(!wrapper){
+        wrappers.forEach((wrapper)=>{
+          wrapper.classList.remove('formelement__wrapper--active')
+        })
+      }
+    })
+
+    wrappers.forEach((wrapper)=>{
+      wrapper.addEventListener('click', (e)=>{
+        const wrapper = e.target.closest('.formelement__wrapper')
+        //Toggle showing options list
+        if(wrapper.classList.contains('formelement__wrapper--active')){
+          wrapper.classList.remove('formelement__wrapper--active')
+        }
+        else{
+          wrapper.classList.add('formelement__wrapper--active')
+        }
+      })
+    })
+  }
+</script>
+
+<style>.form{padding-top:30px;}</style>

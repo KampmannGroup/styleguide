@@ -61,22 +61,18 @@
   <div class="group">
     <div class="group_title">Components</div>
     <ul>
-      <li><a href="/styleguide/docs/components/blockquote.html">Blockquote</a></li>
-    
       <li><a href="/styleguide/docs/components/button.html" class="active">Button</a></li>
     
+      <li><a href="/styleguide/docs/components/form.html">Forms</a></li>
+    
       <li><a href="/styleguide/docs/components/heading.html">Heading</a></li>
-    
-      <li><a href="/styleguide/docs/components/label.html">Label</a></li>
-    
-      <li><a href="/styleguide/docs/components/list.html">List</a></li>
     </ul>
   </div>
   
   <div class="group">
     <div class="group_title">Templates</div>
     <ul>
-      <li><a href="/styleguide/docs/templates/full-width.html">Full Width</a></li>
+      <li><a href="/styleguide/docs/templates/grid.html">Grid</a></li>
     </ul>
   </div>
   
@@ -154,10 +150,12 @@
   <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
   <span class="nl">border-radius</span><span class="p">:</span> <span class="nv">$border-radius-sm</span><span class="p">;</span>
 
+  <span class="nl">box-shadow</span><span class="p">:</span> <span class="nb">none</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+
   <span class="k">&amp;</span><span class="nd">:before</span> <span class="p">{</span>
     <span class="nl">content</span><span class="p">:</span> <span class="s1">''</span><span class="p">;</span>
-    <span class="nl">width</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">+</span> <span class="m">6px</span><span class="p">);</span>
-    <span class="nl">height</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">+</span> <span class="m">6px</span><span class="p">);</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">+</span> <span class="m">10px</span><span class="p">);</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">+</span> <span class="m">10px</span><span class="p">);</span>
     <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
     <span class="nl">border-radius</span><span class="p">:</span> <span class="nv">$border-radius-lg</span><span class="p">;</span>
     <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
@@ -176,6 +174,10 @@
     <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
     <span class="nl">border-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
 
+    <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+    <span class="p">}</span>
+
     <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
     <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
       <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.9</span><span class="p">);</span>
@@ -186,6 +188,10 @@
     <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
     <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
     <span class="nl">border-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+
+    <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+    <span class="p">}</span>
 
     <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
     <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
@@ -202,6 +208,7 @@
     <span class="nl">color</span><span class="p">:</span> <span class="nv">$white</span><span class="p">;</span>
     <span class="nl">border-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
     <span class="nl">pointer-events</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">opacity</span><span class="p">:</span><span class="m">1</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
   <span class="p">}</span>
 
   <span class="k">&amp;</span><span class="nt">--outline</span> <span class="p">{</span>
@@ -209,15 +216,28 @@
       <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
       <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
 
+      <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">&amp;</span><span class="nd">:focus:not</span><span class="o">(</span><span class="nd">:active</span><span class="o">),</span> <span class="k">&amp;</span><span class="nd">:focus:not</span><span class="o">(</span><span class="nd">:active</span><span class="o">)</span><span class="nd">:hover</span><span class="p">{</span>
+        <span class="nl">background-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+      <span class="p">}</span>
+
       <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
       <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
         <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.1</span><span class="p">);</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
       <span class="p">}</span>
     <span class="p">}</span>
 
     <span class="k">&amp;</span><span class="nt">-secondary</span> <span class="p">{</span>
       <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
       <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+
+      <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+      <span class="p">}</span>
 
       <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
       <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
@@ -233,6 +253,7 @@
       <span class="nl">color</span><span class="p">:</span> <span class="nv">$gray</span><span class="p">;</span>
       <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$gray</span><span class="p">;</span>
       <span class="nl">pointer-events</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+      <span class="nl">opacity</span><span class="p">:</span><span class="m">1</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
@@ -291,10 +312,12 @@
   <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
   <span class="nl">border-radius</span><span class="p">:</span> <span class="nv">$border-radius-sm</span><span class="p">;</span>
 
+  <span class="nl">box-shadow</span><span class="p">:</span> <span class="nb">none</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+
   <span class="k">&amp;</span><span class="nd">:before</span> <span class="p">{</span>
     <span class="nl">content</span><span class="p">:</span> <span class="s1">''</span><span class="p">;</span>
-    <span class="nl">width</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">+</span> <span class="m">6px</span><span class="p">);</span>
-    <span class="nl">height</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">+</span> <span class="m">6px</span><span class="p">);</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">+</span> <span class="m">10px</span><span class="p">);</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">+</span> <span class="m">10px</span><span class="p">);</span>
     <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
     <span class="nl">border-radius</span><span class="p">:</span> <span class="nv">$border-radius-lg</span><span class="p">;</span>
     <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
@@ -313,6 +336,10 @@
     <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
     <span class="nl">border-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
 
+    <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+    <span class="p">}</span>
+
     <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
     <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
       <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.9</span><span class="p">);</span>
@@ -323,6 +350,10 @@
     <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
     <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
     <span class="nl">border-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+
+    <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+    <span class="p">}</span>
 
     <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
     <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
@@ -339,6 +370,7 @@
     <span class="nl">color</span><span class="p">:</span> <span class="nv">$white</span><span class="p">;</span>
     <span class="nl">border-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
     <span class="nl">pointer-events</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">opacity</span><span class="p">:</span><span class="m">1</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
   <span class="p">}</span>
 
   <span class="k">&amp;</span><span class="nt">--outline</span> <span class="p">{</span>
@@ -346,15 +378,28 @@
       <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
       <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
 
+      <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">&amp;</span><span class="nd">:focus:not</span><span class="o">(</span><span class="nd">:active</span><span class="o">),</span> <span class="k">&amp;</span><span class="nd">:focus:not</span><span class="o">(</span><span class="nd">:active</span><span class="o">)</span><span class="nd">:hover</span><span class="p">{</span>
+        <span class="nl">background-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+      <span class="p">}</span>
+
       <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
       <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
         <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.1</span><span class="p">);</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
       <span class="p">}</span>
     <span class="p">}</span>
 
     <span class="k">&amp;</span><span class="nt">-secondary</span> <span class="p">{</span>
       <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
       <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+
+      <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+      <span class="p">}</span>
 
       <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
       <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
@@ -370,6 +415,7 @@
       <span class="nl">color</span><span class="p">:</span> <span class="nv">$gray</span><span class="p">;</span>
       <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$gray</span><span class="p">;</span>
       <span class="nl">pointer-events</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+      <span class="nl">opacity</span><span class="p">:</span><span class="m">1</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
@@ -428,10 +474,12 @@
   <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
   <span class="nl">border-radius</span><span class="p">:</span> <span class="nv">$border-radius-sm</span><span class="p">;</span>
 
+  <span class="nl">box-shadow</span><span class="p">:</span> <span class="nb">none</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+
   <span class="k">&amp;</span><span class="nd">:before</span> <span class="p">{</span>
     <span class="nl">content</span><span class="p">:</span> <span class="s1">''</span><span class="p">;</span>
-    <span class="nl">width</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">+</span> <span class="m">6px</span><span class="p">);</span>
-    <span class="nl">height</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">+</span> <span class="m">6px</span><span class="p">);</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">+</span> <span class="m">10px</span><span class="p">);</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">+</span> <span class="m">10px</span><span class="p">);</span>
     <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
     <span class="nl">border-radius</span><span class="p">:</span> <span class="nv">$border-radius-lg</span><span class="p">;</span>
     <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
@@ -450,6 +498,10 @@
     <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
     <span class="nl">border-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
 
+    <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+    <span class="p">}</span>
+
     <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
     <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
       <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.9</span><span class="p">);</span>
@@ -460,6 +512,10 @@
     <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
     <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
     <span class="nl">border-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+
+    <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+    <span class="p">}</span>
 
     <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
     <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
@@ -476,6 +532,7 @@
     <span class="nl">color</span><span class="p">:</span> <span class="nv">$white</span><span class="p">;</span>
     <span class="nl">border-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
     <span class="nl">pointer-events</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">opacity</span><span class="p">:</span><span class="m">1</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
   <span class="p">}</span>
 
   <span class="k">&amp;</span><span class="nt">--outline</span> <span class="p">{</span>
@@ -483,15 +540,28 @@
       <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
       <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
 
+      <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">&amp;</span><span class="nd">:focus:not</span><span class="o">(</span><span class="nd">:active</span><span class="o">),</span> <span class="k">&amp;</span><span class="nd">:focus:not</span><span class="o">(</span><span class="nd">:active</span><span class="o">)</span><span class="nd">:hover</span><span class="p">{</span>
+        <span class="nl">background-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+      <span class="p">}</span>
+
       <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
       <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
         <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.1</span><span class="p">);</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
       <span class="p">}</span>
     <span class="p">}</span>
 
     <span class="k">&amp;</span><span class="nt">-secondary</span> <span class="p">{</span>
       <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
       <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+
+      <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+      <span class="p">}</span>
 
       <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
       <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
@@ -507,6 +577,7 @@
       <span class="nl">color</span><span class="p">:</span> <span class="nv">$gray</span><span class="p">;</span>
       <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$gray</span><span class="p">;</span>
       <span class="nl">pointer-events</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+      <span class="nl">opacity</span><span class="p">:</span><span class="m">1</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
