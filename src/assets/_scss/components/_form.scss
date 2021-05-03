@@ -1,72 +1,93 @@
 .formelement {
-  display:block;
-  width:100%;
+  display: block;
+  width: 100%;
   box-shadow: none !important;
   color: $primary;
   border-color: $body-color;
   border-width: 1px;
   border-style: solid;
   border-radius: $border-radius;
-  outline:none;
+  outline: none;
   padding: $input-btn-padding-y $input-btn-padding-x;
   appearance: none;
 
   &__wrapper {
     position: relative;
 
+    &:after {
+      position: absolute;
+      right: $input-btn-padding-x;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      filter: grayscale(1);
+    }
+
+    &--active{
+      &:after{
+        filter:none;
+      }
+    }
+
     &--select {
       &:after {
         content: url("data:image/svg+xml,%0A%3Csvg width='15px' height='8px' viewBox='0 0 15 8' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Arrow/Down/Blue' fill='%230E2249' fill-rule='nonzero'%3E%3Cg id='Icon/Arrow-Down'%3E%3Cpath d='M14.1998092,0.237903236 C14.382876,0.0548535132 14.679672,0.054867357 14.8627218,0.237934157 C15.0228903,0.398117607 15.0429007,0.64537504 14.9227603,0.827315545 L14.8626908,0.900846764 L8.16294226,7.59997018 C7.98720591,7.775957 7.7487059,7.87484644 7.5,7.87484644 C7.29274509,7.87484644 7.09257759,7.80617322 6.93005839,7.68158351 L6.83730916,7.60022176 L0.137309157,0.900846764 C-0.045757643,0.717797041 -0.0457714868,0.421000957 0.137278236,0.237934157 C0.297446744,0.077750707 0.544702309,0.0577171766 0.726654021,0.177840674 L0.800190843,0.237903236 L7.5,6.937 L14.1998092,0.237903236 Z' id='Path'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        position: absolute;
-        right: $input-btn-padding-x;
-        top: 50%;
-        transform: translateY(-50%);
-        pointer-events: none;
+      }
+    }
+
+    &--search {
+      &:after {
+        content: url("data:image/svg+xml,%0A%3Csvg width='17px' height='17px' viewBox='0 0 17 17' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' opacity='0.822470022'%3E%3Cg id='Form/Input/Text/Search/Focus' transform='translate(-421.000000, -15.000000)' fill='%230E2249' fill-rule='nonzero'%3E%3Cg id='Icon/Search' transform='translate(421.000000, 15.000000)'%3E%3Cpath d='M16.8508772,15.9594542 L12.5760234,11.6846004 C12.4998051,11.6083821 12.4003899,11.568616 12.294347,11.568616 L11.9530214,11.568616 C13.0896686,10.3391813 13.785575,8.69883041 13.785575,6.89278752 C13.785575,3.08518519 10.7003899,0 6.89278752,0 C3.08518519,0 0,3.08518519 0,6.89278752 C0,10.7003899 3.08518519,13.785575 6.89278752,13.785575 C8.69883041,13.785575 10.3391813,13.0896686 11.568616,11.9563353 L11.568616,12.294347 C11.568616,12.4003899 11.6116959,12.4998051 11.6846004,12.5760234 L15.9594542,16.8508772 C16.1152047,17.0066277 16.3670565,17.0066277 16.522807,16.8508772 L16.8508772,16.522807 C17.0066277,16.3670565 17.0066277,16.1152047 16.8508772,15.9594542 Z M6.89278752,12.7251462 C3.66842105,12.7251462 1.06042885,10.117154 1.06042885,6.89278752 C1.06042885,3.66842105 3.66842105,1.06042885 6.89278752,1.06042885 C10.117154,1.06042885 12.7251462,3.66842105 12.7251462,6.89278752 C12.7251462,10.117154 10.117154,12.7251462 6.89278752,12.7251462 Z' id='Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       }
     }
   }
 
-  &__options{
-    display:none;
-    position:absolute;
-    left:0;
-    padding-top: $input-btn-padding-y;
-    padding-bottom: $input-btn-padding-y;
+  &__options {
+    display: none;
+    position: absolute;
+    left: 0;
+    margin-top: $input-btn-padding-y;
     border: $border-width solid $body-color;
     width: 100%;
     border-radius: $border-radius;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-top-color: transparent;
+    background: $white;
+    z-index:999;
   }
 
-  &__option{
-    &:not(.formelement__option--selected){
+  &__option {
+    &:not(.formelement__option--selected) {
       padding: $input-btn-padding-y $input-btn-padding-x;
-      transition:.3s;
-      cursor:pointer;
-      
-      &:hover{
+      transition: 0.3s;
+      cursor: pointer;
+
+      &:hover {
         background-color: rgba($blue, 0.1);
       }
     }
   }
 
-  &--active{
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-color: $body-color !important;
-    border-width: $border-width !important;
-    border-bottom-color: transparent !important;
+  &--select {
+    &.formelement {
+      &--active {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-color: $body-color !important;
+        border-width: $border-width !important;
+        border-bottom-color: transparent !important;
 
-    .formelement{
-      &__options{
-        display:block;
+        .formelement {
+          &__options {
+            display: block;
+          }
+        }
       }
     }
   }
 
-  &--input{ 
+  &--input {
     &:focus {
       color: $primary;
       border-color: $primary;
@@ -77,12 +98,13 @@
     }
   }
 
-  &--select{
+  &--select,
+  &--search {
     padding-right: calc(#{$input-btn-padding-x} * 2);
   }
 
   &:placeholder-shown:not(:active):not(:focus),
-  &--placeholder{
+  &--placeholder {
     background-color: rgba($gray, 0.35);
     border-color: transparent;
 
@@ -102,7 +124,7 @@
     letter-spacing: 1.75px;
   }
 
-  + .formelement__label {
+  &__label {
     position: absolute;
     text-transform: uppercase;
     letter-spacing: 1.38px;
