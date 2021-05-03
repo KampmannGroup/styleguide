@@ -14,9 +14,9 @@ $gray-dark:         #D7D5CD;
 $primary:           $blue;
 $secondary:         $white;
 $light:             $white;
-$dark:              #8A8882;
+$dark:              $blue;
 
-$body-color:        $dark;
+$body-color:        #8A8882;
 
 
 // Font
@@ -28,6 +28,7 @@ $line-height-base:  1.5;
 
 $font-size-root:    16px;
 $font-size-base:    .875rem;
+$font-size-xs:      .75rem;
 $font-size-sm:      .8125rem;
 $font-size-lg:      1.125rem;
 
@@ -68,8 +69,11 @@ $grid-breakpoints: (
 $grid-columns:      12;
 $grid-gutter-width: 20px;
 
-$input-btn-padding-y: 1rem;
-$input-btn-padding-x: 2.875rem;
+$input-btn-padding-y: .9375rem;
+$input-btn-padding-x: 1.25rem;
+
+$btn-padding-y:       1rem;
+$btn-padding-x:       2.875rem;
 
 $border-width:      1px;
 $border-radius:     10px;

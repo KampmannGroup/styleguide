@@ -9,6 +9,10 @@ body{
   color: $body-color;
 }
 
+.container{
+  width: calc(100% - #{$grid-gutter-width} * 2);
+}
+
 *, *:before, *:after{
   box-sizing: border-box;
 }

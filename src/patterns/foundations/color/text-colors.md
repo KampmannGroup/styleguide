@@ -4,7 +4,7 @@ styles: assets/_scss/abstracts/_variables.scss
 maturity: ready
 control: exclude
 colors: 
-  - name: $dark
+  - name: $body-color
     hex: '#8A8882'
     rgb: 'rgba(138,136,130,1)'
     hsl: 'hsla(48,3%,53%,1)'

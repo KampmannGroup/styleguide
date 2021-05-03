@@ -1,0 +1,74 @@
+---
+title: Select
+styles: assets/_scss/components/_form.scss
+maturity: draft
+inlinestyles: '<style>.form{padding-top:30px;}</style>'
+---
+
+<div class="form">
+  <div class="formelement__wrapper formelement__wrapper--select">
+    <input class="formelement__value" type="hidden">
+    <div id="select" class="formelement formelement--select formelement--placeholder" type="text" placeholder="Placeholder">
+      <div class="formelement__selected">
+        <div class="formelement__option formelement__option--selected formelement__option--placeholder">Placeholder</div>
+      </div>
+      <div class="formelement__options">
+        <div class="formelement__option" data-value="os">Osnabrück</div>
+        <div class="formelement__option" data-value="ms">Münster</div>
+      </div>
+    </div>
+
+    <label for="select" class="formelement__label">City</label>
+  </div>
+</div>
+
+<script>
+  const selects = document.querySelectorAll('.formelement--select')
+
+  if(selects){
+    //Hide list on body click
+    document.querySelector('body').addEventListener('click',(e)=>{
+      const select = e.target.closest('.formelement--select')
+      if(!select){
+        selects.forEach((select)=>{
+          select.classList.remove('formelement--active')
+        })
+      }
+    })
+
+    selects.forEach((select)=>{
+      select.addEventListener('click', (e)=>{
+        const option = e.target.closest('.formelement__option:not(.formelement__option--selected)')
+        const select = e.target.closest('.formelement--select')
+        const wrapper = e.target.closest('.formelement__wrapper')
+        const value = wrapper.querySelector('.formelement__value')
+        const selected = wrapper.querySelector('.formelement__selected')
+
+        if(option && value){
+          //Insert clicked option into selected area
+          const clone = option.cloneNode(true)
+          clone.classList.add('formelement__option--selected')
+
+          selected.innerHTML = ""
+          selected.append(clone)
+
+          //Change hidden value
+          value.value = option.dataset.value
+
+          //Change select class to style ad active
+          select.classList.remove('formelement--placeholder')
+        }
+
+        //Toggle showing options list
+        if(select.classList.contains('formelement--active')){
+          select.classList.remove('formelement--active')
+        }
+        else{
+          select.classList.add('formelement--active')
+        }
+      })
+    })
+  }
+</script>
+
+{{ page.inlinestyles }}

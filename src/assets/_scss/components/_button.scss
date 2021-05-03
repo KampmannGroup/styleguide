@@ -40,8 +40,12 @@
 
   &--primary {
     background-color: $primary;
-    color: $secondary !important;
+    color: $secondary;
     border-color: transparent;
+
+    &:hover{
+      color: $secondary;
+    }
 
     &:hover:not(:focus),
     &:active {
@@ -51,8 +55,12 @@
 
   &--secondary {
     background-color: $secondary;
-    color: $primary !important;
+    color: $primary;
     border-color: transparent;
+
+    &:hover{
+      color: $primary;
+    }
 
     &:hover:not(:focus),
     &:active {
@@ -77,9 +85,12 @@
       border-color: $primary;
       color: $primary;
 
+      &:hover{
+        color: $primary;
+      }
+
       &:focus:not(:active), &:focus:not(:active):hover{
         background-color: transparent;
-        color: $primary;
       }
 
       &:hover:not(:focus),
@@ -91,7 +102,11 @@
 
     &-secondary {
       border-color: $secondary;
-      color: $secondary !important;
+      color: $secondary;
+
+      &:hover{
+        color: $secondary;
+      }
 
       &:hover:not(:focus),
       &:active {
