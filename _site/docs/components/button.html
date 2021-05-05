@@ -52,37 +52,31 @@
     
       <li><a href="/styleguide/docs/foundations/color.html">Color</a></li>
     
-      <li><a href="/styleguide/docs/foundations/test.html">Test Foundation</a></li>
-    
       <li><a href="/styleguide/docs/foundations/typography.html">Typography</a></li>
+    
+      <li><a href="/styleguide/docs/foundations/variables.html">Variables</a></li>
     </ul>
   </div>
   
   <div class="group">
     <div class="group_title">Components</div>
     <ul>
-      <li><a href="/styleguide/docs/components/blockquote.html">Blockquote</a></li>
-    
       <li><a href="/styleguide/docs/components/button.html" class="active">Button</a></li>
     
+      <li><a href="/styleguide/docs/components/form.html">Forms</a></li>
+    
       <li><a href="/styleguide/docs/components/heading.html">Heading</a></li>
-    
-      <li><a href="/styleguide/docs/components/label.html">Label</a></li>
-    
-      <li><a href="/styleguide/docs/components/list.html">List</a></li>
     </ul>
   </div>
   
   <div class="group">
     <div class="group_title">Templates</div>
     <ul>
-      <li><a href="/styleguide/docs/templates/full-width.html">Full Width</a></li>
+      <li><a href="/styleguide/docs/templates/grid.html">Grid</a></li>
     </ul>
   </div>
   
-  <ul>
-    <li><a href="/styleguide/docs/sample-pages/sample-pages.html">Sample Pages</a></li>
-  </ul>
+  <ul></ul>
 </div>
       <main class="sg-main">
         <header id="mastheadArea" class="sg_masthead">
@@ -106,22 +100,326 @@
 
 <p>A button can contain text. Although any tag can be used for a button, it will only be keyboard focusable if you use a <code class="language-plaintext highlighter-rouge">button</code> tag or you add the property <code class="language-plaintext highlighter-rouge">tabindex="0"</code>.</p>
 
-<section class="sg_pattern" id="default-button">
+<section class="sg_pattern" id="primary-button">
   <div class="title">
-    <a class="permalink" href="#default-button"><i class="icon" data-icon="link"></i></a><div class="header typo_eagle">Default Button</div> 
-    <div class="sg_label draft">draft</div>
+    <a class="permalink" href="#primary-button"><i class="icon" data-icon="link"></i></a><div class="header typo_eagle">Primary Button</div> 
+    <div class="sg_label ready">ready</div>
   </div>
-  <div class="sg_pattern_control" data-styles="components/button.scss">
+  <div class="sg_pattern_control" data-styles="assets/_scss/components/_button.scss">
     <a href="javascript:void(0)" title="View Source Code" class="sg_helper_code button"><i class="icon" data-icon="code"></i></a>  
     <a href="/styleguide" title="Open in new window" class="sg_helper_open button" target="_blank"><i class="icon" data-icon="screen_share"></i></a>
   </div>
   <div class="sg_viewport">
-    <iframe frameborder="0" scrolling="no" src="/styleguide/src/patterns/components/button/default_button.html" allowfullscreen=""></iframe>
+    <iframe frameborder="0" scrolling="no" src="/styleguide/src/patterns/components/button/primary_button.html" allowfullscreen=""></iframe>
   </div>
-  <div class="sg_code" data-styles="components/button.scss">
-<!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
+  <div class="sg_code" data-styles="assets/_scss/components/_button.scss">
+    <!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
+    
+    
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"canvas"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span> <span class="na">class=</span><span class="s">"btn btn--primary"</span><span class="nt">&gt;</span>Primary Button<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span> <span class="na">class=</span><span class="s">"btn btn--outline-primary"</span><span class="nt">&gt;</span>Primary Outline Button<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>Default Button<span class="nt">&lt;/a&gt;</span></code></pre></figure>
+{{ page.inlinestyles }}</code></pre></figure>
+
+
+
+
+  
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss">  
+<span class="nc">.btn</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-flex</span><span class="p">;</span>
+  <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+
+  <span class="nl">padding</span><span class="p">:</span> <span class="nv">$input-btn-padding-y</span> <span class="nv">$input-btn-padding-x</span><span class="p">;</span>
+  <span class="nl">outline</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">transition</span><span class="p">:</span> <span class="m">0</span><span class="mi">.3s</span><span class="p">;</span>
+
+  <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$font-size-sm</span><span class="p">;</span>
+  <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
+  <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">1</span><span class="mi">.63px</span><span class="p">;</span>
+
+  <span class="nl">border-width</span><span class="p">:</span> <span class="nv">$border-width</span><span class="p">;</span>
+  <span class="nl">border-style</span><span class="p">:</span> <span class="nb">solid</span><span class="p">;</span>
+  <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="nv">$border-radius-sm</span><span class="p">;</span>
+
+  <span class="nl">box-shadow</span><span class="p">:</span> <span class="nb">none</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+
+  <span class="k">&amp;</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="nl">content</span><span class="p">:</span> <span class="s1">''</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">+</span> <span class="m">10px</span><span class="p">);</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">+</span> <span class="m">10px</span><span class="p">);</span>
+    <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+    <span class="nl">border-radius</span><span class="p">:</span> <span class="nv">$border-radius-lg</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.3</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nd">:active</span><span class="o">,</span>
+  <span class="k">&amp;</span><span class="nd">:focus</span> <span class="p">{</span>
+    <span class="k">&amp;</span><span class="nd">:before</span> <span class="p">{</span>
+      <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">--primary</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+
+    <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
+    <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
+      <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.9</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">--secondary</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+
+    <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
+    <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
+      <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$secondary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.8</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">&amp;</span><span class="nd">:before</span> <span class="p">{</span>
+      <span class="nl">border-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$secondary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.3</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">--disabled</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$gray</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nv">$white</span><span class="p">;</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+    <span class="nl">pointer-events</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">opacity</span><span class="p">:</span><span class="m">1</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">--outline</span> <span class="p">{</span>
+    <span class="k">&amp;</span><span class="nt">-primary</span> <span class="p">{</span>
+      <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+
+      <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">&amp;</span><span class="nd">:focus:not</span><span class="o">(</span><span class="nd">:active</span><span class="o">),</span> <span class="k">&amp;</span><span class="nd">:focus:not</span><span class="o">(</span><span class="nd">:active</span><span class="o">)</span><span class="nd">:hover</span><span class="p">{</span>
+        <span class="nl">background-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
+      <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
+        <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.1</span><span class="p">);</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">&amp;</span><span class="nt">-secondary</span> <span class="p">{</span>
+      <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+
+      <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
+      <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
+        <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$secondary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.1</span><span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="k">&amp;</span><span class="nd">:before</span> <span class="p">{</span>
+        <span class="nl">border-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$secondary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.3</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">&amp;</span><span class="nt">-disabled</span> <span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$gray</span><span class="p">;</span>
+      <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$gray</span><span class="p">;</span>
+      <span class="nl">pointer-events</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+      <span class="nl">opacity</span><span class="p">:</span><span class="m">1</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+  </code></pre></figure>
+
+
+  </div>
+</section>
+
+<section class="sg_pattern" id="secondary-button">
+  <div class="title">
+    <a class="permalink" href="#secondary-button"><i class="icon" data-icon="link"></i></a><div class="header typo_eagle">Secondary Button</div> 
+    <div class="sg_label ready">ready</div>
+  </div>
+  <div class="sg_pattern_control" data-styles="assets/_scss/components/_button.scss">
+    <a href="javascript:void(0)" title="View Source Code" class="sg_helper_code button"><i class="icon" data-icon="code"></i></a>  
+    <a href="/styleguide" title="Open in new window" class="sg_helper_open button" target="_blank"><i class="icon" data-icon="screen_share"></i></a>
+  </div>
+  <div class="sg_viewport">
+    <iframe frameborder="0" scrolling="no" src="/styleguide/src/patterns/components/button/secondary_button.html" allowfullscreen=""></iframe>
+  </div>
+  <div class="sg_code" data-styles="assets/_scss/components/_button.scss">
+    <!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
+    
+    
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"canvas"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span> <span class="na">class=</span><span class="s">"btn btn--secondary"</span><span class="nt">&gt;</span>Secondary Button<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span> <span class="na">class=</span><span class="s">"btn btn--outline-secondary"</span><span class="nt">&gt;</span>Secondary Outline Button<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+{{ page.inlinestyles }}</code></pre></figure>
+
+
+
+
+  
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss">  
+<span class="nc">.btn</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-flex</span><span class="p">;</span>
+  <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+
+  <span class="nl">padding</span><span class="p">:</span> <span class="nv">$input-btn-padding-y</span> <span class="nv">$input-btn-padding-x</span><span class="p">;</span>
+  <span class="nl">outline</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">transition</span><span class="p">:</span> <span class="m">0</span><span class="mi">.3s</span><span class="p">;</span>
+
+  <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$font-size-sm</span><span class="p">;</span>
+  <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
+  <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">1</span><span class="mi">.63px</span><span class="p">;</span>
+
+  <span class="nl">border-width</span><span class="p">:</span> <span class="nv">$border-width</span><span class="p">;</span>
+  <span class="nl">border-style</span><span class="p">:</span> <span class="nb">solid</span><span class="p">;</span>
+  <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="nv">$border-radius-sm</span><span class="p">;</span>
+
+  <span class="nl">box-shadow</span><span class="p">:</span> <span class="nb">none</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+
+  <span class="k">&amp;</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="nl">content</span><span class="p">:</span> <span class="s1">''</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">+</span> <span class="m">10px</span><span class="p">);</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">+</span> <span class="m">10px</span><span class="p">);</span>
+    <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+    <span class="nl">border-radius</span><span class="p">:</span> <span class="nv">$border-radius-lg</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.3</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nd">:active</span><span class="o">,</span>
+  <span class="k">&amp;</span><span class="nd">:focus</span> <span class="p">{</span>
+    <span class="k">&amp;</span><span class="nd">:before</span> <span class="p">{</span>
+      <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">--primary</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+
+    <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
+    <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
+      <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.9</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">--secondary</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+
+    <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
+    <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
+      <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$secondary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.8</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">&amp;</span><span class="nd">:before</span> <span class="p">{</span>
+      <span class="nl">border-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$secondary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.3</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">--disabled</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$gray</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nv">$white</span><span class="p">;</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+    <span class="nl">pointer-events</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">opacity</span><span class="p">:</span><span class="m">1</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">--outline</span> <span class="p">{</span>
+    <span class="k">&amp;</span><span class="nt">-primary</span> <span class="p">{</span>
+      <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+
+      <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">&amp;</span><span class="nd">:focus:not</span><span class="o">(</span><span class="nd">:active</span><span class="o">),</span> <span class="k">&amp;</span><span class="nd">:focus:not</span><span class="o">(</span><span class="nd">:active</span><span class="o">)</span><span class="nd">:hover</span><span class="p">{</span>
+        <span class="nl">background-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
+      <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
+        <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.1</span><span class="p">);</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">&amp;</span><span class="nt">-secondary</span> <span class="p">{</span>
+      <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+
+      <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
+      <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
+        <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$secondary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.1</span><span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="k">&amp;</span><span class="nd">:before</span> <span class="p">{</span>
+        <span class="nl">border-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$secondary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.3</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">&amp;</span><span class="nt">-disabled</span> <span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$gray</span><span class="p">;</span>
+      <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$gray</span><span class="p">;</span>
+      <span class="nl">pointer-events</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+      <span class="nl">opacity</span><span class="p">:</span><span class="m">1</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+  </code></pre></figure>
+
 
   </div>
 </section>
@@ -129,73 +427,166 @@
 <section class="sg_pattern" id="disabled-button">
   <div class="title">
     <a class="permalink" href="#disabled-button"><i class="icon" data-icon="link"></i></a><div class="header typo_eagle">Disabled Button</div> 
-    <div class="sg_label draft">draft</div>
+    <div class="sg_label ready">ready</div>
   </div>
-  <div class="sg_pattern_control" data-styles="components/button.scss">
+  <div class="sg_pattern_control" data-styles="assets/_scss/components/_button.scss">
     <a href="javascript:void(0)" title="View Source Code" class="sg_helper_code button"><i class="icon" data-icon="code"></i></a>  
     <a href="/styleguide" title="Open in new window" class="sg_helper_open button" target="_blank"><i class="icon" data-icon="screen_share"></i></a>
   </div>
   <div class="sg_viewport">
     <iframe frameborder="0" scrolling="no" src="/styleguide/src/patterns/components/button/disabled_button.html" allowfullscreen=""></iframe>
   </div>
-  <div class="sg_code" data-styles="components/button.scss">
-<!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
+  <div class="sg_code" data-styles="assets/_scss/components/_button.scss">
+    <!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
+    
+    
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"canvas"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span> <span class="na">class=</span><span class="s">"btn btn--disabled"</span><span class="nt">&gt;</span>Button Disabled<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span> <span class="na">class=</span><span class="s">"btn btn--outline-disabled"</span><span class="nt">&gt;</span>Outline Button Disabled<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span> <span class="na">class=</span><span class="s">"button button_disabled"</span><span class="nt">&gt;</span>Disabled Button<span class="nt">&lt;/a&gt;</span></code></pre></figure>
+{{ page.inlinestyles }}</code></pre></figure>
+
+
+
+
+  
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss">  
+<span class="nc">.btn</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-flex</span><span class="p">;</span>
+  <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+
+  <span class="nl">padding</span><span class="p">:</span> <span class="nv">$input-btn-padding-y</span> <span class="nv">$input-btn-padding-x</span><span class="p">;</span>
+  <span class="nl">outline</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">transition</span><span class="p">:</span> <span class="m">0</span><span class="mi">.3s</span><span class="p">;</span>
+
+  <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$font-size-sm</span><span class="p">;</span>
+  <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
+  <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">1</span><span class="mi">.63px</span><span class="p">;</span>
+
+  <span class="nl">border-width</span><span class="p">:</span> <span class="nv">$border-width</span><span class="p">;</span>
+  <span class="nl">border-style</span><span class="p">:</span> <span class="nb">solid</span><span class="p">;</span>
+  <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="nv">$border-radius-sm</span><span class="p">;</span>
+
+  <span class="nl">box-shadow</span><span class="p">:</span> <span class="nb">none</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+
+  <span class="k">&amp;</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="nl">content</span><span class="p">:</span> <span class="s1">''</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">+</span> <span class="m">10px</span><span class="p">);</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">+</span> <span class="m">10px</span><span class="p">);</span>
+    <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+    <span class="nl">border-radius</span><span class="p">:</span> <span class="nv">$border-radius-lg</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.3</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nd">:active</span><span class="o">,</span>
+  <span class="k">&amp;</span><span class="nd">:focus</span> <span class="p">{</span>
+    <span class="k">&amp;</span><span class="nd">:before</span> <span class="p">{</span>
+      <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">--primary</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+
+    <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
+    <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
+      <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.9</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">--secondary</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+
+    <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
+    <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
+      <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$secondary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.8</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">&amp;</span><span class="nd">:before</span> <span class="p">{</span>
+      <span class="nl">border-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$secondary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.3</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">--disabled</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$gray</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nv">$white</span><span class="p">;</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+    <span class="nl">pointer-events</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">opacity</span><span class="p">:</span><span class="m">1</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">--outline</span> <span class="p">{</span>
+    <span class="k">&amp;</span><span class="nt">-primary</span> <span class="p">{</span>
+      <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+
+      <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">&amp;</span><span class="nd">:focus:not</span><span class="o">(</span><span class="nd">:active</span><span class="o">),</span> <span class="k">&amp;</span><span class="nd">:focus:not</span><span class="o">(</span><span class="nd">:active</span><span class="o">)</span><span class="nd">:hover</span><span class="p">{</span>
+        <span class="nl">background-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
+      <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
+        <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.1</span><span class="p">);</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">&amp;</span><span class="nt">-secondary</span> <span class="p">{</span>
+      <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+
+      <span class="k">&amp;</span><span class="nd">:hover</span><span class="p">{</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
+      <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
+        <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$secondary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.1</span><span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="k">&amp;</span><span class="nd">:before</span> <span class="p">{</span>
+        <span class="nl">border-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$secondary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.3</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">&amp;</span><span class="nt">-disabled</span> <span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$gray</span><span class="p">;</span>
+      <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$gray</span><span class="p">;</span>
+      <span class="nl">pointer-events</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+      <span class="nl">opacity</span><span class="p">:</span><span class="m">1</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+  </code></pre></figure>
+
 
   </div>
 </section>
 
 <p>A button can be disabled, pointer events will not occur.</p>
-
-<section class="sg_pattern" id="button-block">
-  <div class="title">
-    <a class="permalink" href="#button-block"><i class="icon" data-icon="link"></i></a><div class="header typo_eagle">Button Block</div> 
-    <div class="sg_label draft">draft</div>
-  </div>
-  <div class="sg_pattern_control" data-styles="components/button.scss">
-    <a href="javascript:void(0)" title="View Source Code" class="sg_helper_code button"><i class="icon" data-icon="code"></i></a>  
-    <a href="/styleguide" title="Open in new window" class="sg_helper_open button" target="_blank"><i class="icon" data-icon="screen_share"></i></a>
-  </div>
-  <div class="sg_viewport">
-    <iframe frameborder="0" scrolling="no" src="/styleguide/src/patterns/components/button/block_button.html" allowfullscreen=""></iframe>
-  </div>
-  <div class="sg_code" data-styles="components/button.scss">
-<!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span> <span class="na">class=</span><span class="s">"button button_block"</span><span class="nt">&gt;</span>Block Button<span class="nt">&lt;/a&gt;</span></code></pre></figure>
-
-  </div>
-</section>
-
-<p>A button can be made to fill its parent.</p>
-
-<h1 id="advanced-buttons">Advanced Buttons</h1>
-
-<section class="sg_pattern" id="animated-button">
-  <div class="title">
-    <a class="permalink" href="#animated-button"><i class="icon" data-icon="link"></i></a><div class="header typo_eagle">Animated Button</div> 
-    <div class="sg_label planned">planned</div>
-  </div>
-  <div class="sg_pattern_control" data-styles="components/button.scss">
-    <a href="javascript:void(0)" title="View Source Code" class="sg_helper_code button"><i class="icon" data-icon="code"></i></a>  
-    <a href="/styleguide" title="Open in new window" class="sg_helper_open button" target="_blank"><i class="icon" data-icon="screen_share"></i></a>
-  </div>
-  <div class="sg_viewport">
-    <iframe frameborder="0" scrolling="no" src="/styleguide/src/patterns/components/button/animated_button.html" allowfullscreen=""></iframe>
-  </div>
-  <div class="sg_code" data-styles="components/button.scss">
-<!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span> <span class="na">class=</span><span class="s">"button button_animated alt"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"visible-content"</span><span class="nt">&gt;</span>Checkout<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hidden-content"</span><span class="nt">&gt;</span>Buy Now<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/a&gt;</span></code></pre></figure>
-
-  </div>
-</section>
-
-<p>A button can be animated to show hidden content. Note the button will be sized according to the visible content. Make sure there is enough room for the hidden content to show.</p>
 </div>
 </article>
 

@@ -1,12 +1,10 @@
 blockquote {
-  margin-bottom: $base-pad;
-  margin-left: $base-pad;
-  padding: $base-pad;
+  margin-bottom: $grid-gutter-width;
+  margin-left: $grid-gutter-width;
+  padding: $grid-gutter-width;
   border-left: 4px solid transparentize($black, .8);
   background: $white;
   color: $black;
-  font-size: $typo_leopard;
-  line-height: $headline-line-height;
   
   &.blue {
     background: transparentize($blue, .8);

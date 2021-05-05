@@ -1,63 +1,128 @@
 
-.button {
+.btn {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 $small-pad/2 0 0;
-  padding: $base-pad;
-  border: 4px solid $pink;
-  background: $white;
-  cursor: pointer;
-  color: $pink;
-  line-height: 1;
-  text-align: center;
-  text-decoration: none;
-  min-width: 100px;
-  transition: all .2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-  &:hover,
-  &:focus {
-    background: $pink;
-    color: $white;
-    box-shadow: 0 0 8px rgba(0,0,0,0.3);
-  }
-}
-.button_animated {
-  overflow: hidden;
-  padding-right: 0;
-  
-  .visible-content,
-  .hidden-content {
-    transition: right .2s ease;
-  }
-  .visible-content {
-    position: relative;
-    left: auto;
-    right: 0;
-    margin-right: $base-pad;
-  }
-  .hidden-content {
+  padding: $input-btn-padding-y $input-btn-padding-x;
+  outline: none;
+  transition: 0.3s;
+
+  font-size: $font-size-sm;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.63px;
+
+  border-width: $border-width;
+  border-style: solid;
+  border-color: $primary;
+  border-radius: $border-radius-sm;
+
+  box-shadow: none !important;
+
+  &:before {
+    content: '';
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
     position: absolute;
-    width: 100%;
-    top: 50%;
-    left: auto;
-    right: -100%;
-    margin-top: -$base-font-size/2;
+    border-radius: $border-radius-lg;
+    display: none;
+    border: 2px solid rgba($primary, 0.3);
   }
-  &:hover {
-    .visible-content {
-      right: 100%;
-    }
-    
-    .hidden-content {
-      right: 0;
+
+  &:active,
+  &:focus {
+    &:before {
+      display: block;
     }
   }
-}
-.button_disabled {
-  pointer-events: none;
-  opacity: .5;
-}
-.button_block {
-  display: block;
+
+  &--primary {
+    background-color: $primary;
+    color: $secondary;
+    border-color: transparent;
+
+    &:hover{
+      color: $secondary;
+    }
+
+    &:hover:not(:focus),
+    &:active {
+      background-color: rgba($primary, 0.9);
+    }
+  }
+
+  &--secondary {
+    background-color: $secondary;
+    color: $primary;
+    border-color: transparent;
+
+    &:hover{
+      color: $primary;
+    }
+
+    &:hover:not(:focus),
+    &:active {
+      background-color: rgba($secondary, 0.8);
+    }
+
+    &:before {
+      border-color: rgba($secondary, 0.3);
+    }
+  }
+
+  &--disabled {
+    background-color: $gray;
+    color: $white;
+    border-color: transparent;
+    pointer-events: none;
+    opacity:1 !important;
+  }
+
+  &--outline {
+    &-primary {
+      border-color: $primary;
+      color: $primary;
+
+      &:hover{
+        color: $primary;
+      }
+
+      &:focus:not(:active), &:focus:not(:active):hover{
+        background-color: transparent;
+      }
+
+      &:hover:not(:focus),
+      &:active {
+        background-color: rgba($primary, 0.1);
+        color: $primary;
+      }
+    }
+
+    &-secondary {
+      border-color: $secondary;
+      color: $secondary;
+
+      &:hover{
+        color: $secondary;
+      }
+
+      &:hover:not(:focus),
+      &:active {
+        background-color: rgba($secondary, 0.1);
+      }
+
+      &:before {
+        border-color: rgba($secondary, 0.3);
+      }
+    }
+
+    &-disabled {
+      color: $gray;
+      border-color: $gray;
+      pointer-events: none;
+      opacity:1 !important;
+    }
+  }
 }

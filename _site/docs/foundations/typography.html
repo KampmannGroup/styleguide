@@ -52,37 +52,31 @@
     
       <li><a href="/styleguide/docs/foundations/color.html">Color</a></li>
     
-      <li><a href="/styleguide/docs/foundations/test.html">Test Foundation</a></li>
-    
       <li><a href="/styleguide/docs/foundations/typography.html" class="active">Typography</a></li>
+    
+      <li><a href="/styleguide/docs/foundations/variables.html">Variables</a></li>
     </ul>
   </div>
   
   <div class="group">
     <div class="group_title">Components</div>
     <ul>
-      <li><a href="/styleguide/docs/components/blockquote.html">Blockquote</a></li>
-    
       <li><a href="/styleguide/docs/components/button.html">Button</a></li>
     
+      <li><a href="/styleguide/docs/components/form.html">Forms</a></li>
+    
       <li><a href="/styleguide/docs/components/heading.html">Heading</a></li>
-    
-      <li><a href="/styleguide/docs/components/label.html">Label</a></li>
-    
-      <li><a href="/styleguide/docs/components/list.html">List</a></li>
     </ul>
   </div>
   
   <div class="group">
     <div class="group_title">Templates</div>
     <ul>
-      <li><a href="/styleguide/docs/templates/full-width.html">Full Width</a></li>
+      <li><a href="/styleguide/docs/templates/grid.html">Grid</a></li>
     </ul>
   </div>
   
-  <ul>
-    <li><a href="/styleguide/docs/sample-pages/sample-pages.html">Sample Pages</a></li>
-  </ul>
+  <ul></ul>
 </div>
       <main class="sg-main">
         <header id="mastheadArea" class="sg_masthead">
@@ -90,7 +84,7 @@
     <div class="head">
       <div class="title header typo_ostrich">Typography</div>
       
-      <div class="sub_title typo_crow">Roboto and Roboto Slab fonts have been selected as the primary fonts for this system.</div>
+      <div class="sub_title typo_crow">Circular font has been selected as the primary fonts for this system.</div>
       
     </div>
     
@@ -98,70 +92,54 @@
 </header>
 <article id="documentationArea" class="sg_doc">
   <div class="sg_contain">
-<section class="sg_pattern" id="roboto">
+<section class="sg_pattern" id="circular">
   <div class="title">
-    <a class="permalink" href="#roboto"><i class="icon" data-icon="link"></i></a><div class="header typo_eagle">Roboto</div> 
+    <a class="permalink" href="#circular"><i class="icon" data-icon="link"></i></a><div class="header typo_eagle">Circular</div> 
     <div class="sg_label ready">ready</div>
   </div>
-  
+  <div class="sg_pattern_control" data-styles="assets/_scss/abstracts/_fonts.scss">
+    <a href="javascript:void(0)" title="View Source Code" class="sg_helper_code button"><i class="icon" data-icon="code"></i></a>  
+    <a href="/styleguide" title="Open in new window" class="sg_helper_open button" target="_blank"><i class="icon" data-icon="screen_share"></i></a>
+  </div>
   <div class="sg_viewport">
-    <iframe frameborder="0" scrolling="no" src="/styleguide/src/patterns/foundations/typography/roboto.html" allowfullscreen=""></iframe>
+    <iframe frameborder="0" scrolling="no" src="/styleguide/src/patterns/foundations/typography/circular.html" allowfullscreen=""></iframe>
   </div>
-  <div class="sg_code" data-styles="abstracts/fonts.scss">
-<!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;style&gt;</span>
-  <span class="o">*</span> <span class="p">{</span>
-    <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'Roboto'</span> <span class="cp">!important</span><span class="p">;</span>
-    <span class="nl">word-wrap</span><span class="p">:</span> <span class="n">break-word</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="nt">p</span> <span class="p">{</span>
-    <span class="nl">margin-top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="nl">padding-bottom</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
-    <span class="nl">font-size</span><span class="p">:</span> <span class="m">18px</span> <span class="cp">!important</span><span class="p">;</span>
+  <div class="sg_code" data-styles="assets/_scss/abstracts/_fonts.scss">
+    <!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
     
-  <span class="p">}</span>
-<span class="nt">&lt;/style&gt;</span>
+    
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"headline headline--h2"</span><span class="nt">&gt;</span>AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz<span class="nt">&lt;br/&gt;</span>
+# 1234567890',.<span class="nt">&lt;&gt;</span>/?;':"[]{}-=_+!@#$%^<span class="err">&amp;</span>*()<span class="nt">&lt;/h2&gt;</span>
 
-# AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz
-# 1234567890',.<span class="nt">&lt;&gt;</span>/?;':"[]{}-=_+!@#$%^<span class="err">&amp;</span>*()
+<span class="nt">&lt;p&gt;</span>
+Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
+<span class="nt">&lt;/p&gt;</span>
 
-Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</code></pre></figure>
+{{ page.inlinestyles }}</code></pre></figure>
 
-  </div>
-</section>
 
-<section class="sg_pattern" id="roboto-slab">
-  <div class="title">
-    <a class="permalink" href="#roboto-slab"><i class="icon" data-icon="link"></i></a><div class="header typo_eagle">Roboto Slab</div> 
-    <div class="sg_label ready">ready</div>
-  </div>
+
+
   
-  <div class="sg_viewport">
-    <iframe frameborder="0" scrolling="no" src="/styleguide/src/patterns/foundations/typography/roboto-slab.html" allowfullscreen=""></iframe>
-  </div>
-  <div class="sg_code" data-styles="abstracts/fonts.scss">
-<!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss">  <span class="k">@font-face</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Circular'</span><span class="p">;</span>
+  <span class="nl">src</span><span class="p">:</span> <span class="sx">url('../fonts/circular/CircularXXWeb-Book.woff2')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff2'</span><span class="p">)</span><span class="o">,</span>
+    <span class="sx">url('../fonts/circular/CircularXXWeb-Book.woff')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff'</span><span class="p">);</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
+  <span class="nl">font-style</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
+  <span class="na">font-display</span><span class="p">:</span> <span class="n">fallback</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Circular'</span><span class="p">;</span>
+  <span class="nl">src</span><span class="p">:</span> <span class="sx">url('../fonts/circular/CircularXXWeb-Black.woff2')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff2'</span><span class="p">)</span><span class="o">,</span>
+    <span class="sx">url('../fonts/circular/CircularXXWeb-Black.woff')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff'</span><span class="p">);</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
+  <span class="nl">font-style</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
+  <span class="na">font-display</span><span class="p">:</span> <span class="n">fallback</span><span class="p">;</span>
+<span class="p">}</span>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;style&gt;</span>
-  <span class="o">*</span> <span class="p">{</span>
-    <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'Roboto Slab'</span> <span class="cp">!important</span><span class="p">;</span>
-    <span class="nl">word-wrap</span><span class="p">:</span> <span class="n">break-word</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="nt">p</span> <span class="p">{</span>
-    <span class="nl">margin-top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="nl">padding-bottom</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
-    <span class="nl">font-size</span><span class="p">:</span> <span class="m">18px</span> <span class="cp">!important</span><span class="p">;</span>
-    
-  <span class="p">}</span>
-<span class="nt">&lt;/style&gt;</span>
+  </code></pre></figure>
 
-# AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz
-# 1234567890',.<span class="nt">&lt;&gt;</span>/?;':"[]{}-=_+!@#$%^<span class="err">&amp;</span>*()
-
-Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</code></pre></figure>
 
   </div>
 </section>
@@ -172,11 +150,6 @@ Apparently we had reached a great height in the atmosphere, for the sky was a de
 
 <p>A <code class="language-plaintext highlighter-rouge">sans-serif</code> fallback font is used incase <a href="https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp">@font-face</a> is not supported in the target browser.</p>
 
-<hr />
-
-<h2 id="copryright">Copryright</h2>
-
-<p>Roboto and Roboto Slab are free software. For more details, please visit Google Fonts official website at <a href="https://fonts.google.com/">https://fonts.google.com/</a></p>
 </div>
 </article>
 

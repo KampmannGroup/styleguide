@@ -2,6 +2,7 @@
 title: Icons
 maturity: draft
 control: exclude
+styles: ''
 items: 
   - name: Favicon
     path: src/assets/images/icon.ico

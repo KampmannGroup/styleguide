@@ -1,0 +1,18 @@
+html{
+  font-size: $font-size-root;
+}
+
+body{
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $body-color;
+}
+
+.container{
+  width: calc(100% - #{$grid-gutter-width} * 2);
+}
+
+*, *:before, *:after{
+  box-sizing: border-box;
+}

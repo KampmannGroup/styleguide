@@ -1,0 +1,29 @@
+---
+title: Secondary Button
+styles: assets/_scss/components/_button.scss
+maturity: ready
+inlinestyles: '<style>.canvas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 280px;
+    height: 300px;
+    background-color: #ababab;
+    border: 1px solid whitesmoke;
+    margin-bottom: 1rem;
+  }
+
+  .btn{
+    margin-bottom: 16px;
+  }
+</style>'
+
+---
+<div class="canvas">
+  <a href="javascript:void(0)" class="btn btn--secondary">Secondary Button</a>
+  <a href="javascript:void(0)" class="btn btn--outline-secondary">Secondary Outline Button</a>
+</div>
+
+{{ page.inlinestyles }}
