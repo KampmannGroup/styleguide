@@ -5,7 +5,9 @@ control: exclude
 styles: ''
 items: 
   - name: Brand
-    path: styleguide/branding/logo-styleguide.svg
+    path: 
+      - styleguide/branding/kampmann-wort-bild-marke.svg
+      - styleguide/branding/kampmann-wort-bild-marke-light.svg
 ---
 <style>
 .set {
@@ -41,10 +43,12 @@ p {
 </style>
 <ul class="set">
 {% for item in page.items %} 
-  <li>
-    <div class="image"><img src="{{ site.baseurl }}/{{ item.path }}"/></div>
-    <p class="header">{{ item.name }}</p>
-    {% if item.path %}<p>{{ item.path }}</p>{% endif %}
-  </li>
+  {% for brand in item.path %}
+    <li>
+      <div class="image"><img src="{{ site.baseurl }}/{{ brand }}"/></div>
+      <p class="header">{{ item.name }}</p>
+      <p>{{ brand }}</p>
+    </li>
+  {% endfor %}
 {% endfor %}
 </ul>
