@@ -1,0 +1,32 @@
+.footer{
+  &__section{
+    padding-top: $grid-gutter-width*1.25;
+    padding-bottom: $grid-gutter-width*1.25;
+
+    &--contact{
+      display: flex;
+      flex-wrap: wrap;
+      align-items:center;
+      justify-content: space-between;
+      background-color: $primary;
+
+      *{
+        color: $secondary;
+      }
+    }
+
+    &--sitemap{
+      padding-top: $grid-gutter-width*3;
+      padding-bottom: $grid-gutter-width*3;
+      background-color: rgba($gray, .35);
+
+      *{
+        color: $body-color;
+      }
+    }
+
+    &--juristic{
+
+    }
+  }
+}

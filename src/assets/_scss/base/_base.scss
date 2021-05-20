@@ -9,8 +9,20 @@ body{
   color: $body-color;
 }
 
+a{
+  color: var(--color-primary);
+}
+
+img{
+  max-width:100%;
+}
+
 .container{
   width: calc(100% - #{$grid-gutter-width} * 2);
+
+  .container{
+    width:100%;
+  }
 }
 
 *, *:before, *:after{
