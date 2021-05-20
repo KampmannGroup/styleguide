@@ -16,4 +16,8 @@
   &--large{
     font-size: $font-size-lg;
   }
+
+  &--primary{
+    color:$primary;
+  }
 }
