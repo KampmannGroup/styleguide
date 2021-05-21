@@ -25,15 +25,33 @@ control: exclude
     <section class="header__section header__section--main">
       <div class="container header__part--fullheight">
         <div class="header__section-wrapper header__part--fullheight">
-          <div class="row justify-content-between header__part--fullheight">
-            <nav class="navigation navigation--main col-12 col-md-auto header__part" style="--active-level:0">
+          <div class="row flex-column flex-sm-row justify-content-sm-between header__part--fullheight">
+            <div class="header__interaction col-auto d-sm-none d-md-block">
+              <div class="row">
+                <div class="header__search form col-auto">
+                  <div class="formelement__wrapper formelement__wrapper--search">
+                    <input id="search" class="formelement formelement--input formelement--search" type="text" placeholder="Search">
+                    <label for="search" class="formelement__label">Search</label>
+                  </div>
+                </div>
+
+                <div data-navigation="#navigation__main .navigation__wrapper" class="header__burger navigation__burger ml-auto d-sm-none">
+                  <span class="navigation__burger-part"></span>
+                  <span class="navigation__burger-part"></span>
+                  <span class="navigation__burger-part"></span>
+                </div>
+              </div>
+            </div>
+
+            <nav id="navigation__main" class="navigation navigation--main col col-md-auto header__navigation header__part" style="--active-level:0">
               <div class="navigation__wrapper header__part--fullheight">
+                <div class="navigation__wrapper-inner header__part--fullheight">
                 <ul class="navigation__list navigation__list--active navigation__list--level-0 header__part--fullheight">
                   <li class="navigation__element">
                     <div class="navigation__element-wrapper"><a class="navigation__link link link--bold link--uppercase" href="javascript:void(0)">Produkte</a>
                   </div></li>
                   <li class="navigation__element" data-target="service">
-                    <div class="navigation__element-wrapper"><a class="navigation__link link link--bold link--uppercase" href="javascript:void(0)">Service</a><span class="navigation__subnavigation-trigger d-sm-none">+</span></div>
+                    <div class="navigation__element-wrapper"><a class="navigation__link link link--bold link--uppercase" href="javascript:void(0)">Service</a><span class="navigation__subnavigation-trigger d-sm-none"><img class="col-12" src="/styleguide/src/assets/images/graphics/arrow-right.svg"/></span></div>
                   
                     <div class="subnavigation">
                       <ul data-parent="service" class="navigation__list navigation__list--subnavigation navigation__list--subnavigation-0 navigation__list--level-1 container-md">
@@ -43,7 +61,7 @@ control: exclude
 
                         <li class="navigation__element"><div class="navigation__element-wrapper"><a class="navigation__link link" href="javascript:void(0)">Produktfamilien</a></div></li>
                         <li data-target="department" class="navigation__element">
-                          <div class="navigation__element-wrapper"><a class="navigation__link link" href="javascript:void(0)">Einsatzbereiche</a><span class="navigation__subnavigation-trigger">+</span></div>
+                          <div class="navigation__element-wrapper"><a class="navigation__link link" href="javascript:void(0)">Einsatzbereiche</a><span class="navigation__subnavigation-trigger"><img class="col-12" src="/styleguide/src/assets/images/graphics/arrow-right.svg"/></span></div>
 
                           <ul data-parent="department" class="navigation__list navigation__list--subnavigation navigation__list--level-2 container-md">
                             <li class="navigation__element navigation__element--breadcrumb">
@@ -52,7 +70,7 @@ control: exclude
 
                             <li class="navigation__element"><div class="navigation__element-wrapper"><a class="navigation__link link" href="javascript:void(0)">Unterflurkonvektoren</a></div></li>
                             <li class="navigation__element" data-target="air-heater">
-                              <div class="navigation__element-wrapper"><a class="navigation__link link" href="javascript:void(0)">Lufterhitzer</a><span class="navigation__subnavigation-trigger">+</span></div>
+                              <div class="navigation__element-wrapper"><a class="navigation__link link" href="javascript:void(0)">Lufterhitzer</a><span class="navigation__subnavigation-trigger"><img class="col-12" src="/styleguide/src/assets/images/graphics/arrow-right.svg"/></span></div>
                             
                               <ul data-parent="air-heater" class="navigation__list navigation__list--subnavigation navigation__list--level-3">
                                 <li class="navigation__element navigation__element--breadcrumb">
@@ -104,10 +122,10 @@ control: exclude
                     </div>
                   </li>
                   <li class="navigation__element" data-target="company">
-                    <div class="navigation__element-wrapper"><a class="navigation__link link link--bold link--uppercase" href="javascript:void(0)">Unternehmen</a><span class="navigation__subnavigation-trigger d-sm-none">+</span></div>
+                    <div class="navigation__element-wrapper"><a class="navigation__link link link--bold link--uppercase" href="javascript:void(0)">Unternehmen</a><span class="navigation__subnavigation-trigger d-sm-none"><img class="col-12" src="/styleguide/src/assets/images/graphics/arrow-right.svg"/></span></div>
                   
                     <div class="subnavigation">
-                      <ul data-parent="company" class="navigation__list navigation__list--subnavigation navigation__list--level-1 container-md">
+                      <ul data-parent="company" class="navigation__list navigation__list--subnavigation navigation__list--subnavigation-0  navigation__list--level-1 container-md">
                         <li class="navigation__element navigation__element--breadcrumb">
                           <span class="navigation__link navigation__link--breadcrumb d-sm-none" data-level="0">Unternehmen</span>
                         </li>
@@ -146,15 +164,9 @@ control: exclude
                   <li class="navigation__element" data-target="contact"><div class="navigation__element-wrapper"><a class="navigation__link link link--bold link--uppercase" href="javascript:void(0)">Kontakt</a></div></li>
                   <li class="navigation__element" data-target="more"><div class="navigation__element-wrapper"><a class="navigation__link link link--bold link--uppercase" href="javascript:void(0)">...</a></div></li>
                 </ul>
+                </div>
               </div>
             </nav>
-
-            <div class="header__search form col-auto">
-              <div class="formelement__wrapper formelement__wrapper--search">
-                <input id="search" class="formelement formelement--input formelement--search" type="text" placeholder="Search">
-                <label for="search" class="formelement__label">Search</label>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -164,6 +176,54 @@ control: exclude
 
 
 <script>
+  const burgers = document.querySelectorAll('.navigation__burger')
+
+  if(burgers){
+    burgers.forEach((burger, index)=>{
+      burger.addEventListener('click',(e)=>{
+        const el = e.target.closest('[data-navigation]')
+
+        if(burger.classList.contains('--active')){
+          burger.classList.remove('--active')
+        }
+        else{
+          burger.classList.add('--active')
+        }
+
+        if(el){
+          const navigation_selector = el.dataset.navigation
+          const navigation_toggler = document.querySelector(navigation_selector)
+          const navigation = navigation_toggler.closest('.navigation')
+          
+          if(navigation_toggler){
+            if (navigation.classList.contains('--active')) {
+              const collapse = navigation_toggler.animate(
+                [{ height: `${navigation_toggler.scrollHeight}px` }, { height: '0' }],
+                {
+                  duration: 300,
+                }
+              )
+              // collapse.onfinish = () => (navigation_toggler.style.height = '0')
+              collapse.onfinish = () => {navigation_toggler.style.removeProperty('height'); navigation.classList.remove('--active');}
+              return
+            }
+
+            navigation.classList.add('--active')
+
+            const expand = navigation_toggler.animate(
+              [{ height: '0' }, { height: `${navigation_toggler.scrollHeight}px` }],
+              { duration: 300 }
+            )
+
+            // expand.onfinish = () => (navigation_toggler.style.height = 'auto')
+            expand.onfinish = () => (navigation_toggler.style.removeProperty('height'))
+          }
+        }
+      })
+    })
+  }
+
+
   const subnavigation_triggers = document.querySelectorAll('.navigation__subnavigation-trigger')
 
   if(subnavigation_triggers){
