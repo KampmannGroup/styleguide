@@ -1,6 +1,12 @@
 .link{
   text-decoration:none;
   transition:.3s;
+  display: flex;
+  align-items: center;
+
+  &__icon{
+    margin-right: $grid-gutter-width/4;
+  }
 
   &--bold{
     font-weight:700;
