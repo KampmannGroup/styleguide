@@ -363,11 +363,25 @@
             }
           }
 
+          &--level-1{
+            >.navigation__element >.navigation__list--level-4{
+              transform:translateX(75%)
+            }
+          }
+
+          &--level-2{
+            >.navigation__element >.navigation__list--level-4{
+              transform:translateX(50%)
+            }
+          }
+
           &--level-4{
             .navigation__element-wrapper{
               background-image: url(/styleguide/src/assets/images/graphics/divider.svg);
-              background-repeat: no-repeat;
+              background-repeat: repeat-y;
               padding-left: $grid-gutter-width !important;
+              padding-top: $grid-gutter-width;
+              padding-bottom: $grid-gutter-width;
             }
           }
 
