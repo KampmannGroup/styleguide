@@ -65,6 +65,7 @@
   .header{
     &__interaction{
       order:1;
+      max-width: 200px;
     }
 
     &__section-wrapper{
@@ -84,5 +85,13 @@
       height:auto;
     }
   }
+  }
+}
+
+@include media-breakpoint-up(lg){
+  .header{
+    &__interaction{
+      max-width:unset;
+    }
   }
 }

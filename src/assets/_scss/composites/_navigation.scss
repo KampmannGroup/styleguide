@@ -195,6 +195,7 @@
 
       &__link{
         font-size: $font-size-root;
+        line-height: 1.3em;
 
         &:hover{
           color:$green;
@@ -279,7 +280,7 @@
                 &__link{
                   display:block;
                   padding-left: $grid-gutter-width/2;
-                  padding-right: $grid-gutter-width/2;
+                  padding-right: $grid-gutter-width/2 !important;
                   padding-top: $grid-gutter-width/4;
                   padding-bottom: $grid-gutter-width/4;
                   font-weight:700;
