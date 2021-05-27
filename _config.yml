@@ -29,7 +29,7 @@ sg_description: Dies ist der Digital Styleguide der Kampmann Group aus Lingen (E
 sg_language: de
 sg_styles: /styleguide/css/styleguide.css
 sg_favicon: /styleguide/branding/favicon.ico
-sg_ga: UA-19247091-8 ## Analytics Tracking
+# sg_ga: UA-19247091-8 ## Analytics Tracking
 
 ## Generates Style Guide Shell Styles
 ## Enable to change the style guide shell stylesheet.
@@ -106,8 +106,8 @@ pattern_scripts: ## add script locations here
 ## Generates Pattern Styles
 ## Disable to prevent pattern styles from being generated.
 # sass:
-#   sass_dir: _includes/assets/_scss 
-#   style: :compressed   
+#   sass_dir: _includes/assets/_scss
+#   style: :compressed
 
 # sass:
 #   sass_dir: src/assets/_scss # Scss location
