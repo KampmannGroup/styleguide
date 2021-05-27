@@ -72,7 +72,11 @@
   <div class="group">
     <div class="group_title">Templates</div>
     <ul>
+      <li><a href="/styleguide/docs/templates/footer.html">Footer</a></li>
+    
       <li><a href="/styleguide/docs/templates/grid.html">Grid</a></li>
+    
+      <li><a href="/styleguide/docs/templates/header.html">Header</a></li>
     </ul>
   </div>
   
@@ -111,9 +115,9 @@
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"headline headline--h1"</span><span class="nt">&gt;</span>Headline 1<span class="nt">&lt;/h1&gt;</span>
 <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"headline headline--h2"</span><span class="nt">&gt;</span>Headline 2<span class="nt">&lt;/h2&gt;</span>
 <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"headline headline--h3"</span><span class="nt">&gt;</span>Headline 3<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"headline headline--h4"</span><span class="nt">&gt;</span>Headline 4<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"headline headline--h5"</span><span class="nt">&gt;</span>Headline 5<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"headline headline--h6"</span><span class="nt">&gt;</span>Headline 6<span class="nt">&lt;/h3&gt;</span></code></pre></figure>
+<span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"headline headline--h4"</span><span class="nt">&gt;</span>Headline 4<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"headline headline--h5"</span><span class="nt">&gt;</span>Headline 5<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;h6</span> <span class="na">class=</span><span class="s">"headline headline--h6"</span><span class="nt">&gt;</span>Headline 6<span class="nt">&lt;/h6&gt;</span></code></pre></figure>
 
 
 
@@ -135,27 +139,33 @@
 
   <span class="k">&amp;</span><span class="nt">--h2</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nc">.h2</span> <span class="p">{</span>
     <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$h2-font-size</span><span class="p">;</span>
+    <span class="nl">line-height</span><span class="p">:</span> <span class="m">1</span><span class="mi">.278</span><span class="p">;</span>
     <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">1</span><span class="mi">.5rem</span><span class="p">;</span>
   <span class="p">}</span>
 
   <span class="k">&amp;</span><span class="nt">--h3</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nc">.h3</span> <span class="p">{</span>
     <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$h3-font-size</span><span class="p">;</span>
+    <span class="nl">line-height</span><span class="p">:</span> <span class="m">1</span><span class="mi">.385</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
     <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">1</span><span class="mi">.125rem</span><span class="p">;</span>
   <span class="p">}</span>
 
   <span class="k">&amp;</span><span class="nt">--h4</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nc">.h4</span> <span class="p">{</span>
     <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$h4-font-size</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
+    <span class="nl">line-height</span><span class="p">:</span> <span class="m">1</span><span class="mi">.333</span><span class="p">;</span>
   <span class="p">}</span>
 
   <span class="k">&amp;</span><span class="nt">--h5</span><span class="o">,</span> <span class="nt">h5</span><span class="o">,</span> <span class="nc">.h5</span> <span class="p">{</span>
     <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$h5-font-size</span><span class="p">;</span>
-    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">400</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
+    <span class="nl">line-height</span><span class="p">:</span> <span class="m">1</span><span class="mi">.5</span><span class="p">;</span>
+    <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
     <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">0</span><span class="mi">.5px</span><span class="p">;</span>
   <span class="p">}</span>
 
   <span class="k">&amp;</span><span class="nt">--h6</span><span class="o">,</span> <span class="nt">h6</span><span class="o">,</span> <span class="nc">.h6</span> <span class="p">{</span>
     <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$h6-font-size</span><span class="p">;</span>
-    <span class="nl">color</span><span class="p">:</span> <span class="nv">$green</span><span class="p">;</span>
     <span class="nl">font-weight</span><span class="p">:</span> <span class="m">400</span><span class="p">;</span>
     <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
     <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">1</span><span class="mi">.38px</span><span class="p">;</span>
