@@ -1,0 +1,15 @@
+
+<svg width="16px" height="18px" viewBox="0 0 16 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="Topbar" transform="translate(-1053.000000, -22.000000)">
+            <g id="Links" transform="translate(939.466667, 21.000000)">
+                <g id="Icon/User" transform="translate(114.533333, 0.000000)" filter="url(#filter-1)">
+                    <g transform="translate(0.000000, 2.000000)">
+                        <path d="M14,16.6896552 L14,14.7241379 C14,12.5530875 12.4329966,10.7931034 10.5,10.7931034 L3.5,10.7931034 C1.56700338,10.7931034 0,12.5530875 0,14.7241379 L0,16.6896552" id="Path" stroke="#FFFFFF"></path>
+                        <circle id="Oval" stroke="#FFFFFF" cx="6.86206897" cy="3.93103448" r="3.93103448"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
