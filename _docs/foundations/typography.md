@@ -5,6 +5,10 @@ info: Circular font has been selected as the primary fonts for this system.
 
 {% include pattern_block.html url='/src/patterns/foundations/typography/circular.html' %}
 
+{% include pattern_block.html url='/src/patterns/components/heading/headlines.html' %}
+
+{% include pattern_block.html url='/src/patterns/components/running-text/running-text.html' %}
+
 ---
 
 ## Fallback

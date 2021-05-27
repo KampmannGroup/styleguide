@@ -8,7 +8,11 @@ colors:
     hex: '#8A8882'
     rgb: 'rgba(138,136,130,1)'
     hsl: 'hsla(48,3%,53%,1)'
-  - name: $light
+  - name: $primary
+    hex: '#0E2249'  
+    rgb: 'rgba(14,34,73,1)'
+    hsl: 'hsla(220,68%,17%,1)'
+  - name: $secondary
     hex: '#FFFFFF'
     rgb: 'rgba(255,255,255,1)'
     hsl: 'hsla(0,0%,100%,1)'

@@ -14,27 +14,33 @@
 
   &--h2, h2, .h2 {
     font-size: $h2-font-size;
+    line-height: 1.278;
     margin-bottom: 1.5rem;
   }
 
   &--h3, h3, .h3 {
     font-size: $h3-font-size;
+    line-height: 1.385;
+    font-weight: normal;
     margin-bottom: 1.125rem;
   }
 
   &--h4, h4, .h4 {
     font-size: $h4-font-size;
+    font-weight: normal;
+    line-height: 1.333;
   }
 
   &--h5, h5, .h5 {
     font-size: $h5-font-size;
-    font-weight: 400;
+    font-weight: normal;
+    line-height: 1.5;
+    text-transform: uppercase;
     letter-spacing: 0.5px;
   }
 
   &--h6, h6, .h6 {
     font-size: $h6-font-size;
-    color: $green;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1.38px;
