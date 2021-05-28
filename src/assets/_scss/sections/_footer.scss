@@ -16,11 +16,14 @@
     }
 
     &--sitemap{
+      --background-color: #eee;
+
       padding-top: $grid-gutter-width*3;
       padding-bottom: $grid-gutter-width*3;
       background-color: rgba($gray, .35);
-
-      *{
+      color: $body-color;
+      
+      .headline{
         color: $body-color;
       }
     }

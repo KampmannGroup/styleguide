@@ -15,4 +15,8 @@
   &--uppercase{
     text-transform: uppercase;
   }
+
+  &--symbol{
+    line-height:0 !important;
+  }
 }

@@ -20,4 +20,8 @@
   &--primary{
     color:$primary;
   }
+
+  &--lower{
+    text-transform: none !important;
+  }
 }
