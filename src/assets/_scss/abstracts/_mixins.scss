@@ -1,0 +1,16 @@
+@each $breakpointname, $breakpointsize in $grid-breakpoints{
+  @media (min-width: #{$breakpointsize}){
+    body{
+      --current-breakpoint: #{$breakpointname};
+      --current-containerwidth: #{map-get($container-max-widths, $breakpointname)};
+    }
+  }
+}
+
+// @each $breakpointname, $containerwidth in $container-max-widths{
+//   @include media-breakpoint-up($breakpointname){
+//     body{
+//       --current-containerwidth: #{$containerwidth};
+//     }
+//   }
+// }
