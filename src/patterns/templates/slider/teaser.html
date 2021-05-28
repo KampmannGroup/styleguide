@@ -86,7 +86,7 @@ control: exclude
       var wait = 
         setInterval(()=>{
           slide(slider, slidesCount)
-        },3000)
+        },5000)
 
       dotswrapper.addEventListener('mouseover',(e)=>{
         clearInterval(wait)
@@ -96,7 +96,7 @@ control: exclude
         wait = 
           setInterval(()=>{
             slide(slider, slidesCount)
-          },3000)
+          },5000)
       })
 
       slider.addEventListener('click',(e)=>{
