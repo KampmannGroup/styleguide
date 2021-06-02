@@ -24,11 +24,13 @@
       wrapper.addEventListener('click', (e)=>{
         const wrapper = e.target.closest('.formelement__wrapper')
         //Toggle showing options list
-        if(wrapper.classList.contains('formelement__wrapper--active')){
-          wrapper.classList.remove('formelement__wrapper--active')
+        if(!wrapper.classList.contains('formelement__wrapper--active')){
+          wrapper.classList.add('formelement__wrapper--active')
         }
         else{
-          wrapper.classList.add('formelement__wrapper--active')
+          if(wrapper.classList.contains('formelement__wrapper--select')){
+            wrapper.classList.remove('formelement__wrapper--active')
+          }
         }
       })
     })

@@ -68,6 +68,8 @@
       <li><a href="/styleguide/docs/templates/grid.html">Grid</a></li>
     
       <li><a href="/styleguide/docs/templates/header.html">Header</a></li>
+    
+      <li><a href="/styleguide/docs/templates/slider.html">Slider</a></li>
     </ul>
   </div>
   
@@ -129,6 +131,7 @@
   <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
   <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
 
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="nv">$grid-gutter-width</span><span class="o">/</span><span class="m">2</span><span class="p">;</span>
   <span class="nl">padding</span><span class="p">:</span> <span class="nv">$input-btn-padding-y</span> <span class="nv">$input-btn-padding-x</span><span class="p">;</span>
   <span class="nl">outline</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
   <span class="nl">transition</span><span class="p">:</span> <span class="m">0</span><span class="mi">.3s</span><span class="p">;</span>
@@ -153,6 +156,7 @@
     <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
     <span class="nl">border-radius</span><span class="p">:</span> <span class="nv">$border-radius-lg</span><span class="p">;</span>
     <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">left</span><span class="p">:</span><span class="nv">$grid-gutter-width</span><span class="o">/-</span><span class="m">4</span><span class="p">;</span>
     <span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.3</span><span class="p">);</span>
   <span class="p">}</span>
 
@@ -206,6 +210,14 @@
   <span class="p">}</span>
 
   <span class="k">&amp;</span><span class="nt">--outline</span> <span class="p">{</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$body-color</span><span class="p">;</span>
+
+    <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
+    <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
+      <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.1</span><span class="p">);</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+    <span class="p">}</span>
+
     <span class="k">&amp;</span><span class="nt">-primary</span> <span class="p">{</span>
       <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
       <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
@@ -248,6 +260,16 @@
       <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$gray</span><span class="p">;</span>
       <span class="nl">pointer-events</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
       <span class="nl">opacity</span><span class="p">:</span><span class="m">1</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">__icon</span><span class="p">{</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="si">#{</span><span class="nv">$line-height-base</span><span class="si">}</span><span class="n">em</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+    <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+
+    <span class="k">&amp;</span><span class="nt">--before</span><span class="p">{</span>
+      <span class="nl">margin-right</span><span class="p">:</span> <span class="nv">$grid-gutter-width</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
@@ -292,6 +314,7 @@
   <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
   <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
 
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="nv">$grid-gutter-width</span><span class="o">/</span><span class="m">2</span><span class="p">;</span>
   <span class="nl">padding</span><span class="p">:</span> <span class="nv">$input-btn-padding-y</span> <span class="nv">$input-btn-padding-x</span><span class="p">;</span>
   <span class="nl">outline</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
   <span class="nl">transition</span><span class="p">:</span> <span class="m">0</span><span class="mi">.3s</span><span class="p">;</span>
@@ -316,6 +339,7 @@
     <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
     <span class="nl">border-radius</span><span class="p">:</span> <span class="nv">$border-radius-lg</span><span class="p">;</span>
     <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">left</span><span class="p">:</span><span class="nv">$grid-gutter-width</span><span class="o">/-</span><span class="m">4</span><span class="p">;</span>
     <span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.3</span><span class="p">);</span>
   <span class="p">}</span>
 
@@ -369,6 +393,14 @@
   <span class="p">}</span>
 
   <span class="k">&amp;</span><span class="nt">--outline</span> <span class="p">{</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$body-color</span><span class="p">;</span>
+
+    <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
+    <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
+      <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.1</span><span class="p">);</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+    <span class="p">}</span>
+
     <span class="k">&amp;</span><span class="nt">-primary</span> <span class="p">{</span>
       <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
       <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
@@ -411,6 +443,16 @@
       <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$gray</span><span class="p">;</span>
       <span class="nl">pointer-events</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
       <span class="nl">opacity</span><span class="p">:</span><span class="m">1</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">__icon</span><span class="p">{</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="si">#{</span><span class="nv">$line-height-base</span><span class="si">}</span><span class="n">em</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+    <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+
+    <span class="k">&amp;</span><span class="nt">--before</span><span class="p">{</span>
+      <span class="nl">margin-right</span><span class="p">:</span> <span class="nv">$grid-gutter-width</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
@@ -455,6 +497,7 @@
   <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
   <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
 
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="nv">$grid-gutter-width</span><span class="o">/</span><span class="m">2</span><span class="p">;</span>
   <span class="nl">padding</span><span class="p">:</span> <span class="nv">$input-btn-padding-y</span> <span class="nv">$input-btn-padding-x</span><span class="p">;</span>
   <span class="nl">outline</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
   <span class="nl">transition</span><span class="p">:</span> <span class="m">0</span><span class="mi">.3s</span><span class="p">;</span>
@@ -479,6 +522,7 @@
     <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
     <span class="nl">border-radius</span><span class="p">:</span> <span class="nv">$border-radius-lg</span><span class="p">;</span>
     <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">left</span><span class="p">:</span><span class="nv">$grid-gutter-width</span><span class="o">/-</span><span class="m">4</span><span class="p">;</span>
     <span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.3</span><span class="p">);</span>
   <span class="p">}</span>
 
@@ -532,6 +576,14 @@
   <span class="p">}</span>
 
   <span class="k">&amp;</span><span class="nt">--outline</span> <span class="p">{</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$body-color</span><span class="p">;</span>
+
+    <span class="k">&amp;</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
+    <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
+      <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="m">0</span><span class="mi">.1</span><span class="p">);</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+    <span class="p">}</span>
+
     <span class="k">&amp;</span><span class="nt">-primary</span> <span class="p">{</span>
       <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
       <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
@@ -574,6 +626,16 @@
       <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$gray</span><span class="p">;</span>
       <span class="nl">pointer-events</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
       <span class="nl">opacity</span><span class="p">:</span><span class="m">1</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">__icon</span><span class="p">{</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="si">#{</span><span class="nv">$line-height-base</span><span class="si">}</span><span class="n">em</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+    <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+
+    <span class="k">&amp;</span><span class="nt">--before</span><span class="p">{</span>
+      <span class="nl">margin-right</span><span class="p">:</span> <span class="nv">$grid-gutter-width</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
