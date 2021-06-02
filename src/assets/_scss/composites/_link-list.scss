@@ -3,14 +3,26 @@
   padding:0;
   margin:0;
   transition:.3s;
+  margin-top:$grid-gutter-width/-8;
+  margin-bottom:$grid-gutter-width/-8;
 
   &__link{
     display:block; 
+    padding-top:$grid-gutter-width/8;
+    padding-bottom:$grid-gutter-width/8;
     
     &:hover{
       padding-left: $grid-gutter-width/2;
     }
   }
+
+  // &__element{
+  //   &:not(:last-child){
+  //     .link-list__link{
+  //       padding-top:$grid-gutter-width/4;
+  //     }
+  //   }
+  // }
 }
 
 @include media-breakpoint-up(md) {

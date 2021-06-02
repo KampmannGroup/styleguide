@@ -9,6 +9,8 @@
       align-items:center;
       justify-content: space-between;
       background-color: $primary;
+      padding-top: $grid-gutter-width;
+      padding-bottom: $grid-gutter-width;
 
       *{
         color: $secondary;
@@ -16,11 +18,14 @@
     }
 
     &--sitemap{
+      --background-color: #eee;
+
       padding-top: $grid-gutter-width*3;
       padding-bottom: $grid-gutter-width*3;
       background-color: rgba($gray, .35);
-
-      *{
+      color: $body-color;
+      
+      .headline{
         color: $body-color;
       }
     }

@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
 
+  margin-top: $grid-gutter-width/2;
   padding: $input-btn-padding-y $input-btn-padding-x;
   outline: none;
   transition: 0.3s;
@@ -29,6 +30,7 @@
     position: absolute;
     border-radius: $border-radius-lg;
     display: none;
+    left:$grid-gutter-width/-4;
     border: 2px solid rgba($primary, 0.3);
   }
 
@@ -82,6 +84,14 @@
   }
 
   &--outline {
+    border-color: $body-color;
+
+    &:hover:not(:focus),
+    &:active {
+      background-color: rgba($primary, 0.1);
+      color: $primary;
+    }
+
     &-primary {
       border-color: $primary;
       color: $primary;
@@ -124,6 +134,16 @@
       border-color: $gray;
       pointer-events: none;
       opacity:1 !important;
+    }
+  }
+
+  &__icon{
+    height: #{$line-height-base}em;
+    display: flex;
+    align-items: center;
+
+    &--before{
+      margin-right: $grid-gutter-width;
     }
   }
 }
