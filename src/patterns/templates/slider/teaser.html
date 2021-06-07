@@ -76,6 +76,11 @@ control: exclude
   document.addEventListener("DOMContentLoaded", function(event) {
     const sliders = document.querySelectorAll('.slider');
 
+    const adjustHeight = (slider)=>{
+      const slideFirst = slider.querySelector(`.slider__slide--active`)
+      slider.style.height = slideFirst.offsetHeight + 'px'
+    }
+
     const slide = (slider, slidesCount)=>{
       const dotActive = slider.querySelector('.slider__dot--active')
       const slideActive = parseInt(dotActive.dataset.slide)
@@ -88,8 +93,11 @@ control: exclude
     if(sliders){
       sliders.forEach((slider, index)=>{
         window.addEventListener('load',()=>{
-          const slideFirst = slider.querySelector(`.slider__slide--active`)
-          slider.style.height = slideFirst.offsetHeight + 'px'
+          adjustHeight(slider)
+        })
+
+        window.addEventListener('resize', ()=>{
+          adjustHeight(slider)
         })
 
         const slideContent = slider.querySelector('.slide__content')
