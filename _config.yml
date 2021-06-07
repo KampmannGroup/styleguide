@@ -14,7 +14,7 @@ port: 4000
 
 ## Output
 siteurl: https://kampmanngroup.github.io/styleguide
-baseurl: /styleguide
+baseurl: /
 destination: _site ## Output folder
 
 ###################################
