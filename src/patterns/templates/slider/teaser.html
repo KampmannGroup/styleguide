@@ -98,25 +98,25 @@ control: exclude
         const slidesCount = dots.length - 1;
 
         //Autoplay
-        // var wait = 
-        //   setInterval(()=>{
-        //     slide(slider, slidesCount)
-        //   },5000)
+        var wait = 
+          setInterval(()=>{
+            slide(slider, slidesCount)
+          },5000)
 
-        // //PauseOnHover
-        // const elemsToPauseOnHover = [slideContent, dotsWrapper]
-        // elemsToPauseOnHover.forEach((el, index)=>{
-        //   el.addEventListener('mouseover',(e)=>{
-        //     clearInterval(wait)
-        //   })
+        //PauseOnHover
+        const elemsToPauseOnHover = [slideContent, dotsWrapper]
+        elemsToPauseOnHover.forEach((el, index)=>{
+          el.addEventListener('mouseover',(e)=>{
+            clearInterval(wait)
+          })
 
-        //   el.addEventListener('mouseout',(e)=>{
-        //     wait = 
-        //       setInterval(()=>{
-        //         slide(slider, slidesCount)
-        //       },5000)
-        //   })
-        // })
+          el.addEventListener('mouseout',(e)=>{
+            wait = 
+              setInterval(()=>{
+                slide(slider, slidesCount)
+              },5000)
+          })
+        })
 
         //Navigation Click
         slider.addEventListener('click',(e)=>{
