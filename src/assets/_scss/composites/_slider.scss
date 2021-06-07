@@ -81,10 +81,12 @@
     }
 
     &__wrapper-inner{
+      align-items: flex-start;
       height: 100%;
     }
 
     &__content{
+      align-self: flex-end;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -121,7 +123,12 @@
     }
 
     .slide{
+      &__wrapper-inner{
+        align-items: stretch;
+      }
+
       &__content{
+        align-self: stretch;
         padding-top:$grid-gutter-width*6;
         padding-bottom:$grid-gutter-width*8;
       }
