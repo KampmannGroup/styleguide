@@ -2,7 +2,7 @@
   <div class="slider__wrapper">
     <div data-slide="0" class="slider__slide slider__slide--teal slide slider__slide--active">
       <div class="container slide__wrapper">
-        <div class="row">
+        <div class="row slide__wrapper-inner">
           <div class="slide__content col-12 col-md-4">
             <h2 class="headline headline--h2">RRA als Stilelement im Industrial Style</h2>
             <p class="text">Die richtige Belüftung ist elementar, wenn Frontcooking praktiziert wird. Nebenbei sollen die Lüftungsanlagen als Designelement dienen.</p>
@@ -20,7 +20,7 @@
 
     <div data-slide="1" class="slider__slide slider__slide--cyan slide">
       <div class="container slide__wrapper">
-        <div class="row">
+        <div class="row slide__wrapper-inner">
           <div class="slide__meta col-12 col-md-6 mr-auto">
             <div class="slide__image-wrapper">
               <img class="slide__image" src="/styleguide/src/assets/images/pictures/kampmann-industrial-design.png"/>
@@ -40,7 +40,7 @@
 
     <div data-slide="2" class="slider__slide slider__slide--green slide">
       <div class="container slide__wrapper">
-        <div class="row">
+        <div class="row slide__wrapper-inner">
           <div class="slide__content col-12 col-md-5">
             <h2 class="headline headline--h2">RRA als Stilelement im Industrial Style</h2>
             <p class="text">Die richtige Belüftung ist elementar, wenn Frontcooking praktiziert wird. Nebenbei sollen die Lüftungsanlagen als Designelement dienen.</p>
@@ -70,6 +70,11 @@
   document.addEventListener("DOMContentLoaded", function(event) {
     const sliders = document.querySelectorAll('.slider');
 
+    const adjustHeight = (slider)=>{
+      const slideFirst = slider.querySelector(`.slider__slide--active`)
+      slider.style.height = slideFirst.offsetHeight + 'px'
+    }
+
     const slide = (slider, slidesCount)=>{
       const dotActive = slider.querySelector('.slider__dot--active')
       const slideActive = parseInt(dotActive.dataset.slide)
@@ -82,8 +87,11 @@
     if(sliders){
       sliders.forEach((slider, index)=>{
         window.addEventListener('load',()=>{
-          const slideFirst = slider.querySelector(`.slider__slide--active`)
-          slider.style.height = slideFirst.offsetHeight + 'px'
+          adjustHeight(slider)
+        })
+
+        window.addEventListener('resize', ()=>{
+          adjustHeight(slider)
         })
 
         const slideContent = slider.querySelector('.slide__content')
