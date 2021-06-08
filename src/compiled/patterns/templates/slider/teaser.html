@@ -5,13 +5,16 @@
         <div class="row slide__wrapper-inner">
           <div class="slide__content col-12 col-md-4">
             <h2 class="headline headline--h2">RRA als Stilelement im Industrial Style</h2>
-            <p class="text">Die richtige Belüftung ist elementar, wenn Frontcooking praktiziert wird. Nebenbei sollen die Lüftungsanlagen als Designelement dienen.</p>
+            <p class="text">
+              Die richtige Belüftung ist elementar, wenn Frontcooking praktiziert wird. Nebenbei sollen die
+              Lüftungsanlagen als Designelement dienen.
+            </p>
             <a class="btn btn--secondary" href="javascript:void(0)">Mehr erfahren</a>
           </div>
 
           <div class="slide__meta col-12 col-md-7 ml-auto">
             <div class="slide__image-wrapper">
-              <img class="slide__image" src="/styleguide/src/assets/images/pictures/kampmann-industrial-design.png"/>
+              <img class="slide__image" src="/src/assets/images/pictures/kampmann-industrial-design.png" />
             </div>
           </div>
         </div>
@@ -23,15 +26,24 @@
         <div class="row slide__wrapper-inner">
           <div class="slide__meta col-12 col-md-6 mr-auto">
             <div class="slide__image-wrapper">
-              <img class="slide__image" src="/styleguide/src/assets/images/pictures/kampmann-industrial-design.png"/>
+              <img class="slide__image" src="/src/assets/images/pictures/kampmann-industrial-design.png" />
             </div>
           </div>
 
           <div class="slide__content col-12 col-md-5">
             <h2 class="headline headline--h2">RRA als Stilelement im Industrial Style</h2>
-            <p class="text">Die richtige Belüftung ist elementar, wenn Frontcooking praktiziert wird. Nebenbei sollen die Lüftungsanlagen als Designelement dienen.</p>
-            <p class="text">Die richtige Belüftung ist elementar, wenn Frontcooking praktiziert wird. Nebenbei sollen die Lüftungsanlagen als Designelement dienen.</p>
-            <p class="text">Die richtige Belüftung ist elementar, wenn Frontcooking praktiziert wird. Nebenbei sollen die Lüftungsanlagen als Designelement dienen.</p>
+            <p class="text">
+              Die richtige Belüftung ist elementar, wenn Frontcooking praktiziert wird. Nebenbei sollen die
+              Lüftungsanlagen als Designelement dienen.
+            </p>
+            <p class="text">
+              Die richtige Belüftung ist elementar, wenn Frontcooking praktiziert wird. Nebenbei sollen die
+              Lüftungsanlagen als Designelement dienen.
+            </p>
+            <p class="text">
+              Die richtige Belüftung ist elementar, wenn Frontcooking praktiziert wird. Nebenbei sollen die
+              Lüftungsanlagen als Designelement dienen.
+            </p>
             <a class="btn btn--secondary" href="javascript:void(0)">Mehr erfahren</a>
           </div>
         </div>
@@ -43,13 +55,16 @@
         <div class="row slide__wrapper-inner">
           <div class="slide__content col-12 col-md-5">
             <h2 class="headline headline--h2">RRA als Stilelement im Industrial Style</h2>
-            <p class="text">Die richtige Belüftung ist elementar, wenn Frontcooking praktiziert wird. Nebenbei sollen die Lüftungsanlagen als Designelement dienen.</p>
+            <p class="text">
+              Die richtige Belüftung ist elementar, wenn Frontcooking praktiziert wird. Nebenbei sollen die
+              Lüftungsanlagen als Designelement dienen.
+            </p>
             <a class="btn btn--secondary" href="javascript:void(0)">Mehr erfahren</a>
           </div>
 
           <div class="slide__meta col-12 col-md-7 ml-auto">
             <div class="slide__image-wrapper">
-              <img class="slide__image" src="/styleguide/src/assets/images/pictures/kampmann-industrial-design.png"/>
+              <img class="slide__image" src="/src/assets/images/pictures/kampmann-industrial-design.png" />
             </div>
           </div>
         </div>
@@ -59,81 +74,81 @@
 
   <div class="slider__dots">
     <div class="slider__dots-wrapper container d-flex">
-      <div data-slide='0' class="slider__dot slider__dot--active"></div>
-      <div data-slide='1' class="slider__dot"></div>
-      <div data-slide='2' class="slider__dot"></div>
+      <div data-slide="0" class="slider__dot slider__dot--active"></div>
+      <div data-slide="1" class="slider__dot"></div>
+      <div data-slide="2" class="slider__dot"></div>
     </div>
   </div>
 </section>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    const sliders = document.querySelectorAll('.slider');
+  document.addEventListener('DOMContentLoaded', function (event) {
+    const sliders = document.querySelectorAll('.slider')
 
-    const adjustHeight = (slider)=>{
+    const adjustHeight = (slider) => {
       const slideFirst = slider.querySelector(`.slider__slide--active`)
       slider.style.height = slideFirst.offsetHeight + 'px'
     }
 
-    const slide = (slider, slidesCount)=>{
+    const slide = (slider, slidesCount) => {
       const dotActive = slider.querySelector('.slider__dot--active')
       const slideActive = parseInt(dotActive.dataset.slide)
-      const slideNext = slideActive==slidesCount ? 0 : slideActive + 1
+      const slideNext = slideActive == slidesCount ? 0 : slideActive + 1
       const dotNext = slider.querySelector(`.slider__dot[data-slide='${slideNext}']`)
 
       dotNext.click()
     }
 
-    if(sliders){
-      sliders.forEach((slider, index)=>{
-        window.addEventListener('load',()=>{
+    if (sliders) {
+      sliders.forEach((slider, index) => {
+        window.addEventListener('load', () => {
           adjustHeight(slider)
         })
 
-        window.addEventListener('resize', ()=>{
+        window.addEventListener('resize', () => {
           adjustHeight(slider)
         })
 
         const slideContent = slider.querySelector('.slide__content')
         const dotsWrapper = slider.querySelector('.slider__dots')
         const dots = slider.querySelectorAll('.slider__dot')
-        const slidesCount = dots.length - 1;
+        const slidesCount = dots.length - 1
 
         //Autoplay
-        var wait = 
-          setInterval(()=>{
-            slide(slider, slidesCount)
-          },5000)
+        var wait = setInterval(() => {
+          slide(slider, slidesCount)
+        }, 5000)
 
         //PauseOnHover
         const elemsToPauseOnHover = [slideContent, dotsWrapper]
-        elemsToPauseOnHover.forEach((el, index)=>{
-          el.addEventListener('mouseover',(e)=>{
+        elemsToPauseOnHover.forEach((el, index) => {
+          el.addEventListener('mouseover', (e) => {
             clearInterval(wait)
           })
 
-          el.addEventListener('mouseout',(e)=>{
-            wait = 
-              setInterval(()=>{
-                slide(slider, slidesCount)
-              },5000)
+          el.addEventListener('mouseout', (e) => {
+            wait = setInterval(() => {
+              slide(slider, slidesCount)
+            }, 5000)
           })
         })
 
         //Navigation Click
-        slider.addEventListener('click',(e)=>{
+        slider.addEventListener('click', (e) => {
           const dot = e.target.closest('.slider__dot')
 
-          if(dot && !dot.classList.contains('slider__dot--active')){
-            slider.dispatchEvent(new CustomEvent('slidechange', {
-              detail:{
-                slideTarget: parseInt(dot.dataset.slide)
-              }
-            }));
+          if (dot && !dot.classList.contains('slider__dot--active')) {
+            slider.dispatchEvent(
+              new CustomEvent('slidechange', {
+                detail: {
+                  slideTarget: parseInt(dot.dataset.slide),
+                },
+              })
+            )
           }
         })
 
-        slider.addEventListener('slidechange',(e)=>{
+        slider.addEventListener('slidechange', (e) => {
           //Navigation Change
           const dotPrevActive = slider.querySelector('.slider__dot--active')
           dotPrevActive.classList.remove('slider__dot--active')
@@ -151,9 +166,9 @@
           //Slider Growth
           slider.style.height = slideActive.offsetHeight + 'px'
           //Slider Position
-          slider.style.setProperty('--active-slide', e.detail.slideTarget);
+          slider.style.setProperty('--active-slide', e.detail.slideTarget)
         })
       })
     }
-  });
+  })
 </script>
