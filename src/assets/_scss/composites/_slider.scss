@@ -16,7 +16,7 @@
 
   &__wrapper{  
     display:flex;
-    align-items:flex-start;
+    // align-items:flex-start;
   }
 
   &__slide{
@@ -77,9 +77,20 @@
 
     &__wrapper{
       position:relative;
+      height: 100%;
+    }
+
+    &__wrapper-inner{
+      align-items: flex-start;
+      height: 100%;
     }
 
     &__content{
+      align-self: flex-end;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
       padding-top:$grid-gutter-width*3;
       padding-bottom:$grid-gutter-width*4.5;
     }
@@ -112,7 +123,12 @@
     }
 
     .slide{
+      &__wrapper-inner{
+        align-items: stretch;
+      }
+
       &__content{
+        align-self: stretch;
         padding-top:$grid-gutter-width*6;
         padding-bottom:$grid-gutter-width*8;
       }
