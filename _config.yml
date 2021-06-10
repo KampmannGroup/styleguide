@@ -23,7 +23,7 @@ destination: _site ## Output folder
 ## These settings are used in when generating the style guide shell
 sg_title: Kampmann Styleguide
 sg_version: 3.0
-sg_keywords: jekyll, style guide, playbook, design, code
+sg_keywords: style guide, kampmann, design, code
 sg_author: Matthew Elsom
 sg_description: Dies ist der Digital Styleguide der Kampmann Group aus Lingen (Ems).
 sg_language: de
@@ -97,7 +97,7 @@ defaults:
 
 pattern_author: AUTHOR NAME ## used in <head> tag
 pattern_description: DESCRIPTION ## used in <head> tag
-pattern_language: en ## used in <html> tag
+pattern_language: de ## used in <html> tag
 pattern_favicon: /_includes/assets/images/icon.ico
 pattern_styles: ## add style locations here
   - /src/compiled/assets/css/style.css
