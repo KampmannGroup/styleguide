@@ -521,6 +521,7 @@
       .subnavigation {
         height: 0;
         overflow: hidden;
+        overflow-y:auto;
         box-sizing: content-box;
         padding-bottom: $grid-gutter-width;
         margin-top: calc(48px + #{$grid-gutter-width});
