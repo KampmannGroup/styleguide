@@ -367,7 +367,7 @@
 
       .subnavigation {
         display: none;
-        transition: 0.3s;
+        // transition: 0.3s;
         margin-left: calc(-100% * var(--active-level));
         position: absolute;
         height: 100%;
