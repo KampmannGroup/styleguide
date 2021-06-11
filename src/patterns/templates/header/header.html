@@ -1021,6 +1021,22 @@ control: exclude
     })
   }
 
+  var subnavigations = document.querySelectorAll('.subnavigation')
+
+  const setHeaderHeight = () => {
+    if (subnavigations) {
+      subnavigations.forEach((subnavigation) => {
+        console.log(window.innerHeight)
+        console.log(document.querySelector('.header__wrapper').offsetHeight)
+
+        const subnavheight = window.innerHeight - document.querySelector('.header__wrapper').offsetHeight + 'px'
+        subnavigation.style.height = subnavheight
+      })
+    }
+  }
+  window.addEventListener('load', setHeaderHeight)
+  window.addEventListener('resize', setHeaderHeight)
+
   const navigation_elements = document.querySelectorAll('.navigation__element')
 
   if (navigation_elements) {
@@ -1050,22 +1066,21 @@ control: exclude
                 targets.push(list_children)
               }
 
-              if (targets) {
-                var maxheight = 0
-                targets.forEach((el, index) => {
-                  if (el.scrollHeight > maxheight) {
-                    maxheight = el.scrollHeight
-                  }
-                })
+              // if(targets){
+              //   var maxheight = 0
+              //   targets.forEach((el, index)=>{
+              //     if(el.scrollHeight > maxheight){
+              //       maxheight = el.scrollHeight
+              //     }
+              //   })
 
-                subnavigation.style.height = maxheight + 'px'
-              }
+              //   subnavigation.style.height = maxheight + "px"
+              // }
             } else {
-              subnavigation = element.querySelector('.subnavigation')
-
-              if (subnavigation) {
-                subnavigation.style.height = subnavigation.querySelector('.navigation__list').scrollHeight + 'px'
-              }
+              // subnavigation = element.querySelector('.subnavigation')
+              // if(subnavigation){
+              //   subnavigation.style.height = subnavigation.querySelector('.navigation__list').scrollHeight + "px"
+              // }
             }
           }
         }
