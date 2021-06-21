@@ -148,6 +148,88 @@ Apparently we had reached a great height in the atmosphere, for the sky was a de
   </div>
 </section>
 
+<section class="sg_pattern" id="headlines">
+  <div class="title">
+    <a class="permalink" href="#headlines"><i class="icon" data-icon="link"></i></a><div class="header typo_eagle">Headlines</div> 
+    <div class="sg_label ready">ready</div>
+  </div>
+  <div class="sg_pattern_control" data-styles="assets/_scss/base/_headline.scss">
+    <a href="javascript:void(0)" title="View Source Code" class="sg_helper_code button"><i class="icon" data-icon="code"></i></a>  
+    <a href="" title="Open in new window" class="sg_helper_open button" target="_blank"><i class="icon" data-icon="screen_share"></i></a>
+  </div>
+  <div class="sg_viewport">
+    <iframe frameborder="0" scrolling="no" src="/src/patterns/components/heading/headlines.html" allowfullscreen=""></iframe>
+  </div>
+  <div class="sg_code" data-styles="assets/_scss/base/_headline.scss">
+    <!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
+    
+    
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"headline headline--h1"</span><span class="nt">&gt;</span>Headline 1<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"headline headline--h2"</span><span class="nt">&gt;</span>Headline 2<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"headline headline--h3"</span><span class="nt">&gt;</span>Headline 3<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"headline headline--h4"</span><span class="nt">&gt;</span>Headline 4<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"headline headline--h5"</span><span class="nt">&gt;</span>Headline 5<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;h6</span> <span class="na">class=</span><span class="s">"headline headline--h6"</span><span class="nt">&gt;</span>Headline 6<span class="nt">&lt;/h6&gt;</span></code></pre></figure>
+
+
+
+
+  
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss">  
+<span class="nc">.headline</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary</span><span class="p">;</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="nv">$font-family-base</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="nv">$headings-line-height</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">700</span><span class="p">;</span>
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">1em</span><span class="p">;</span>
+
+  <span class="k">&amp;</span><span class="nt">--h1</span><span class="o">,</span> <span class="nt">h1</span><span class="o">,</span> <span class="nc">.h1</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$h1-font-size</span><span class="p">;</span>
+    <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">2</span><span class="mi">.5rem</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">--h2</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nc">.h2</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$h2-font-size</span><span class="p">;</span>
+    <span class="nl">line-height</span><span class="p">:</span> <span class="m">1</span><span class="mi">.278</span><span class="p">;</span>
+    <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">1</span><span class="mi">.5rem</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">--h3</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nc">.h3</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$h3-font-size</span><span class="p">;</span>
+    <span class="nl">line-height</span><span class="p">:</span> <span class="m">1</span><span class="mi">.385</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
+    <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">1</span><span class="mi">.125rem</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">--h4</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nc">.h4</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$h4-font-size</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
+    <span class="nl">line-height</span><span class="p">:</span> <span class="m">1</span><span class="mi">.333</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">--h5</span><span class="o">,</span> <span class="nt">h5</span><span class="o">,</span> <span class="nc">.h5</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$h5-font-size</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
+    <span class="nl">line-height</span><span class="p">:</span> <span class="m">1</span><span class="mi">.5</span><span class="p">;</span>
+    <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
+    <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">0</span><span class="mi">.5px</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">--h6</span><span class="o">,</span> <span class="nt">h6</span><span class="o">,</span> <span class="nc">.h6</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$h6-font-size</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">400</span><span class="p">;</span>
+    <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
+    <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">1</span><span class="mi">.38px</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+  </code></pre></figure>
+
+
+  </div>
+</section>
+
 <section class="sg_pattern" id="running-text">
   <div class="title">
     <a class="permalink" href="#running-text"><i class="icon" data-icon="link"></i></a><div class="header typo_eagle">Running text</div> 
