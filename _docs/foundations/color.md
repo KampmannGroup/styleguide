@@ -1,6 +1,6 @@
 ---
-title: Color
-info: Colors used in this system. 
+title: Farben
+info: Verwendete Farben 
 ---
 
 {% include pattern_block.html url='/src/patterns/foundations/color/accent-colors.html' %}

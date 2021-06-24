@@ -1,6 +1,5 @@
 ---
-title: Typography
-info: Circular font has been selected as the primary fonts for this system.
+title: Typografie
 ---
 
 {% include pattern_block.html url='/src/patterns/foundations/typography/circular.html' %}
@@ -13,5 +12,5 @@ info: Circular font has been selected as the primary fonts for this system.
 
 ## Fallback
 
-A `sans-serif` fallback font is used incase [@font-face](https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp) is not supported in the target browser. 
+Eine `sans-serif` wird als Fallback-Font verwendet, falls [@font-face] im Browser nicht unterstützt wird. (https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp)
 

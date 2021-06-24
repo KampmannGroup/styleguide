@@ -1,6 +1,6 @@
 ---
-title: Variables
-info: Blockquotes are used to emphasise a portion of the body content.
+title: Variablen
+info: CSS-Variablen werden verwendet, um eine Änderung nur einmal pflegen zu müssen.
 ---
 
 {% include pattern_block.html url='/src/patterns/foundations/variables/variables.html' %}

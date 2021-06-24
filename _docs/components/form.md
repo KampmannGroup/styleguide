@@ -1,6 +1,6 @@
 ---
-title: Forms
-info: Form Elements
+title: Formulare
+info: Formular Elemente
 nav: true
 ---
 

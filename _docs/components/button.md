@@ -1,6 +1,6 @@
 ---
-title: Button
-info: Use buttons to signal actions.
+title: Buttons
+info: Verwenden Sie Buttons um Interaktionen zu highlighten.
 nav: true
 ---
 
