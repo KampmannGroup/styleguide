@@ -1,3 +1,0 @@
-# Kampmann Digital Styleguide
-
-TBF
