@@ -4,7 +4,7 @@ title: Typografie
 
 {% include pattern_block.html url='/src/patterns/foundations/typography/circular.html' %}
 
-{% include pattern_block.html url='/src/patterns/components/heading/headlines.html' %}
+{% include pattern_block.html url='/src/patterns/components/headings/headlines.html' %}
 
 {% include pattern_block.html url='/src/patterns/components/running-text/running-text.html' %}
 
