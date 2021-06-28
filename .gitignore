@@ -154,4 +154,5 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/macos,jekyll,node
 
 src/compiled/*
+!src/compiled/.gitkeep 
 _site/*
