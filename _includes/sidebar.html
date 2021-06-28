@@ -4,7 +4,7 @@
     <img class="logo__svg" src="{{ site.baseurl }}/styleguide/branding/logo-styleguide.svg">
   </a>
   <ul>
-    <li><a href="{{ site.baseurl }}/index.html"{% if page.url == '/' %} class="active"{% endif %}>Overview</a></li>
+    <li><a href="{{ site.baseurl }}/index.html"{% if page.url == '/' %} class="active"{% endif %}>Willkommen</a></li>
   </ul>
   {% assign about = site.docs | where: 'type', 'about' | sort: 'url' %}
   <div class="group">
