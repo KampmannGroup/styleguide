@@ -1,5 +1,5 @@
 ---
-title: Accent Colors
+title: Akzentfarben
 styles: assets/_scss/abstracts/_variables.scss
 maturity: ready
 control: exclude

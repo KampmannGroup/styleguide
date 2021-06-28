@@ -1,5 +1,5 @@
 ---
-title: Text Colors
+title: Textfarben
 styles: assets/_scss/abstracts/_variables.scss
 maturity: ready
 control: exclude

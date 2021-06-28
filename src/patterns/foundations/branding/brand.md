@@ -33,6 +33,7 @@ li {
   background-color: #ababab;
   border: 1px solid whitesmoke;
   margin-bottom: 1rem;
+  padding: 30px;
 }
 img {
   max-height: 100%;
@@ -47,7 +48,7 @@ p {
     <li>
       <div class="image"><img src="{{ site.baseurl }}/{{ brand }}"/></div>
       <p class="header">{{ item.name }}</p>
-      <p>{{ brand }}</p>
+      <p><a target="__blank" href="{{ site.baseurl }}/{{ brand }}">{{ brand }}</a></p>
     </li>
   {% endfor %}
 {% endfor %}

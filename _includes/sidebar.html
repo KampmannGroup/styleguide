@@ -15,14 +15,14 @@
   </div>
   {% assign foundations = site.docs | where: 'type', 'foundation' | sort: 'url' %}
   <div class="group">
-    <div class="group_title">Foundations</div>
+    <div class="group_title">Grundlagen</div>
     <ul>{% for doc in foundations %}
       <li><a href="{{ site.baseurl }}{{ doc.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ doc.title }}</a></li>
     {% endfor %}</ul>
   </div>
   {% assign components = site.docs | where: 'type', 'component' | sort: 'url' %}
   <div class="group">
-    <div class="group_title">Components</div>
+    <div class="group_title">Komponenten</div>
     <ul>{% for doc in components %}
       <li><a href="{{ site.baseurl }}{{ doc.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ doc.title }}</a></li>
     {% endfor %}</ul>
