@@ -5,6 +5,8 @@ info: Dieser digitale Styleguide wurde erstellt, um Designer, Entwickler und Pro
 nav: false
 ---
 
+# 👋 Genau mein Style!
+
 ## Ansprechpartner
 
 Bei Rückfragen zu den hier visualisierten Styles wenden Sie sich bitte per E-Mail an [Jens Reisenbichler](mailto:jens.reisenbichler@kampmann.de) oder [Frederik Vollmer](mailto:frederik.vollmer@kampmann.de)

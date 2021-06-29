@@ -1,27 +1,18 @@
 ---
-title: Getting Started
-info: How to setup and configure this Jekyll-based style guide boilerplate.
+title: Einführung
+info: Empfindung und Technik, Emotion und Präzision. Das Produkt Klima verkörpert Gefühl und dient dem Wohlbefinden des Menschen. Der Mensch rückt in den Mittelpunkt, Klimazonen werden sichtbar. Kampmanns neues Design ist modern, flächig, vielfarbig und eine Mischung aus Technologie und Persönlichkeit.
 nav: true
 ---
 
-# Installation
+# Genau mein Klima.
 
-To start you’ll need to download and install [Jekyll](http://jekyllrb.com/) (3.1 or higher) and the source code from [Github](https://github.com/matthewelsom/jekyll-style-guide). 
+## Die Herleitung des Designs
 
+Der Claim umfasst die drei konzeptionellen Säulen der Markengestaltung. Die technische Genauigkeit, die durch Kampmanns technologischen Vorsprung möglich ist.
 
-><i class="icon red" data-icon="info"></i>Sample UI patterns and documentation have been included in this tool to indicate what a finished Style Guide could look like. You can remove the files from `src/` and the `CNAME` file to start from scratch.
+Die individuelle Empfindung des Einzelnen, denn jeder nimmt seine Umgebung unterschiedlich wahr. Und natürlich das Klima selbst, die Kernleistung aller Kampmann-Produkte, hier sichtbar gemacht durch verschiedene Temperaturströme.
 
-
-To serve the files locally run the following code in terminal: 
-
-{% highlight terminal %}
-$ cd /path/to/local/folder/
-jekyll serve
-{% endhighlight%}
-
-Once your style guide is complete you can publish it to [Github Pages](https://pages.github.com/) like any other Jekyll website.
-
-
+<!--
 # Configuration
 
 {% highlight directory %}
@@ -308,7 +299,7 @@ Coming Soon
 
 
 
-<!--
+
 ## Includes
 
 - Includes are snippets of code used to help generate the style guide pages. 
