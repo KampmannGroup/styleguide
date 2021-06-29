@@ -7,9 +7,12 @@ $black:             #000000;
 $blue:              #0E2249;
 $green:             #95C11F;
 $teal:              #008F8C;
+$aloevera:          #79C08B;
 $cyan:              #58C7DA;
 $gray:              #CECECE;
 $gray-dark:         #D7D5CD;
+$gray-medium:       #F0EFEC;
+$gray-light:        #F1F0Fe;
 
 $primary:           $blue;
 $secondary:         $white;
@@ -20,6 +23,25 @@ $body-color:        #8A8882;
 
 $color-contrast-dark:      $dark;
 $color-contrast-light:     $light;
+
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "aloevera":   $aloevera,
+  "white":      $white,
+  "gray":       $gray,
+  "gray-dark":  $gray-dark,
+  "gray-medium":$gray-medium,
+  "gray-light": $gray-light
+)
 
 
 // Font
