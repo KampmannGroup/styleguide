@@ -26,12 +26,6 @@ $color-contrast-light:     $light;
 
 $colors: (
   "blue":       $blue,
-  "indigo":     $indigo,
-  "purple":     $purple,
-  "pink":       $pink,
-  "red":        $red,
-  "orange":     $orange,
-  "yellow":     $yellow,
   "green":      $green,
   "teal":       $teal,
   "cyan":       $cyan,
@@ -40,8 +34,8 @@ $colors: (
   "gray":       $gray,
   "gray-dark":  $gray-dark,
   "gray-medium":$gray-medium,
-  "gray-light": $gray-light
-)
+  "gray-light": $gray-light,
+);
 
 
 // Font
