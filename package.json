@@ -1,0 +1,22 @@
+{
+  "name": "kampmann-styleguide",
+  "version": "1.0.0",
+  "description": "TBF",
+  "main": "index.js",
+  "scripts": {
+    "build:root": "jekyll build",
+    "build:src": "cd src && jekyll build",
+    "build:all": "npm run build:root && npm run build:src",
+    "deploy": "npm run build:all && git add -A && git commit -m 'Run build' && git push deployment"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/muuuh/kampmann-styleguide.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/muuuh/kampmann-styleguide/issues"
+  },
+  "homepage": "https://bitbucket.org/muuuh/kampmann-styleguide#readme"
+}
