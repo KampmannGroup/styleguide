@@ -2,8 +2,12 @@
   "name": "kampmann-styleguide",
   "version": "1.0.0",
   "description": "TBF",
-  "main": "index.js",
+  "module": "dist/kampmann.esm.min.js",
+  "browser": "dist/kampmann.umd.min.js",
+  "main": "dist/kampmann.esm.min.js",
   "scripts": {
+    "build:package": "rollup -c",
+    "watch:package": "rollup -c -w",
     "build:root": "jekyll build",
     "build:src": "cd src && jekyll build",
     "build:all": "npm run build:root && npm run build:src",
@@ -18,5 +22,12 @@
   "bugs": {
     "url": "https://bitbucket.org/muuuh/kampmann-styleguide/issues"
   },
-  "homepage": "https://bitbucket.org/muuuh/kampmann-styleguide#readme"
+  "homepage": "https://bitbucket.org/muuuh/kampmann-styleguide#readme",
+  "devDependencies": {
+    "rollup": "^2.52.7",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.35.1"
+  }
 }
