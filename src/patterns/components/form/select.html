@@ -1,6 +1,7 @@
 ---
 title: Select
 styles: assets/_scss/components/_form.scss
+script: /src/assets/js/form.js
 maturity: ready
 inlinestyles: '<style>.form{padding-top:30px;}</style>'
 ---
@@ -22,53 +23,6 @@ inlinestyles: '<style>.form{padding-top:30px;}</style>'
   </div>
 </div>
 
-<script>
-  const selects = document.querySelectorAll('.formelement--select')
-
-  if(selects){
-    //Hide list on body click
-    document.querySelector('body').addEventListener('click',(e)=>{
-      const select = e.target.closest('.formelement--select')
-      if(!select){
-        selects.forEach((select)=>{
-          select.classList.remove('formelement--active')
-        })
-      }
-    })
-
-    selects.forEach((select)=>{
-      select.addEventListener('click', (e)=>{
-        const option = e.target.closest('.formelement__option:not(.formelement__option--selected)')
-        const select = e.target.closest('.formelement--select')
-        const wrapper = e.target.closest('.formelement__wrapper')
-        const value = wrapper.querySelector('.formelement__value')
-        const selected = wrapper.querySelector('.formelement__selected')
-
-        if(option && value){
-          //Insert clicked option into selected area
-          const clone = option.cloneNode(true)
-          clone.classList.add('formelement__option--selected')
-
-          selected.innerHTML = ""
-          selected.append(clone)
-
-          //Change hidden value
-          value.value = option.dataset.value
-
-          //Change select class to style ad active
-          select.classList.remove('formelement--placeholder')
-        }
-
-        //Toggle showing options list
-        if(select.classList.contains('formelement--active')){
-          select.classList.remove('formelement--active')
-        }
-        else{
-          select.classList.add('formelement--active')
-        }
-      })
-    })
-  }
-</script>
+<script src="{{ page.script }}"></script>
 
 {{ page.inlinestyles }}

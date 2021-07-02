@@ -1,6 +1,7 @@
 ---
 title: Text
 styles: assets/_scss/components/_form.scss
+script: /src/assets/js/form.js
 maturity: ready
 inlinestyles: '<style>.form{padding-top:30px;}</style>'
 ---
@@ -12,36 +13,6 @@ inlinestyles: '<style>.form{padding-top:30px;}</style>'
   </div>
 </div>
 
-<script>
-  const wrappers = document.querySelectorAll('.formelement__wrapper')
-
-  if(wrappers){
-    //Remove active class on body click
-    document.querySelector('body').addEventListener('click',(e)=>{
-      const wrapper = e.target.closest('.formelement__wrapper')
-
-      if(!wrapper){
-        wrappers.forEach((wrapper)=>{
-          wrapper.classList.remove('formelement__wrapper--active')
-        })
-      }
-    })
-
-    wrappers.forEach((wrapper)=>{
-      wrapper.addEventListener('click', (e)=>{
-        const wrapper = e.target.closest('.formelement__wrapper')
-        //Toggle showing options list
-        if(!wrapper.classList.contains('formelement__wrapper--active')){
-          wrapper.classList.add('formelement__wrapper--active')
-        }
-        else{
-          if(wrapper.classList.contains('formelement__wrapper--select')){
-            wrapper.classList.remove('formelement__wrapper--active')
-          }
-        }
-      })
-    })
-  }
-</script>
+<script src="{{ page.script }}"></script>
 
 {{ page.inlinestyles }}
