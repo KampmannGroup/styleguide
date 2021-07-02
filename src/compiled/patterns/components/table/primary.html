@@ -1,0 +1,144 @@
+<table class="table" cellspacing="0" cellpadding="0">
+  <tbody class="table__wrapper">
+    <tr class="table__row table__row--header">
+      <th data-target="title" class="table__head table__head--primary table__head--title">Titel<span class="table__sort table__sort--asc">ASC</span><span class="table__sort table__sort--desc">DESC</span></th>
+      <th data-target="type" class="table__head table__head--primary table__head--type">Typ<span class="table__sort table__sort--asc">ASC</span><span class="table__sort table__sort--desc">DESC</span></th>
+      <th data-target="language" class="table__head table__head--primary table__head--language">Sprache<span class="table__sort table__sort--asc">ASC</span><span class="table__sort table__sort--desc">DESC</span></th>
+      <th data-target="mime" class="table__head table__head--primary table__head--mime">Dateityp<span class="table__sort table__sort--asc">ASC</span><span class="table__sort table__sort--desc">DESC</span></th>
+    </tr>
+
+    <tr class="table__row table__row--content">
+      <td data-target="title" class="table__content table__content--title">2-Stufen-Drehschalter, Typ 30049</td>
+      <td data-target="type" class="table__content table__content--type">Montageanleitung</td>
+      <td data-target="language" class="table__content table__content--language">Deutsch</td>
+      <td data-target="mime" class="table__content table__content--mime">PDF (142 kB)</td>
+    </tr>
+
+    <tr class="table__row table__row--content">
+      <td data-target="title" class="table__content table__content--title">2-Stufen-Drehschalter, Typ 30051</td>
+      <td data-target="type" class="table__content table__content--type">Montageanleitung</td>
+      <td data-target="language" class="table__content table__content--language">Deutsch</td>
+      <td data-target="mime" class="table__content table__content--mime">PDF (142 kB)</td>
+    </tr>
+
+    <tr class="table__row table__row--content">
+      <td data-target="title" class="table__content table__content--title">2-Stufen-Drehstromsteuerung, Typ 30277</td>
+      <td data-target="type" class="table__content table__content--type">Montageanleitung</td>
+      <td data-target="language" class="table__content table__content--language">Spanisch</td>
+      <td data-target="mime" class="table__content table__content--mime">PDF (142 kB)</td>
+    </tr>
+
+    <tr class="table__row table__row--content">
+      <td data-target="title" class="table__content table__content--title">350 Anleitung KaClima NK 91-171</td>
+      <td data-target="type" class="table__content table__content--type">Montageanleitung</td>
+      <td data-target="language" class="table__content table__content--language">Deutsch</td>
+      <td data-target="mime" class="table__content table__content--mime">PDF (158 kB)</td>
+    </tr>
+
+    <tr class="table__row table__row--content">
+      <td data-target="title" class="table__content table__content--title">5-Stufen-Drehstromsteuerung, Typ 3075*</td>
+      <td data-target="type" class="table__content table__content--type">Montageanleitung</td>
+      <td data-target="language" class="table__content table__content--language">Deutsch</td>
+      <td data-target="mime" class="table__content table__content--mime">PDF (140 kB)</td>
+    </tr>
+
+    <tr class="table__row table__row--content">
+      <td data-target="title" class="table__content table__content--title">Anbindungskonzept KaControl C1</td>
+      <td data-target="type" class="table__content table__content--type">Montageanleitung</td>
+      <td data-target="language" class="table__content table__content--language">Deutsch</td>
+      <td data-target="mime" class="table__content table__content--mime">PDF (142 kB)</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function (event) {
+    const tables = document.querySelectorAll('.table')
+
+    if(tables){
+      tables.forEach((table, index)=>{
+        const table_body = table.querySelector("tbody")
+
+        //Mobile
+        let isMobile = false;
+
+        const mobilizeTable = ()=>{
+          if(window.innerWidth < 768){
+            if(!isMobile){
+              const table_heads = table.querySelectorAll(".table__head[data-target]")
+
+              if(table_heads){
+                table_heads.forEach((table_head, index)=>{
+                  const target = table_head.dataset.target
+                  const table_content_targets = table.querySelectorAll(`.table__content[data-target="${target}"]`)
+
+                  if(table_content_targets){
+                    table_content_targets.forEach((table_content, index)=>{
+                      const table_head_clone = table_head.cloneNode(true)
+                      table_head_clone.classList.add("--mobile")
+
+                      table_content.parentNode.insertBefore(table_head_clone, table_content)
+                    })
+                  }
+                })
+              }
+
+              isMobile=true
+            }
+          }
+          else{
+            const table_heads = table.querySelectorAll(".table__head.--mobile")
+
+            if(table_heads){
+              table_heads.forEach((table_head)=>{
+                table_head.remove()
+              })
+            }
+
+            isMobile=false
+          }
+        }
+        window.addEventListener("load", mobilizeTable)
+        window.addEventListener("resize", mobilizeTable)
+
+        //Sorting
+        table.addEventListener("click", (e)=>{
+          const table_head = e.target.closest('.table__head[data-target]')
+          const table_sort = e.target.closest('.table__sort')
+
+          if(table_head && table_sort){
+            const target = table_head.dataset.target
+            const table_content_targets = table.querySelectorAll(`.table__content[data-target="${target}"]`)
+
+            const array_table_content_targets = Array.prototype.slice.call(table_content_targets, 0)
+            array_table_content_targets.sort(function(a,b) {
+                var aContent = a.innerText;
+                var bContent = b.innerText;
+                if (aContent > bContent) return 1;
+                if (aContent < bContent) return -1;
+                return 0;
+            });
+            
+            if(e.target.closest(".table__sort--desc")){
+              for(const [index, item] of array_table_content_targets.entries()){
+                const table_row = item.closest(".table__row")
+                table_body.prepend(table_row)
+              }
+
+              const table_row_head = table_head.closest(".table__row")
+              table_body.prepend(table_row_head)
+            }
+            else if(e.target.closest(".table__sort--asc")){
+              for(const [index, item] of array_table_content_targets.entries()){
+                const table_row = item.closest(".table__row")
+                table_body.append(table_row)
+              }
+            }
+          }
+        })
+      })
+    }
+  })
+</script>
+
