@@ -8,7 +8,7 @@ export default {
   plugins: [
     terser(),
     scss({
-      output: 'dist/kampmann.min.css',
+      output: 'dist/css/kampmann.min.css',
       outputStyle: 'compressed',
     }),
     copy({
