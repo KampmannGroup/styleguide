@@ -1,5 +1,5 @@
 {
-  "name": "kampmann-styleguide",
+  "name": "@kampmanngroup/styleguide",
   "version": "1.0.0",
   "description": "TBF",
   "module": "dist/js/kampmann.esm.min.js",
@@ -15,14 +15,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/muuuh/kampmann-styleguide.git"
+    "url": "git+ssh://git@github.com:KampmannGroup/styleguide.git"
   },
-  "author": "MUUUH! Digital",
-  "private": true,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "author": "Kampmann Group",
   "bugs": {
     "url": "https://bitbucket.org/muuuh/kampmann-styleguide/issues"
   },
-  "homepage": "https://bitbucket.org/muuuh/kampmann-styleguide#readme",
+  "homepage": "https://github.com/KampmannGroup/styleguide#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.14.7",
     "@rollup/plugin-babel": "^5.3.0",

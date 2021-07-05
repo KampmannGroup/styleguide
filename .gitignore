@@ -89,6 +89,7 @@ typings/
 
 # Optional npm cache directory
 .npm
+.npmrc
 
 node_modules
 
