@@ -13,7 +13,9 @@ export default {
       outputStyle: 'compressed',
     }),
     copy({
-      targets: [{ src: ['src/assets/fonts/**/*.woff', 'src/assets/fonts/**/*.woff2'], dest: 'dist/fonts' }],
+      targets: [
+        { src: ['src/assets/fonts/circular/*.woff', 'src/assets/fonts/circular/*.woff2'], dest: 'dist/fonts/circular' },
+      ],
     }),
     babel({ babelHelpers: 'bundled' }),
   ],
