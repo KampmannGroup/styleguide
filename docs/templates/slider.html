@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+ <html id="sg"  lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Kampmann Styleguide</title>
+    <meta name="description" content="Dies ist der Digital Styleguide der Kampmann Group aus Lingen (Ems).">
+    <meta name="keywords" content="style guide, kampmann, design, code">
+    <meta name="author" content="Matthew Elsom">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/styleguide/branding/favicon.ico">
+    <link rel="stylesheet" href="/styleguide/css/styleguide.css" media="screen">
+    <script src="/styleguide/js/libs/jquery-2.1.4.min.js"></script>
+    
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SKTQ5G2V59"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-SKTQ5G2V59');
+	</script>	
+    
+  </head>
+  <body id="sg">
+    <div class="sg-pusher">
+      <a href="javascript:void(0)" class="sg_sidebar_button"><i class="icon" data-icon="menu"></i></a>
+<div class="sg_sidebar">  
+  <a href="/index.html" class="logo">
+    <img class="logo__svg" src="/styleguide/branding/logo-styleguide.svg">
+  </a>
+  <ul>
+    <li><a href="/index.html">Willkommen</a></li>
+  </ul>
+  
+  <div class="group">
+    <div class="group_title">Gut zu wissen</div>
+    <ul>
+      <li><a href="/docs/about/01-getting-started.html">Einführung</a></li>
+    
+      <li><a href="/docs/about/03-maturity.html">Statusanzeige</a></li>
+    
+      <li><a href="/docs/about/04-roadmap.html">Roadmap</a></li>
+    </ul>
+  </div>
+  
+  <div class="group">
+    <div class="group_title">Grundlagen</div>
+    <ul>
+      <li><a href="/docs/foundations/branding.html">Branding</a></li>
+    
+      <li><a href="/docs/foundations/color.html">Farben</a></li>
+    
+      <li><a href="/docs/foundations/typography.html">Typografie</a></li>
+    
+      <li><a href="/docs/foundations/variables.html">Variablen</a></li>
+    </ul>
+  </div>
+  
+  <div class="group">
+    <div class="group_title">Komponenten</div>
+    <ul>
+      <li><a href="/docs/components/button.html">Buttons</a></li>
+    
+      <li><a href="/docs/components/form.html">Formulare</a></li>
+    
+      <li><a href="/docs/components/lists.html">Listen</a></li>
+    </ul>
+  </div>
+  
+  <div class="group">
+    <div class="group_title">Templates</div>
+    <ul>
+      <li><a href="/docs/templates/footer.html">Footer</a></li>
+    
+      <li><a href="/docs/templates/grid.html">Grid</a></li>
+    
+      <li><a href="/docs/templates/header.html">Header</a></li>
+    
+      <li><a href="/docs/templates/slider.html" class="active">Slider</a></li>
+    </ul>
+  </div>
+  
+  <ul></ul>
+</div>
+      <main class="sg-main">
+        <header id="mastheadArea" class="sg_masthead">
+  <div class="sg_contain">
+    <div class="head">
+      <div class="title header typo_ostrich">Slider</div>
+      
+    </div>
+    
+  </div>
+</header>
+<article id="documentationArea" class="sg_doc">
+  <div class="sg_contain">
+<section class="sg_pattern" id="teaser">
+  <div class="title">
+    <a class="permalink" href="#teaser"><i class="icon" data-icon="link"></i></a><div class="header typo_eagle">Teaser</div> 
+    <div class="sg_label draft">draft</div>
+  </div>
+  <div class="sg_pattern_control" data-styles="">
+    <a href="/src/patterns/templates/slider/teaser.html" title="Open in new window" class="sg_helper_open button" target="_blank"><i class="icon" data-icon="screen_share"></i></a>
+  </div>
+  
+  <div class="sg_viewport">
+    <iframe frameborder="0" scrolling="no" src="/src/patterns/templates/slider/teaser.html" allowfullscreen=""></iframe>
+  </div>
+  <div class="sg_code" data-styles="">
+    <!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
+    
+    
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"slider slider--teaser"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slider__wrapper"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-slide=</span><span class="s">"0"</span> <span class="na">class=</span><span class="s">"slider__slide slider__slide--teal slide slider__slide--active"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container slide__wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row slide__wrapper-inner"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slide__content col-12 col-md-4"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"headline headline--h2"</span><span class="nt">&gt;</span>RRA als Stilelement im Industrial Style<span class="nt">&lt;/h2&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+              Die richtige Belüftung ist elementar, wenn Frontcooking praktiziert wird. Nebenbei sollen die
+              Lüftungsanlagen als Designelement dienen.
+            <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--secondary"</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span><span class="nt">&gt;</span>Mehr erfahren<span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slide__meta col-12 col-md-7 ml-auto"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slide__image-wrapper"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"slide__image"</span> <span class="na">src=</span><span class="s">"/src/assets/images/pictures/kampmann-industrial-design.png"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">data-slide=</span><span class="s">"1"</span> <span class="na">class=</span><span class="s">"slider__slide slider__slide--cyan slide"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container slide__wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row slide__wrapper-inner"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slide__meta col-12 col-md-6 mr-auto"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slide__image-wrapper"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"slide__image"</span> <span class="na">src=</span><span class="s">"/src/assets/images/pictures/kampmann-industrial-design.png"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slide__content col-12 col-md-5"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"headline headline--h2"</span><span class="nt">&gt;</span>RRA als Stilelement im Industrial Style<span class="nt">&lt;/h2&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+              Die richtige Belüftung ist elementar, wenn Frontcooking praktiziert wird. Nebenbei sollen die
+              Lüftungsanlagen als Designelement dienen.
+            <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+              Die richtige Belüftung ist elementar, wenn Frontcooking praktiziert wird. Nebenbei sollen die
+              Lüftungsanlagen als Designelement dienen.
+            <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+              Die richtige Belüftung ist elementar, wenn Frontcooking praktiziert wird. Nebenbei sollen die
+              Lüftungsanlagen als Designelement dienen.
+            <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--secondary"</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span><span class="nt">&gt;</span>Mehr erfahren<span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">data-slide=</span><span class="s">"2"</span> <span class="na">class=</span><span class="s">"slider__slide slider__slide--green slide"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container slide__wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row slide__wrapper-inner"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slide__content col-12 col-md-5"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"headline headline--h2"</span><span class="nt">&gt;</span>RRA als Stilelement im Industrial Style<span class="nt">&lt;/h2&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+              Die richtige Belüftung ist elementar, wenn Frontcooking praktiziert wird. Nebenbei sollen die
+              Lüftungsanlagen als Designelement dienen.
+            <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--secondary"</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span><span class="nt">&gt;</span>Mehr erfahren<span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slide__meta col-12 col-md-7 ml-auto"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slide__image-wrapper"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"slide__image"</span> <span class="na">src=</span><span class="s">"/src/assets/images/pictures/kampmann-industrial-design.png"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slider__dots"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slider__dots-wrapper container d-flex"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-slide=</span><span class="s">"0"</span> <span class="na">class=</span><span class="s">"slider__dot slider__dot--active"</span><span class="nt">&gt;&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-slide=</span><span class="s">"1"</span> <span class="na">class=</span><span class="s">"slider__dot"</span><span class="nt">&gt;&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-slide=</span><span class="s">"2"</span> <span class="na">class=</span><span class="s">"slider__dot"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"{{ page.script }}"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+
+
+
+
+  </div>
+</section>
+
+</div>
+</article>
+
+      </main>
+    </div>
+    <script src="/styleguide/js/main.js"></script>
+<script src="/styleguide/js/libs/iframeResizer.min.js"></script>
+<script src="/styleguide/js/resize.js"></script>
+  </body>
+</html>
