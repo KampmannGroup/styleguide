@@ -114,8 +114,8 @@ var subnavigations = document.querySelectorAll('.subnavigation')
 const setHeaderHeight = () => {
   if (subnavigations) {
     subnavigations.forEach((subnavigation) => {
-      console.log(window.innerHeight)
-      console.log(document.querySelector('.header__wrapper').offsetHeight)
+      // console.log(window.innerHeight)
+      // console.log(document.querySelector('.header__wrapper').offsetHeight)
 
       const subnavheight = window.innerHeight - document.querySelector('.header__wrapper').offsetHeight + 'px'
       subnavigation.style.height = subnavheight
