@@ -84,7 +84,7 @@ if (level_breadcrumbs) {
       const navigation = e.target.closest('.navigation')
       const subnavigation = e.target.closest('.subnavigation')
 
-      var level = breadcrumb.dataset.level - 1
+      let level = breadcrumb.dataset.level - 1
       if (window.innerWidth < 768) {
         level = breadcrumb.dataset.level
       }
@@ -109,14 +109,11 @@ if (level_breadcrumbs) {
   })
 }
 
-var subnavigations = document.querySelectorAll('.subnavigation')
+const subnavigations = document.querySelectorAll('.subnavigation')
 
 const setHeaderHeight = () => {
   if (subnavigations) {
     subnavigations.forEach((subnavigation) => {
-      // console.log(window.innerHeight)
-      // console.log(document.querySelector('.header__wrapper').offsetHeight)
-
       const subnavheight = window.innerHeight - document.querySelector('.header__wrapper').offsetHeight + 'px'
       subnavigation.style.height = subnavheight
     })
@@ -131,15 +128,15 @@ if (navigation_elements) {
   navigation_elements.forEach((navigation_element, index) => {
     navigation_element.addEventListener('mouseover', (e) => {
       if (window.innerWidth >= 768) {
-        var subnavigation = e.target.closest('.subnavigation')
+        const subnavigation = e.target.closest('.subnavigation')
         const element = e.target.closest('.navigation__element')
 
         if (element) {
           if (subnavigation) {
             const list = e.target.closest('.navigation__list')
             const list_children = element.querySelector('.navigation__list')
-            var list_parents = []
-            var list_parent = list
+            let list_parents = []
+            let list_parent = list
 
             do {
               list_parent = list_parent.parentNode.closest('.navigation__list')
