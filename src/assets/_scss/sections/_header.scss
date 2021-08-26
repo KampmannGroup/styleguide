@@ -1,101 +1,101 @@
-.header{
-  position:-webkit-sticky;
-  position:sticky;
-  top:0;
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 
-  &__wrapper{
+  &__wrapper {
     display: flex;
     flex-direction: column;
     height: 100vh;
   }
 
-  &__section{
-    display:flex;
+  &__section {
+    display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     padding-top: $grid-gutter-width;
     padding-bottom: $grid-gutter-width;
 
-    &--main{
-      padding-top:0;
-      padding-bottom:0;
+    &--main {
+      padding-top: 0;
+      padding-bottom: 0;
       flex-grow: 1;
       align-items: flex-start;
 
-      .header__section-wrapper{
-        overflow:visible;
+      .header__section-wrapper {
+        overflow: visible;
       }
     }
 
-    &--meta{
+    &--meta {
       background-color: $primary;
       padding-top: $grid-gutter-width/4;
       padding-bottom: $grid-gutter-width/4;
 
-      *{
-        color:$secondary;
+      * {
+        color: $secondary;
       }
     }
   }
 
-  &__part{
-    &--fullheight{
-      height:100%;
+  &__part {
+    &--fullheight {
+      height: 100%;
     }
   }
 
-  &__section-wrapper{
-    overflow:hidden;
+  &__section-wrapper {
+    overflow: hidden;
   }
 
-  &__search{
+  &__search {
     align-self: flex-start;
     padding-top: $grid-gutter-width/2;
     padding-bottom: $grid-gutter-width/2;
   }
 
-  &__burger{
+  &__burger {
     padding-left: $grid-gutter-width;
     padding-right: $grid-gutter-width/2;
     align-self: center;
   }
 }
 
-@include media-breakpoint-up(md){
-  .header{
-    &__wrapper{
-      height:auto;
+@include media-breakpoint-up(md) {
+  .header {
+    &__wrapper {
+      height: auto;
     }
-    
-    &__interaction{
-      order:1;
+
+    &__interaction {
+      order: 1;
       max-width: 200px;
     }
 
-    &__section-wrapper{
-      position:relative;
-      overflow:visible;
+    &__section-wrapper {
+      position: relative;
+      overflow: visible;
     }
 
-    &__section{
-      &--meta{
+    &__section {
+      &--meta {
         padding-top: $grid-gutter-width/2;
         padding-bottom: $grid-gutter-width/2;
       }
     }
 
-    &__part{
-    &--fullheight{
-      height:auto;
+    &__part {
+      &--fullheight {
+        height: auto;
+      }
     }
-  }
   }
 }
 
-@include media-breakpoint-up(lg){
-  .header{
-    &__interaction{
-      max-width:unset;
+@include media-breakpoint-up(lg) {
+  .header {
+    &__interaction {
+      max-width: unset;
     }
   }
 }
