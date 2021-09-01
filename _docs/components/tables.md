@@ -1,6 +1,6 @@
 ---
 title: Tabellen
-nav: true
+nav: false
 ---
 
 {% include pattern_block.html url='/src/patterns/components/table/primary.html' %}
