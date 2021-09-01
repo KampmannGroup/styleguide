@@ -1,6 +1,9 @@
+/**
+ * Open and animate menu on click on burger button (mobile)
+ */
 const burgers = document.querySelectorAll('.navigation__burger')
 
-if (burgers) {
+if (burgers.length > 0) {
   burgers.forEach((burger, index) => {
     burger.addEventListener('click', (e) => {
       const el = e.target.closest('[data-navigation]')
@@ -24,7 +27,6 @@ if (burgers) {
                 duration: 300,
               }
             )
-            // collapse.onfinish = () => (navigation_toggler.style.height = '0')
             collapse.onfinish = () => {
               navigation_toggler.style.removeProperty('height')
               navigation.classList.remove('--active')
@@ -39,7 +41,6 @@ if (burgers) {
             { duration: 300 }
           )
 
-          // expand.onfinish = () => (navigation_toggler.style.height = 'auto')
           expand.onfinish = () => navigation_toggler.style.removeProperty('height')
         }
       }
@@ -47,10 +48,13 @@ if (burgers) {
   })
 }
 
+/**
+ * Set subnavigation list active on click of subnavigation trigger
+ */
 const subnavigation_triggers = document.querySelectorAll('.navigation__subnavigation-trigger')
 
-if (subnavigation_triggers) {
-  subnavigation_triggers.forEach((trigger, index) => {
+if (subnavigation_triggers.length > 0) {
+  subnavigation_triggers.forEach((trigger) => {
     trigger.addEventListener('click', (e) => {
       const navigation = e.target.closest('.navigation')
       const subnavigation = e.target.closest('.subnavigation')
@@ -76,10 +80,13 @@ if (subnavigation_triggers) {
   })
 }
 
+/**
+ * Check and jump to breadcrumb data level
+ */
 const level_breadcrumbs = document.querySelectorAll('[data-level]')
 
-if (level_breadcrumbs) {
-  level_breadcrumbs.forEach((breadcrumb, index) => {
+if (level_breadcrumbs.length > 0) {
+  level_breadcrumbs.forEach((breadcrumb) => {
     breadcrumb.addEventListener('click', (e) => {
       const navigation = e.target.closest('.navigation')
       const subnavigation = e.target.closest('.subnavigation')
@@ -101,7 +108,7 @@ if (level_breadcrumbs) {
       )
 
       if (active_lists) {
-        active_lists.forEach((active_list, index) => {
+        active_lists.forEach((active_list) => {
           active_list.classList.remove('navigation__list--active')
         })
       }
@@ -109,93 +116,42 @@ if (level_breadcrumbs) {
   })
 }
 
+/**
+ * Hover effect with delay for better navigation on subnavigation elements
+ */
+const subNavElements = document.querySelectorAll('.subnavigation .navigation__element')
+
+if (subNavElements.length > 0 && window.innerWidth >= 768) {
+  let showNavigation
+
+  subNavElements.forEach((el) => {
+    let hideNavigation
+
+    el.addEventListener('mouseenter', (e) => {
+      const target = e.currentTarget
+      clearTimeout(hideNavigation)
+      showNavigation = setTimeout(() => target.classList.add('isHovered'), 300)
+    })
+    el.addEventListener('mouseleave', (e) => {
+      const target = e.currentTarget
+      clearTimeout(showNavigation)
+      hideNavigation = setTimeout(() => target.classList.remove('isHovered'), 300)
+    })
+  })
+}
+
+/**
+ * Calculates and sets height of subnavigation
+ */
 const subnavigations = document.querySelectorAll('.subnavigation')
 
-const setHeaderHeight = () => {
-  if (subnavigations) {
+const calcAndSetSubnavHeight = () => {
+  if (subnavigations.length > 0) {
     subnavigations.forEach((subnavigation) => {
       const subnavheight = window.innerHeight - document.querySelector('.header__wrapper').offsetHeight + 'px'
       subnavigation.style.height = subnavheight
     })
   }
 }
-window.addEventListener('load', setHeaderHeight)
-window.addEventListener('resize', setHeaderHeight)
-
-const navigation_elements = document.querySelectorAll('.navigation__element')
-
-if (navigation_elements) {
-  navigation_elements.forEach((navigation_element, index) => {
-    navigation_element.addEventListener('mouseover', (e) => {
-      if (window.innerWidth >= 768) {
-        const subnavigation = e.target.closest('.subnavigation')
-        const element = e.target.closest('.navigation__element')
-
-        if (element) {
-          if (subnavigation) {
-            const list = e.target.closest('.navigation__list')
-            const list_children = element.querySelector('.navigation__list')
-            let list_parents = []
-            let list_parent = list
-
-            do {
-              list_parent = list_parent.parentNode.closest('.navigation__list')
-              if (list_parent) {
-                list_parents.push(list_parent)
-              }
-            } while (list_parent)
-
-            const targets = list_parents
-            targets.push(list)
-            if (list_children) {
-              targets.push(list_children)
-            }
-
-            // if(targets){
-            //   var maxheight = 0
-            //   targets.forEach((el, index)=>{
-            //     if(el.scrollHeight > maxheight){
-            //       maxheight = el.scrollHeight
-            //     }
-            //   })
-
-            //   subnavigation.style.height = maxheight + "px"
-            // }
-          } else {
-            // subnavigation = element.querySelector('.subnavigation')
-            // if(subnavigation){
-            //   subnavigation.style.height = subnavigation.querySelector('.navigation__list').scrollHeight + "px"
-            // }
-          }
-        }
-      }
-    })
-  })
-}
-
-const wrappers = document.querySelectorAll('.formelement__wrapper')
-
-if (wrappers) {
-  //Remove active class on body click
-  document.querySelector('body').addEventListener('click', (e) => {
-    const wrapper = e.target.closest('.formelement__wrapper')
-
-    if (!wrapper) {
-      wrappers.forEach((wrapper) => {
-        wrapper.classList.remove('formelement__wrapper--active')
-      })
-    }
-  })
-
-  wrappers.forEach((wrapper) => {
-    wrapper.addEventListener('click', (e) => {
-      const wrapper = e.target.closest('.formelement__wrapper')
-      //Toggle showing options list
-      if (wrapper.classList.contains('formelement__wrapper--active')) {
-        wrapper.classList.remove('formelement__wrapper--active')
-      } else {
-        wrapper.classList.add('formelement__wrapper--active')
-      }
-    })
-  })
-}
+window.addEventListener('load', calcAndSetSubnavHeight)
+window.addEventListener('resize', calcAndSetSubnavHeight)

@@ -280,7 +280,7 @@
         &__element {
           align-self: flex-start;
 
-          &:hover {
+          &.isHovered {
             > .navigation__element-wrapper .navigation__link {
               color: $green !important;
             }
@@ -321,6 +321,28 @@
                   margin-bottom: 0;
                 }
 
+                &:hover {
+                  > .navigation__element-wrapper .navigation__link {
+                    color: $green !important;
+                  }
+
+                  .subnavigation {
+                    display: flex !important;
+                    animation: 0.3s fadeIn forwards;
+                  }
+
+                  > .navigation__list,
+                  > .subnavigation > .navigation__list {
+                    opacity: 1;
+                    animation: 0.4s fadeIn forwards;
+                    display: block;
+                  }
+
+                  > .navigation__element-wrapper .navigation__subnavigation-trigger {
+                    opacity: 1;
+                  }
+                }
+
                 > .navigation__element-wrapper {
                   align-items: center;
 
@@ -345,6 +367,7 @@
                       display: flex;
                       justify-content: center;
                       margin-left: $grid-gutter-width/-2;
+                      padding: 3px 0 1px 0;
 
                       img {
                         transform: rotate(90deg);
@@ -367,7 +390,7 @@
 
       .subnavigation {
         display: none;
-        // transition: 0.3s;
+        font-size: $font-size-root;
         margin-left: calc(-100% * var(--active-level));
         position: absolute;
         height: 100%;
@@ -375,6 +398,10 @@
         left: 0;
         transform: none;
         box-sizing: border-box;
+
+        .navigation__link {
+          padding: 2px 0;
+        }
       }
     }
 
@@ -456,7 +483,7 @@
           &--level-4 {
             .navigation__element-wrapper {
               display: none;
-              background-image: url(/styleguide/src/assets/images/graphics/divider.svg);
+              background-image: url('/styleguide/src/assets/images/graphics/divider.svg');
               background-repeat: repeat-y;
               padding-left: $grid-gutter-width !important;
               padding-top: $grid-gutter-width;
@@ -491,15 +518,17 @@
 
         &__element {
           align-self: stretch;
+
           &--breadcrumb {
             display: none;
           }
 
-          &:hover {
+          &.isHovered {
             .subnavigation {
               display: flex !important;
               animation: 0.3s fadeIn forwards;
             }
+
             > .navigation__list,
             > .subnavigation > .navigation__list {
               opacity: 1;
