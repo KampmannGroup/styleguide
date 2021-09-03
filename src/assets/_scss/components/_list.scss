@@ -1,72 +1,70 @@
+ul,
+ol,
 .list {
   width: 100%;
   list-style: none;
   padding: 0;
   margin: 0 0 $grid-gutter-width 0;
   font-size: $font-size-root;
+  color: $primary;
 
+  & > li > ul,
+  & > li > ol,
   &__sublist {
     margin-top: $grid-gutter-width/2;
     padding-left: $grid-gutter-width;
   }
 
+  li,
   &__item {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: $grid-gutter-width/2;
-  }
 
-  &__item-content {
-    width: calc(100% - 20px);
-  }
-
-  &--unordered {
-    .list {
-      &__item {
-        &:before {
-          content: url("data:image/svg+xml,%3Csvg width='8' height='15' viewBox='0 0 8 15' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.238.8a.469.469 0 01.59-.723L.9.137l6.699 6.7a.937.937 0 01.082 1.233l-.082.093-6.7 6.7a.469.469 0 01-.722-.59l.06-.073 6.699-6.7L.237.8z' fill='%230E2249' fill-rule='nonzero'/%3E%3C/svg%3E%0A");
-          display: inline-block;
-          flex-shrink: 0;
-          width: 8px;
-          height: 15px;
-        }
-      }
+    &::before {
+      margin-right: $grid-gutter-width/2;
     }
   }
+}
 
-  &--ordered {
-    .list {
-      counter-reset: counter;
+ul,
+.list--unordered {
+  li,
+  .list__item {
+    &:before {
+      content: url("data:image/svg+xml,%3Csvg width='8' height='15' viewBox='0 0 8 15' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.137.777a.469.469 0 01.59-.723L.8.114l6.7 6.7a.937.937 0 01.081 1.233L7.5 8.14l-6.7 6.7a.469.469 0 01-.723-.59l.06-.073 6.7-6.7-6.7-6.7z' fill='%230E2249' fill-rule='nonzero'/%3E%3C/svg%3E%0A");
+      display: inline-block;
+      flex-shrink: 0;
+      width: 8px;
+      height: 15px;
+    }
+  }
+}
 
-      &__sublist {
-        padding-left: 33px;
-      }
+ol,
+.list--ordered {
+  counter-reset: counter;
 
-      &__item {
-        counter-increment: counter;
+  li,
+  .list__item {
+    counter-increment: counter;
 
-        &:before {
-          content: counter(counter);
-          display: inline-block;
-          width: 21px;
-          height: 21px;
-          display: flex;
-          flex-shrink: 0;
-          border: 1px solid $primary;
-          border-radius: 100%;
-          justify-content: center;
-          align-items: center;
-          color: $primary;
-          line-height: 1em;
-          font-size: $font-size-sm;
-        }
-      }
-
-      &__item-content {
-        width: calc(100% - 33px);
-      }
+    &:before {
+      content: counter(counter);
+      display: inline-block;
+      width: 21px;
+      height: 21px;
+      display: flex;
+      flex-shrink: 0;
+      border: 1px solid $primary;
+      border-radius: 100%;
+      justify-content: center;
+      align-items: center;
+      color: $primary;
+      line-height: 1em;
+      font-size: $font-size-sm;
     }
   }
 }
