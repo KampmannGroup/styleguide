@@ -1,5 +1,3 @@
-ul,
-ol,
 .list {
   width: 100%;
   list-style: none;
@@ -29,7 +27,7 @@ ol,
   }
 }
 
-ul,
+ul.list,
 .list--unordered {
   li,
   .list__item {
@@ -43,7 +41,7 @@ ul,
   }
 }
 
-ol,
+ol.list,
 .list--ordered {
   counter-reset: counter;
 
