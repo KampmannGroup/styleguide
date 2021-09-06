@@ -116,15 +116,19 @@ if (level_breadcrumbs.length > 0) {
   })
 }
 
+const showAndHideSubNavEl = (el) => {}
+
 /**
- * Hover effect with delay for better navigation on subnavigation elements
+ * Hover effect with delay for better navigation on subnavigation elements AND
+ * Set first element of subnav to active when hovering main nav element
  */
 const subNavElements = document.querySelectorAll('.subnavigation .navigation__element')
+const mainNavElements = document.querySelectorAll('.navigation--main .navigation__list--level-0 > .navigation__element')
 
-if (subNavElements.length > 0 && window.innerWidth >= 768) {
+if (mainNavElements.length > 0 && subNavElements.length > 0 && window.innerWidth >= 768) {
   let showNavigation
 
-  subNavElements.forEach((el) => {
+  const addListeners = (el) => {
     let hideNavigation
 
     el.addEventListener('mouseenter', (e) => {
@@ -136,6 +140,18 @@ if (subNavElements.length > 0 && window.innerWidth >= 768) {
       const target = e.currentTarget
       clearTimeout(showNavigation)
       hideNavigation = setTimeout(() => target.classList.remove('isHovered'), 300)
+    })
+  }
+
+  subNavElements.forEach((el) => addListeners(el))
+
+  mainNavElements.forEach((el) => {
+    el.addEventListener('mouseenter', (e) => {
+      const subnav = el.querySelector('.subnavigation')
+      if (subnav) {
+        const firstEl = subnav.querySelector('.navigation__element--first')
+        showNavigation = setTimeout(() => firstEl.classList.add('isHovered'), 300)
+      }
     })
   })
 }

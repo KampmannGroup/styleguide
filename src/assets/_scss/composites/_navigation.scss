@@ -452,26 +452,26 @@
               }
             }
 
-            &:not(:hover) {
-              .navigation {
-                &__element {
-                  &--first {
-                    > .navigation__element-wrapper {
-                      color: $green;
+            // &:not(:hover) {
+            //   .navigation {
+            //     &__element {
+            //       &--first {
+            //         > .navigation__element-wrapper {
+            //           color: $green;
 
-                      .navigation__subnavigation-trigger {
-                        opacity: 1;
-                      }
-                    }
+            //           .navigation__subnavigation-trigger {
+            //             opacity: 1;
+            //           }
+            //         }
 
-                    > .navigation__list {
-                      display: block;
-                      opacity: 1;
-                    }
-                  }
-                }
-              }
-            }
+            //         > .navigation__list {
+            //           display: block;
+            //           opacity: 1;
+            //         }
+            //       }
+            //     }
+            //   }
+            // }
           }
 
           &--level-2 {
