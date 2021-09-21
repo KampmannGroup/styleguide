@@ -1,19 +1,24 @@
 ---
-title: Hauptfarben
+title: Signalfarben
 styles: assets/_scss/abstracts/_variables.scss
 maturity: ready
 control: exclude
 colors:
-  - name: Kampmann Blau
-    mashinename: $primary
-    hex: "#0E2249"
-    rgb: "rgba(14,34,73,1)"
-    hsl: "hsla(220,68%,17%,1)"
-  - name: Frühlingsgrün
-    mashinename: $green
-    hex: "#95C11F"
-    rgb: "rgba(149,193,31,1)"
-    hsl: "hsla(76,72%,44%,1)"
+  # - name: Frühlingsgrün
+  #   mashinename: $green
+  #   hex: '#95C11F'
+  #   rgb: 'rgba(149,193,31,1)'
+  #   hsl: 'hsla(76,72%,44%,1)'
+  - name: Gelb
+    mashinename: $yellow
+    hex: "#FFC107"
+    rgb: "rgba(255,193,7,1)"
+    hsl: "hsla(45,100%,51%,1)"
+  - name: Rot
+    mashinename: $red
+    hex: "#DC3545"
+    rgb: "rgba(220,53,69,1)"
+    hsl: "hsla(354,70%,54%,1)"
 ---
 
 <style>
@@ -26,7 +31,7 @@ colors:
   list-style: none;
 }
 li {
-  flex: 1 0 20%;
+  flex: 1 0 25%;
   margin: 1rem;
 }
 .color {
