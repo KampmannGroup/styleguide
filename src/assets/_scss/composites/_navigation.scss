@@ -237,11 +237,16 @@
       }
 
       &__subnavigation-trigger {
-        margin-top: 1px;
+        top: 3px;
         position: absolute;
         right: 5px;
-        width: auto;
-        min-width: $grid-gutter-width;
+        width: 20px;
+        height: 16px;
+
+        img {
+          width: 8px;
+          height: 16px;
+        }
       }
     }
   }

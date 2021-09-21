@@ -6,6 +6,8 @@
   "browser": "dist/js/kampmann.umd.min.js",
   "main": "dist/js/kampmann.esm.min.js",
   "scripts": {
+    "dev:root": "bundle exec jekyll serve --trace",
+    "dev:src": "cd src && bundle exec jekyll serve --trace",
     "build:package": "rollup -c",
     "watch:package": "rollup -c -w",
     "build:root": "bundle exec jekyll build",
@@ -35,5 +37,8 @@
     "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.35.1"
   },
-  "browserslist": "> 0.25%, not dead"
+  "browserslist": "> 0.25%, not dead",
+  "dependencies": {
+    "bootstrap": "^5.1.1"
+  }
 }
