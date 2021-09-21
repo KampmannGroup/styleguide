@@ -4,8 +4,9 @@ Files inside this folder can contain abstract settings,
 helpers or functions. They have no direct output.
 */
 //Import Abstracts files
-@import 'fonts';
-@import 'variables';
+@import "fonts";
+@import "variables";
 // @import '../bootstrap/node_modules/bootstrap/scss/bootstrap.scss';
-@import 'bootstrap/scss/bootstrap-grid.scss';
-@import 'mixins';
+@import "bootstrap/scss/bootstrap-utilities.scss";
+@import "bootstrap/scss/bootstrap-grid.scss";
+@import "mixins";
