@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   const carousels = document.querySelectorAll('.carousel')
 
-  const autoplay = 4000
+  const autoplay = 5000
   const speed = 600
   
   if (carousels.length) {
@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         speed: speed,
         autoplay: {
           delay: autoplay,
+          disableOnInteraction: false,
         },
         slidesPerView: 'auto',
         spaceBetween: 20,
