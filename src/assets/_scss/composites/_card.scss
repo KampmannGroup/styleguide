@@ -1,0 +1,56 @@
+@import 'bootstrap/scss/mixins.scss';
+@import 'bootstrap/scss/card.scss';
+
+.card {
+  height: 100%;
+
+  &__title {
+    background: $gray-light;
+    padding: $card-spacer-y $card-spacer-x;
+
+    .headline {
+      margin-bottom: 0;
+    }
+  }
+
+  &__slider {
+    &__control {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      z-index: 99;
+      display: flex;
+      padding: $card-spacer-y $card-spacer-x;
+
+      &--prev {
+        transform: rotate(180deg) translateY(50%);
+      }
+
+      &--next {
+        right: 0;
+      }
+
+      &.disabled {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  &__tabs {
+    .list__item-content {
+      color: $body-color;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__links {
+    margin-top: auto;
+    align-self: flex-end;
+    width: 100%;
+  }
+}

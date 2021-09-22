@@ -40,6 +40,10 @@ ul.list,
       height: 15px;
     }
   }
+
+  .list__item-content {
+    max-width: calc(100% - 18px);
+  }
 }
 
 ol.list,

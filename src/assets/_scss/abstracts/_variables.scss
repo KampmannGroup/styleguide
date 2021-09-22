@@ -47,6 +47,7 @@ $line-height-base:  1.5;
 
 $font-size-root:    16px;
 $font-size-base:    .875rem;
+$font-size-xxs:     .625rem;
 $font-size-xs:      .75rem;
 $font-size-sm:      .8125rem;
 $font-size-lg:      1rem;
@@ -111,3 +112,8 @@ $border-width:      1px;
 $border-radius:     10px;
 $border-radius-sm:  8px;
 $border-radius-lg:  12px;
+
+$nav-link-padding-y: .3125rem;
+$nav-link-padding-x: .28rem;
+$nav-pills-border-radius: 4px;
+$nav-pills-link-active-bg: $teal;
