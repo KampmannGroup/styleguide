@@ -55,6 +55,7 @@ p {
     {% if item.hex %}<p>{{ item.hex }}</p>{% endif %}
     {% if item.rgb %}<p>{{ item.rgb }}</p>{% endif %}
     {% if item.hsl %}<p>{{ item.hsl }}</p>{% endif %}
+    {% if item.cmyk %}<p>{{ item.cmyk }}</p>{% endif %}
   </li>
 {% endfor %}
 </ul>
