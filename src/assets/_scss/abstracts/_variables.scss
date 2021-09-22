@@ -23,6 +23,7 @@ $body-color:        #8A8882;
 
 $color-contrast-dark:      $dark;
 $color-contrast-light:     $light;
+$min-contrast-ratio: 1.25;
 
 $colors: (
   "blue":       $blue,
@@ -110,6 +111,7 @@ $btn-padding-x:       2.875rem;
 
 $border-width:      1px;
 $border-radius:     10px;
+$border-radius-xs:  4px;
 $border-radius-sm:  8px;
 $border-radius-lg:  12px;
 
