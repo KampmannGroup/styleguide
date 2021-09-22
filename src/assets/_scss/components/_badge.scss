@@ -1,2 +1,24 @@
 @import "bootstrap/scss/mixins.scss";
 @import "bootstrap/scss/badge.scss";
+
+.badge {
+  &--primary {
+    background-color: $blue;
+  }
+
+  &--success {
+    background-color: $green;
+  }
+
+  &--info {
+    background-color: $teal;
+  }
+
+  &--warning {
+    background-color: $yellow;
+  }
+
+  &--error {
+    background-color: $red;
+  }
+}

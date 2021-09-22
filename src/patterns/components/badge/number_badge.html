@@ -3,4 +3,27 @@ title: Nummeriertes Badge
 styles: assets/_scss/components/_badge.scss
 maturity: draft
 ---
-  <h1>Example heading <span class="badge bg-success">4</span></h1>
+inlinestyles: '<style>.canvas{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 280px;
+  height: 300px;
+  background-color: whitesmoke;
+  border: 1px solid whitesmoke;
+  margin-bottom: 1rem;
+}
+
+.btn{
+  margin-bottom: 16px;
+}
+</style>'
+
+---
+<div class="canvas">
+<a href="javascript:void(0)" class="btn btn--outline-primary">Notifications<span class="badge badge--primary">99+</span></a>
+</div>
+
+{{ page.inlinestyles }}
