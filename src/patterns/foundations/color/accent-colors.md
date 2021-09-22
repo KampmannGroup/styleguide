@@ -14,25 +14,25 @@ colors:
     hex: "#79C08B"
     rgb: "rgba(121,192,139,1)"
     hsl: "hsla(135,36%,61%,1)"
-    cmyk: "cmyk(57/0/57/0)"
+    cmyk: "CMYK 57/0/57/0"
   - name: Petrol
     mashinename: $teal
     hex: "#008F8C"
     rgb: "rgba(0,143,140,1)"
     hsl: "hsla(179,100%,28%,1)"
-    cmyk: "cmyk(81/21/47/5)"
+    cmyk: "CMYK 81/21/47/5"
   - name: Cyan
     mashinename: $cyan
     hex: "#58C7DA"
     rgb: "rgba(88,199,218,1)"
     hsl: "hsla(189,64%,60%,1)"
-    cmyk: "cmyk(61/0/16/0)"
+    cmyk: "CMYK 61/0/16/0"
   - name: Beige
     mashinename: $gray-dark
     hex: "#D7D5CD"
     rgb: "rgba(215,213,205,1)"
     hsl: "hsla(48,11%,82%,1)"
-    cmyk: "cmyk(18/13/20/0)"
+    cmyk: "CMYK 18/13/20/0"
   - name: Beige 35%
     mashinename: $gray-medium
     hex: "#F0EFEC"
@@ -43,7 +43,7 @@ colors:
     hex: "#F1F0EE"
     rgb: "rgba(241,240,238,1)"
     hsl: "hsla(40,10%,94%,1)"
-    cmyk: "cmyk(7/5/7/0)"
+    cmyk: "CMYK 7/5/7/0"
 ---
 
 <style>
