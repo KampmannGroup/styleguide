@@ -39,6 +39,7 @@
   },
   "browserslist": "> 0.25%, not dead",
   "dependencies": {
+    "@rollup/plugin-node-resolve": "^13.0.5",
     "bootstrap": "^5.1.1",
     "swiper": "^7.0.6"
   }

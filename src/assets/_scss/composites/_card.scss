@@ -1,16 +1,10 @@
 @import 'bootstrap/scss/mixins.scss';
+@import 'bootstrap/scss/utilities.scss';
 @import 'bootstrap/scss/card.scss';
 
 .card {
-  height: 100%;
-
-  &__title {
-    background: $gray-light;
-    padding: $card-spacer-y $card-spacer-x;
-
-    .headline {
-      margin-bottom: 0;
-    }
+  &__type {
+    margin-bottom: 0.25rem;
   }
 
   &__slider {
@@ -52,5 +46,58 @@
     margin-top: auto;
     align-self: flex-end;
     width: 100%;
+  }
+
+  &__data {
+    margin: 0 $grid-gutter-width/-1;
+
+    &__item {
+      display: inline-flex;
+      align-items: center;
+      padding: 0 $grid-gutter-width;
+    }
+
+    img {
+      margin-right: $grid-gutter-width/4;
+    }
+  }
+
+  &--product {
+    height: 100%;
+
+    .card {
+      &__title {
+        background: $gray-light;
+        padding: $card-spacer-y $card-spacer-x;
+
+        .headline {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &--event {
+    overflow: hidden;
+    .card {
+      &__title {
+        margin-bottom: $grid-gutter-width;
+      }
+
+      &__body {
+        padding: $grid-gutter-width * 1.25;
+        &__item {
+          width: 100%;
+        }
+      }
+
+      &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $primary;
+        min-height: $grid-gutter-width * 2;
+      }
+    }
   }
 }
