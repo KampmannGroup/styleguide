@@ -3,10 +3,12 @@ import scss from 'rollup-plugin-scss'
 import pkg from './package.json'
 import copy from 'rollup-plugin-copy'
 import { babel } from '@rollup/plugin-babel'
+import resolve from '@rollup/plugin-node-resolve'
 
 export default {
   input: 'src/assets/js/index.js',
   plugins: [
+    resolve(),
     terser(),
     scss({
       output: 'dist/css/kampmann.min.css',

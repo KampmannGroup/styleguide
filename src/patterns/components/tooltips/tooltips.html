@@ -1,6 +1,7 @@
 ---
 title: Tooltips
-styles: assets/_scss/components/_button.scss
+styles: assets/_scss/components/_tooltips.scss
+script: /dist/js/kampmann.umd.min.js
 maturity: draft
 inlinestyles: '<style>.canvas{
     display: flex;
@@ -23,10 +24,15 @@ inlinestyles: '<style>.canvas{
 ---
 <div class="canvas">
 
-  <a href="javascript:void(0)" class="btn btn--primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+  <a href="javascript:void(0)" 
+    class="btn btn--primary" 
+    data-bs-toggle="tooltip" 
+    data-bs-placement="top" 
+    title="Tooltip on top">
     Tooltip on top
   </a>
   
+  <script type="module" src="{{ page.script }}"></script>
 </div>
 
 {{ page.inlinestyles }}
