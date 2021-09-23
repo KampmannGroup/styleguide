@@ -7,28 +7,40 @@
   background-color: var(--highlight-color, transparent);
   margin-bottom: $grid-gutter-width;
 
-  * {
-    color: var(--contrast-color, $blue);
-  }
-
   &--teal {
     --highlight-color: #{$teal};
     --contrast-color: #{color-contrast($teal)};
+
+    * {
+      color: var(--contrast-color, $blue);
+    }
   }
 
   &--green {
     --highlight-color: #{$green};
     --contrast-color: #{color-contrast($green)};
+
+    * {
+      color: var(--contrast-color, $blue);
+    }
   }
 
   &--cyan {
     --highlight-color: #{$cyan};
     --contrast-color: #{color-contrast($cyan)};
+
+    * {
+      color: var(--contrast-color, $blue);
+    }
   }
 
   &--gray-light {
     --highlight-color: #{$gray-light};
     --contrast-color: #{color-contrast($gray-light)};
+
+    * {
+      color: var(--contrast-color, $blue);
+    }
   }
 
   &__slider {

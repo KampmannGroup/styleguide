@@ -9,16 +9,17 @@
     &__item {
       margin-left: $grid-gutter-width / 4;
       margin-right: $grid-gutter-width / 4;
-
-      &:not(.active) {
-        background: $gray-light;
-      }
+      margin-bottom: $grid-gutter-width / 4;
     }
 
     &__link {
       cursor: pointer;
       color: $body-color;
       font-size: $font-size-xxs;
+
+      &:not(.active) {
+        background: $gray-light;
+      }
     }
   }
 }
