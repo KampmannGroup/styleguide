@@ -1,8 +1,7 @@
 ---
-title: Nummeriertes Badge
+title: Nummerierte Badges
 styles: assets/_scss/components/_badge.scss
 maturity: draft
----
 inlinestyles: '<style>.canvas{
   display: flex;
   flex-direction: column;
@@ -10,9 +9,9 @@ inlinestyles: '<style>.canvas{
   justify-content: center;
   width: 100%;
   min-width: 280px;
-  height: 300px;
   background-color: whitesmoke;
   border: 1px solid whitesmoke;
+  padding-top: 5px;
   margin-bottom: 1rem;
 }
 
@@ -22,8 +21,22 @@ inlinestyles: '<style>.canvas{
 </style>'
 
 ---
+
 <div class="canvas">
-<a href="javascript:void(0)" class="btn btn--outline-primary">Notifications<span class="badge badge--primary">99+</span></a>
+  <div>
+    <span class="badge badge--primary">24</span>
+    <span class="badge badge--success">24</span>
+    <span class="badge badge--info">24</span>
+    <span class="badge badge--warning">24</span>
+    <span class="badge badge--error">24</span>
+  </div>
+
+  <a href="javascript:void(0)" class="btn btn--outline-primary">
+    Benachrichtigungen
+    <span class="badge badge--info">24</span>
+  </a>
 </div>
+
+
 
 {{ page.inlinestyles }}

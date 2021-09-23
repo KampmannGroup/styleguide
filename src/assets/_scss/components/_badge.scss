@@ -2,6 +2,9 @@
 @import "bootstrap/scss/badge.scss";
 
 .badge {
+  margin: 0 10px;
+  font-weight: 500;
+
   &--primary {
     background-color: $blue;
   }
@@ -21,4 +24,9 @@
   &--error {
     background-color: $red;
   }
+}
+
+.btn .badge {
+  margin: 0;
+  margin-left: 10px;
 }
