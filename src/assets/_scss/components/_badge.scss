@@ -1,0 +1,32 @@
+@import "bootstrap/scss/mixins.scss";
+@import "bootstrap/scss/badge.scss";
+
+.badge {
+  margin: 0 10px;
+  font-weight: 500;
+
+  &--primary {
+    background-color: $blue;
+  }
+
+  &--success {
+    background-color: $green;
+  }
+
+  &--info {
+    background-color: $teal;
+  }
+
+  &--warning {
+    background-color: $yellow;
+  }
+
+  &--error {
+    background-color: $red;
+  }
+}
+
+.btn .badge {
+  margin: 0;
+  margin-left: 10px;
+}
