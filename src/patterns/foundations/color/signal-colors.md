@@ -1,7 +1,7 @@
 ---
 title: Signalfarben
 styles: assets/_scss/abstracts/_variables.scss
-maturity: ready
+maturity: draft
 control: exclude
 colors:
   # - name: Frühlingsgrün
@@ -11,14 +11,14 @@ colors:
   #   hsl: 'hsla(76,72%,44%,1)'
   - name: Gelb
     mashinename: $yellow
-    hex: "#FFC107"
-    rgb: "rgba(255,193,7,1)"
-    hsl: "hsla(45,100%,51%,1)"
+    hex: '#FFC107'
+    rgb: 'rgba(255,193,7,1)'
+    hsl: 'hsla(45,100%,51%,1)'
   - name: Rot
     mashinename: $red
-    hex: "#DC3545"
-    rgb: "rgba(220,53,69,1)"
-    hsl: "hsla(354,70%,54%,1)"
+    hex: '#DC3545'
+    rgb: 'rgba(220,53,69,1)'
+    hsl: 'hsla(354,70%,54%,1)'
 ---
 
 <style>
