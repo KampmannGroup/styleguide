@@ -1,0 +1,38 @@
+.navigation {
+  &__dots {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  &__dot {
+    display: block;
+    width: $grid-gutter-width/2;
+    height: $grid-gutter-width/2;
+    background-color: $secondary;
+    border-radius: $grid-gutter-width/2;
+    margin-left: $grid-gutter-width/8;
+    margin-right: $grid-gutter-width/8;
+    transition: 0.3s;
+    opacity: 0.7;
+    cursor: pointer;
+    overflow: hidden;
+
+    &--active {
+      width: $grid-gutter-width * 1.5;
+      opacity: 1;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__progress {
+    display: block;
+    width: 0;
+    height: 100%;
+    background-color: $cyan;
+  }
+}
