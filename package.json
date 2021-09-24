@@ -1,6 +1,6 @@
 {
   "name": "@kampmanngroup/styleguide",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "TBF",
   "module": "dist/js/kampmann.esm.min.js",
   "browser": "dist/js/kampmann.umd.min.js",
