@@ -1,7 +1,7 @@
 ---
 title: Badges
 info: Verwenden Sie Badges um zusätzliche, kontextuelle Informationen anzuzeigen.
-nav: true
+nav: false
 ---
 
 ## Implementieren von Badges
