@@ -16,17 +16,17 @@
 
     &--teal {
       --highlight-color: #{$teal};
-      --contrast-color: #{color-contrast($teal)};
+      --contrast-color: white;
     }
 
     &--green {
       --highlight-color: #{$green};
-      --contrast-color: $white;
+      --contrast-color: white;
     }
 
     &--cyan {
       --highlight-color: #{$cyan};
-      --contrast-color: $white;
+      --contrast-color: #{color-contrast($cyan)};
     }
 
     &--gray-light {
