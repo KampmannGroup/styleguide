@@ -1,7 +1,7 @@
 ---
 title: Alerts
 info:
-nav: true
+nav: false
 ---
 
 {% include pattern_block.html url='/src/patterns/components/alert/primary_alert.html' %}
