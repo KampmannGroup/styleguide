@@ -15,6 +15,19 @@
     }
   }
 
+  &--teal {
+    & .page-item {
+      & .page-link {
+        color: $teal;
+      }
+      &.active .page-link {
+        color: white;
+        background-color: $teal;
+        border-color: $teal;
+      }
+    }
+  }
+
   &--aloevera {
     & .page-item {
       & .page-link {
