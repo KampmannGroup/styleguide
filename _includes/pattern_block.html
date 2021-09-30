@@ -14,13 +14,13 @@
     <a href="javascript:void(0)" title="View Source Code" class="sg_helper_code button"><i class="icon" data-icon="code"></i></a>  
     <a href="javascript:void(0)" title="Open in new window" class="sg_helper_open button" href="{{ site.baseurl }}{{ include.url }}" target="_blank"><i class="icon" data-icon="screen_share"></i></a>
     {% if pattern.download %}
-      <a href="{{ pattern.download }}" class="sg_helper_download button" download><i class="icon" data-icon="download"></i></a>
+      <a href="{{ pattern.download }}" class="sg_helper_download button" download><i class="icon" data-icon="file_download"></i></a>
     {% endif %}
   </div>
   {% else %}<div class="sg_pattern_control" data-styles="{{ pattern.styles }}">
     <a href="javascript:void(0)" title="Open in new window" class="sg_helper_open button" href="{{ site.baseurl }}{{ include.url }}" target="_blank"><i class="icon" data-icon="screen_share"></i></a>
     {% if pattern.download %}
-      <a href="{{ pattern.download }}" class="sg_helper_download button" download><i class="icon" data-icon="download"></i></a>
+      <a href="{{ pattern.download }}" class="sg_helper_download button" download><i class="icon" data-icon="file_download"></i></a>
     {% endif %}
   </div>
   {% endif %}
