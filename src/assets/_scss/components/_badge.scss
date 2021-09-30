@@ -4,6 +4,7 @@
 .badge {
   margin: 0 10px;
   font-weight: 500;
+  border-radius: $border-radius-full;
 
   &--primary {
     background-color: $blue;
