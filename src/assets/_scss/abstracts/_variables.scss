@@ -15,13 +15,29 @@ $gray-light: #f1f0ee;
 $yellow: #ffc107;
 $red: #dc3545;
 
+//Complementary Colors (either white or lower lightness value in hsl)----------------
+$blue-complement: $white;
+$green-complement: hsl(76, 72%, 20%);
+$teal-complement: hsl(179, 100%, 12%);
+$cyan-complement: hsl(189, 64%, 20%);
+$yellow-complement: hsl(45, 100%, 20%);
+$red-complement: hsl(354, 70%, 20%);
+//-----------------------------------------------------------------------------------
+
 $primary: $blue;
 $secondary: $white;
 $light: $white;
 $dark: $blue;
 $success: $green;
+$info: $teal;
 $warning: $yellow;
 $danger: $red;
+
+$primary-complement: $blue-complement;
+$success-complement: $green-complement;
+$info-complement: $teal-complement;
+$warning-complement: $yellow-complement;
+$danger-complement: $red-complement;
 
 $body-color: #8a8882;
 
@@ -29,16 +45,16 @@ $color-contrast-dark: $dark;
 $color-contrast-light: $light;
 
 $colors: (
-  'blue': $blue,
-  'green': $green,
-  'teal': $teal,
-  'cyan': $cyan,
-  'aloevera': $aloevera,
-  'white': $white,
-  'gray': $gray,
-  'gray-dark': $gray-dark,
-  'gray-medium': $gray-medium,
-  'gray-light': $gray-light,
+  "blue": $blue,
+  "green": $green,
+  "teal": $teal,
+  "cyan": $cyan,
+  "aloevera": $aloevera,
+  "white": $white,
+  "gray": $gray,
+  "gray-dark": $gray-dark,
+  "gray-medium": $gray-medium,
+  "gray-light": $gray-light,
 );
 
 $alert-bg-scale: 0;
@@ -46,8 +62,9 @@ $alert-color-scale: 0;
 
 // Font
 
-$font-family-sans-serif: 'Circular', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-  'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji',
+$font-family-sans-serif: "Circular", system-ui, -apple-system, "Segoe UI",
+  Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji",
   sans-serif;
 $font-family-base: $font-family-sans-serif;
 

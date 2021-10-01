@@ -1,1 +1,28 @@
 @import "bootstrap/scss/alert.scss";
+
+.alert {
+  &-primary {
+    color: $primary-complement;
+    border-color: $primary;
+  }
+
+  &-success {
+    color: $success-complement;
+    border-color: $success-complement;
+  }
+
+  &-info {
+    color: $info-complement;
+    border-color: $info-complement;
+  }
+
+  &-warning {
+    color: $warning-complement;
+    border-color: $warning-complement;
+  }
+
+  &-danger {
+    color: $danger-complement;
+    border-color: $danger-complement;
+  }
+}
