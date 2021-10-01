@@ -1,5 +1,5 @@
 <a href="javascript:void(0)" class="sg_sidebar_button"><i class="icon" data-icon="menu"></i></a>
-<div class="sg_sidebar">  
+<div class="sg_sidebar accordion">  
   <a href="{{ site.baseurl }}/index.html" class="logo">
     <img class="logo__svg" src="{{ site.baseurl }}/styleguide/branding/logo-styleguide.svg">
   </a>
@@ -7,30 +7,30 @@
     <li><a href="{{ site.baseurl }}/index.html"{% if page.url == '/' %} class="active"{% endif %}>Willkommen</a></li>
   </ul>
   {% assign about = site.docs | where: 'type', 'about' | sort: 'url' %}
-  <div class="group">
-    <div class="group_title">Gut zu wissen</div>
-    <ul>{% for doc in about %}
+  <div data-active="1" class="group accordion__item --active">
+    <div class="group_title accordion__toggler">Gut zu wissen</div>
+    <ul class="accordion__content">{% for doc in about %}
       <li><a href="{{ site.baseurl }}{{ doc.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ doc.title }}</a></li>
     {% endfor %}</ul>
   </div>
   {% assign foundations = site.docs | where: 'type', 'foundation' | sort: 'url' %}
-  <div class="group">
-    <div class="group_title">Grundlagen</div>
-    <ul>{% for doc in foundations %}
+  <div data-active="1" class="group accordion__item --active">
+    <div class="group_title accordion__toggler">Grundlagen</div>
+    <ul class="accordion__content">{% for doc in foundations %}
       <li><a href="{{ site.baseurl }}{{ doc.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ doc.title }}</a></li>
     {% endfor %}</ul>
   </div>
   {% assign components = site.docs | where: 'type', 'component' | sort: 'url' %}
-  <div class="group">
-    <div class="group_title">Komponenten</div>
-    <ul>{% for doc in components %}
+  <div class="group accordion__item">
+    <div class="group_title accordion__toggler">Komponenten</div>
+    <ul class="accordion__content">{% for doc in components %}
       <li><a href="{{ site.baseurl }}{{ doc.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ doc.title }}</a></li>
     {% endfor %}</ul>
   </div>
   {% assign templates = site.docs | where: 'type', 'template' | sort: 'url' %}
-  <div class="group">
-    <div class="group_title">Templates</div>
-    <ul>{% for doc in templates %}
+  <div class="group accordion__item">
+    <div class="group_title accordion__toggler">Templates</div>
+    <ul class="accordion__content">{% for doc in templates %}
       <li><a href="{{ site.baseurl }}{{ doc.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ doc.title }}</a></li>
     {% endfor %}</ul>
   </div>
