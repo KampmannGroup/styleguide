@@ -1,18 +1,17 @@
 import Swiper, { Navigation, Pagination, Autoplay, Controller } from 'swiper'
 Swiper.use([Pagination, Autoplay, Navigation, Controller])
 
-document.addEventListener('DOMContentLoaded', function (event) {
+document.addEventListener('DOMContentLoaded', () => {
   //Carousel
   var elem = {},
     process = {}
 
-  
   const startProgress = (slider, i, autoplay, speed) => {
     let interval = 20,
       step = Math.floor((100 / ((autoplay + speed) / interval)) * 100) / 100,
       progressed,
       width
-    
+
     if (slider.pagination && slider.pagination.bullets) {
       if (elem[i]) {
         elem[i].style.width = 0
@@ -35,8 +34,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   const autoplay = 5000
   const speed = 600
-  
-  if (carousels.length) {
+
+  if (carousels.length > 0) {
     carousels.forEach((slider, i) => {
       new Swiper(slider, {
         speed: speed,
