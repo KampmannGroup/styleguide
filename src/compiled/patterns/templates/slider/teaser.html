@@ -1,6 +1,6 @@
-<section class="slider slider--teaser">
-  <div class="slider__wrapper">
-    <div data-slide="0" class="slider__slide slider__slide--teal slide slider__slide--active">
+<section class="slider slider--teaser swiper">
+  <div class="slider__wrapper swiper-wrapper">
+    <div data-slide="0" class="slider__slide slider__slide--teal slide slider__slide--active swiper-slide">
       <div class="container slide__wrapper">
         <div class="row slide__wrapper-inner">
           <div class="slide__content col-12 col-md-4">
@@ -12,7 +12,7 @@
             <a class="btn btn--secondary" href="javascript:void(0)">Mehr erfahren</a>
           </div>
 
-          <div class="slide__meta col-12 col-md-7 ml-auto">
+          <div class="slide__meta col-12 col-md-7 ms-auto">
             <div class="slide__image-wrapper">
               <img class="slide__image" src="/src/assets/images/pictures/kampmann-industrial-design.png" />
             </div>
@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <div data-slide="1" class="slider__slide slider__slide--cyan slide">
+    <div data-slide="1" class="slider__slide slider__slide--cyan slide swiper-slide">
       <div class="container slide__wrapper">
         <div class="row slide__wrapper-inner">
           <div class="slide__meta col-12 col-md-6 mr-auto">
@@ -50,7 +50,7 @@
       </div>
     </div>
 
-    <div data-slide="2" class="slider__slide slider__slide--green slide">
+    <div data-slide="2" class="slider__slide slider__slide--green slide swiper-slide">
       <div class="container slide__wrapper">
         <div class="row slide__wrapper-inner">
           <div class="slide__content col-12 col-md-5">
@@ -62,7 +62,7 @@
             <a class="btn btn--secondary" href="javascript:void(0)">Mehr erfahren</a>
           </div>
 
-          <div class="slide__meta col-12 col-md-7 ml-auto">
+          <div class="slide__meta col-12 col-md-7 ms-auto">
             <div class="slide__image-wrapper">
               <img class="slide__image" src="/src/assets/images/pictures/kampmann-industrial-design.png" />
             </div>
@@ -72,13 +72,9 @@
     </div>
   </div>
 
-  <div class="slider__dots navigation__dots">
-    <div class="slider__dots-wrapper navigation__dots-wrapper container d-flex">
-      <div data-slide="0" class="navigation__dot navigation__dot--active"></div>
-      <div data-slide="1" class="navigation__dot"></div>
-      <div data-slide="2" class="navigation__dot"></div>
-    </div>
+  <div class="slider__dots navigation__dots navigation__dots container">
+    <div class="slider__dots-wrapper navigation__dots-wrapper d-flex swiper-pagination"></div>
   </div>
 </section>
 
-<script src="/src/assets/js/slider.js"></script>
+<script src="/dist/js/kampmann.umd.min.js"></script>
