@@ -2,27 +2,27 @@
 
 .alert {
   &-primary {
-    color: $primary-complement;
+    color: $primary-supportive;
     border-color: $primary;
   }
 
   &-success {
-    color: $success-complement;
-    border-color: $success-complement;
+    color: $success-supportive;
+    border-color: $success-supportive;
   }
 
   &-info {
-    color: $info-complement;
-    border-color: $info-complement;
+    color: $info-supportive;
+    border-color: $info-supportive;
   }
 
   &-warning {
-    color: $warning-complement;
-    border-color: $warning-complement;
+    color: $warning-supportive;
+    border-color: $warning-supportive;
   }
 
   &-danger {
-    color: $danger-complement;
+    color: $danger-supportive;
     border-color: $danger;
   }
 }
