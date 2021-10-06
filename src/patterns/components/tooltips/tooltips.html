@@ -5,19 +5,18 @@ script: /dist/js/kampmann.umd.min.js
 maturity: draft
 inlinestyles: '<style>.canvas{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     min-width: 280px;
-    height: 300px;
+    height: 150px;
     background-color: whitesmoke;
     border: 1px solid whitesmoke;
     margin-bottom: 1rem;
   }
 
-  .btn{
-    margin-bottom: 16px;
+  .btn:not(:last-child){
+    margin-right: 10px;
   }
 </style>'
 
@@ -27,10 +26,34 @@ inlinestyles: '<style>.canvas{
   <a href="javascript:void(0)" 
     class="btn btn--primary" 
     data-bs-toggle="tooltip" 
-    data-bs-placement="top" 
+    data-bs-placement="top"
     title="Tooltip on top">
     Tooltip on top
   </a>
+
+  <a href="javascript:void(0)" 
+    class="btn btn--primary" 
+    data-bs-toggle="tooltip" 
+    data-bs-placement="right"
+    title="Tooltip on right">
+    Tooltip on right
+  </a>
+
+  <a href="javascript:void(0)" 
+    class="btn btn--primary" 
+    data-bs-toggle="tooltip" 
+    data-bs-placement="bottom"
+    title="Tooltip on bottom">
+    Tooltip on bottom
+  </a>
+
+  <a href="javascript:void(0)" 
+  class="btn btn--primary" 
+  data-bs-toggle="tooltip" 
+  data-bs-placement="left"
+  title="Tooltip on left">
+  Tooltip on left
+</a>
   
   <script type="module" src="{{ page.script }}"></script>
 </div>
