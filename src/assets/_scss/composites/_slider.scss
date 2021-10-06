@@ -1,157 +1,132 @@
-.slider{
-  --slide-speed: .3s;
-  --active-slide:0;
+.slider {
+  --slide-speed: 0.3s;
+  --active-slide: 0;
 
   transition: height var(--slide-speed);
-  overflow:hidden;
-  position:relative;
+  overflow: hidden;
+  position: relative;
 
-  *{
-    color:$secondary;
+  * {
+    color: $secondary;
   }
 
-  .btn{
+  .btn {
     color: var(--highlight-color);
   }
 
-  &__wrapper{  
-    display:flex;
+  &__wrapper {
+    display: flex;
     // align-items:flex-start;
   }
 
-  &__slide{
+  &__slide {
     background-color: var(--highlight-color);
 
-    &--teal{
+    &--teal {
       --highlight-color: #{$teal};
     }
 
-    &--green{
+    &--green {
       --highlight-color: #{$green};
     }
 
-    &--cyan{
+    &--cyan {
       --highlight-color: #{$cyan};
     }
   }
 
-  &__dots{
-    position:absolute;
-    bottom:0;
-    width:100%;
-    margin-bottom:$grid-gutter-width*3;
+  &__dots {
+    margin-bottom: $grid-gutter-width * 3;
     transform: translateY(100%);
   }
 
-  &__dot{
-    display:block;
-    width:$grid-gutter-width/2;
-    height:$grid-gutter-width/2;
-    background-color: $secondary;
-    border-radius: $grid-gutter-width/2;
-    margin-left:$grid-gutter-width/8;
-    margin-right:$grid-gutter-width/8;
-    transition:.3s;
-    opacity:.7;
-    cursor:pointer;
-
-    &--active{
-      width:$grid-gutter-width*1.5;
-      opacity:1;
-    }
-
-    &:hover{
-      opacity:1;
-    }
-  }
-
-  .slide{
-    width:100%;
-    flex-shrink:0;
+  .slide {
+    width: 100%;
+    flex-shrink: 0;
     transition: var(--slide-speed);
-    overflow:hidden;
+    overflow: hidden;
 
-    &:first-child{
+    &:first-child {
       margin-left: calc(var(--active-slide) * -100%);
     }
 
-    &__wrapper{
-      position:relative;
+    &__wrapper {
+      position: relative;
       height: 100%;
     }
 
-    &__wrapper-inner{
+    &__wrapper-inner {
       align-items: flex-start;
       height: 100%;
     }
 
-    &__content{
+    &__content {
       align-self: flex-end;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-end;
-      padding-top:$grid-gutter-width*3;
-      padding-bottom:$grid-gutter-width*4.5;
+      padding-top: $grid-gutter-width * 3;
+      padding-bottom: $grid-gutter-width * 4.5;
     }
 
-    &__meta{
+    &__meta {
       order: -1;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    &__image-wrapper{
-      height:100%;
+    &__image-wrapper {
+      height: 100%;
       width: 100vw;
     }
 
-    &__image{
-      object-fit:cover;
+    &__image {
+      object-fit: cover;
       object-position: center;
-      width:100%;
-      height:100%;
+      width: 100%;
+      height: 100%;
     }
   }
 }
 
-@include media-breakpoint-up('md'){
-  .slider{
-    &__dots{
-      margin-bottom:$grid-gutter-width*6;
+@include media-breakpoint-up('md') {
+  .slider {
+    &__dots {
+      margin-bottom: $grid-gutter-width * 6;
     }
 
-    .slide{
-      &__wrapper-inner{
+    .slide {
+      &__wrapper-inner {
         align-items: stretch;
       }
 
-      &__content{
+      &__content {
         align-self: stretch;
-        padding-top:$grid-gutter-width*6;
-        padding-bottom:$grid-gutter-width*8;
+        padding-top: $grid-gutter-width * 6;
+        padding-bottom: $grid-gutter-width * 8;
       }
     }
   }
 }
 
 //Relating Size of image to custom breakpoint-settings
-@each $breakpointname, $breakpointsize in $grid-breakpoints{
-  @include media-breakpoint-up('#{$breakpointname}'){
-    .slider{
-      .slide{
-        &__content{
-          + .slide__meta[class*="col-#{$breakpointname}-"]:not(.col-#{$breakpointname}-12){
+@each $breakpointname, $breakpointsize in $grid-breakpoints {
+  @include media-breakpoint-up('#{$breakpointname}') {
+    .slider {
+      .slide {
+        &__content {
+          + .slide__meta[class*='col-#{$breakpointname}-']:not(.col-#{$breakpointname}-12) {
             align-items: flex-start;
           }
         }
 
-        &__meta[class*="col-#{$breakpointname}-"]:not(.col-#{$breakpointname}-12){
-          order:0;
+        &__meta[class*='col-#{$breakpointname}-']:not(.col-#{$breakpointname}-12) {
+          order: 0;
           align-items: flex-end;
 
-          .slide__image-wrapper{
+          .slide__image-wrapper {
             width: calc(100% + ((100vw - var(--current-containerwidth)) / 2) + #{$grid-gutter-width/2});
           }
         }

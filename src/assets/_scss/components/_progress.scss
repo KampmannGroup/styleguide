@@ -1,0 +1,22 @@
+@import 'bootstrap/scss/progress.scss';
+
+.progress {
+  --status: 0;
+
+  &__status {
+    width: calc(var(--status) * 1%);
+    background-color: var(--highlight-color, $primary);
+
+    &--teal {
+      --highlight-color: #{$teal};
+    }
+
+    &--green {
+      --highlight-color: #{$green};
+    }
+
+    &--cyan {
+      --highlight-color: #{$cyan};
+    }
+  }
+}

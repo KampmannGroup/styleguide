@@ -36,6 +36,9 @@ $colors: (
   "gray-light": $gray-light,
 );
 
+$alert-bg-scale: 0;
+$alert-color-scale: 0;
+
 // Font
 
 $font-family-sans-serif: "Circular", system-ui, -apple-system, "Segoe UI",
@@ -111,6 +114,7 @@ $border-width: 1px;
 $border-radius: 10px;
 $border-radius-sm: 8px;
 $border-radius-lg: 12px;
+$border-radius-full: 1em;
 
 //Tooltips
 

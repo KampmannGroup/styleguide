@@ -1,0 +1,76 @@
+.carousel {
+  overflow: visible;
+
+  &__wrapper {
+    overflow: hidden;
+    padding-bottom: $grid-gutter-width * 2;
+  }
+
+  &__slide {
+    background-color: var(--highlight-color);
+    height: auto;
+
+    * {
+      color: var(--contrast-color);
+    }
+
+    &--teal {
+      --highlight-color: #{$teal};
+      --contrast-color: white;
+    }
+
+    &--green {
+      --highlight-color: #{$green};
+      --contrast-color: white;
+    }
+
+    &--cyan {
+      --highlight-color: #{$cyan};
+      --contrast-color: #{color-contrast($cyan)};
+    }
+
+    &--gray-light {
+      --highlight-color: #{$gray-light};
+      --contrast-color: #{color-contrast($gray-light)};
+    }
+
+    &__wrapper {
+      height: 100%;
+    }
+  }
+
+  &__content {
+    &__wrapper {
+      padding: 40px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .navigation {
+    &__dots {
+      transform: translateY($grid-gutter-width * 2);
+    }
+
+    &__dot {
+      background: $gray;
+
+      &--active {
+        width: $grid-gutter-width * 5;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &__image {
+      &__wrapper {
+        order: 2;
+      }
+    }
+  }
+}
