@@ -1,0 +1,19 @@
+.accordion {
+  &__item {
+    &.--active {
+      .accordion {
+        &__content {
+          height: auto;
+          padding-bottom: $margin_small;
+        }
+      }
+    }
+  }
+
+  &__content {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 0;
+    transition: padding .3s;
+  }
+}
