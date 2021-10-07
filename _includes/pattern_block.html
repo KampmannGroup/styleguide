@@ -31,7 +31,7 @@
     <!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
     {% if pattern.content != '' %}
       {% highlight html %}
-      {{ pattern.content | replace: '<div class="canvas">' , '' | replace: '</div><!-- Don't render this div -->', ''}}
+      {{ pattern.content | replace: '<div class="canvas">' , '' | replace: '</div><!-- norender -->', ''}}
       {% endhighlight %}
     {% endif %}
 
