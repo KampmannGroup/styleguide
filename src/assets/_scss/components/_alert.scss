@@ -1,1 +1,28 @@
 @import "bootstrap/scss/alert.scss";
+
+.alert {
+  &-primary {
+    color: $primary-supportive;
+    border-color: $primary;
+  }
+
+  &-success {
+    color: $success-supportive;
+    border-color: $success-supportive;
+  }
+
+  &-info {
+    color: $info-supportive;
+    border-color: $info-supportive;
+  }
+
+  &-warning {
+    color: $warning-supportive;
+    border-color: $warning-supportive;
+  }
+
+  &-danger {
+    color: $danger-supportive;
+    border-color: $danger;
+  }
+}
