@@ -1,5 +1,7 @@
 .accordion {
   &__item {
+    transition: all 0.2 ease-in-out;
+
     &.--active {
       .accordion {
         &__content {
@@ -7,13 +9,50 @@
           padding-bottom: $margin_small;
         }
       }
+      .icon__line-v {
+        transform: scaleY(0);
+      }
     }
+  }
+
+  &__toggler {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+
+    &:hover .accordion__icon {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &__headline {
+    display: block;
+    flex: 1;
   }
 
   &__content {
     height: 0;
     overflow: hidden;
     padding-bottom: 0;
-    transition: padding .3s;
+    transition: padding 0.3s;
+  }
+
+  &__icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    padding: 3px;
+    border-radius: 50%;
+
+    .icon {
+      display: block;
+      width: 100%;
+      height: auto;
+
+      &__line-v {
+        transition: transform 0.2s ease-in-out;
+        transform-origin: center;
+      }
+    }
   }
 }

@@ -8,28 +8,40 @@
   </ul>
   {% assign about = site.docs | where: 'type', 'about' | sort: 'url' %}
   <div data-active="1" class="group accordion__item --active">
-    <div class="group_title accordion__toggler">Gut zu wissen</div>
+    <div class="group_title accordion__toggler">
+      <span class="accordion__headline">Gut zu wissen</span>
+      <span class="accordion__icon">{% include plus-icon.html %}</span>
+    </div>
     <ul class="accordion__content">{% for doc in about %}
       <li><a href="{{ site.baseurl }}{{ doc.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ doc.title }}</a></li>
     {% endfor %}</ul>
   </div>
   {% assign foundations = site.docs | where: 'type', 'foundation' | sort: 'url' %}
   <div data-active="1" class="group accordion__item --active">
-    <div class="group_title accordion__toggler">Grundlagen</div>
+    <div class="group_title accordion__toggler">
+      <span class="accordion__headline">Grundlagen</span>
+      <span class="accordion__icon">{% include plus-icon.html %}</span>
+    </div>
     <ul class="accordion__content">{% for doc in foundations %}
       <li><a href="{{ site.baseurl }}{{ doc.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ doc.title }}</a></li>
     {% endfor %}</ul>
   </div>
   {% assign components = site.docs | where: 'type', 'component' | sort: 'url' %}
   <div class="group accordion__item">
-    <div class="group_title accordion__toggler">Komponenten</div>
+    <div class="group_title accordion__toggler">
+      <span class="accordion__headline">Komponenten</span>
+      <span class="accordion__icon">{% include plus-icon.html %}</span>
+    </div>
     <ul class="accordion__content">{% for doc in components %}
       <li><a href="{{ site.baseurl }}{{ doc.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ doc.title }}</a></li>
     {% endfor %}</ul>
   </div>
   {% assign templates = site.docs | where: 'type', 'template' | sort: 'url' %}
   <div class="group accordion__item">
-    <div class="group_title accordion__toggler">Templates</div>
+    <div class="group_title accordion__toggler">
+      <span class="accordion__headline">Templates</span>
+      <span class="accordion__icon">{% include plus-icon.html %}</span>
+    </div>
     <ul class="accordion__content">{% for doc in templates %}
       <li><a href="{{ site.baseurl }}{{ doc.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ doc.title }}</a></li>
     {% endfor %}</ul>
