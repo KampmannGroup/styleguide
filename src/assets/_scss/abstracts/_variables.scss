@@ -12,8 +12,6 @@ $gray: #cecece;
 $gray-dark: #d7d5cd;
 $gray-medium: #f0efec;
 $gray-light: #f1f0ee;
-$yellow: #ffc107;
-$red: #dc3545;
 
 //Darkened Colors (lower lightness value in hsl)----------------
 $green-dark: hsl(76, 72%, 15%);
@@ -43,16 +41,16 @@ $color-contrast-dark: $dark;
 $color-contrast-light: $light;
 
 $colors: (
-  "blue": $blue,
-  "green": $green,
-  "teal": $teal,
-  "cyan": $cyan,
-  "aloevera": $aloevera,
-  "white": $white,
-  "gray": $gray,
-  "gray-dark": $gray-dark,
-  "gray-medium": $gray-medium,
-  "gray-light": $gray-light,
+  'blue': $blue,
+  'green': $green,
+  'teal': $teal,
+  'cyan': $cyan,
+  'aloevera': $aloevera,
+  'white': $white,
+  'gray': $gray,
+  'gray-dark': $gray-dark,
+  'gray-medium': $gray-medium,
+  'gray-light': $gray-light,
 );
 
 $alert-bg-scale: 0;
@@ -60,9 +58,8 @@ $alert-color-scale: 0;
 
 // Font
 
-$font-family-sans-serif: "Circular", system-ui, -apple-system, "Segoe UI",
-  Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji",
+$font-family-sans-serif: 'Circular', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+  'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji',
   sans-serif;
 $font-family-base: $font-family-sans-serif;
 
@@ -134,3 +131,20 @@ $border-radius: 10px;
 $border-radius-sm: 8px;
 $border-radius-lg: 12px;
 $border-radius-full: 1em;
+
+//Tooltips
+
+$spacer: 1rem;
+$tooltip-font-size: $font-size-sm;
+$tooltip-max-width: 200px;
+$tooltip-color: $white;
+$tooltip-bg: $black;
+$tooltip-border-radius: $border-radius;
+$tooltip-opacity: 0.9;
+$tooltip-padding-y: $spacer * 0.25;
+$tooltip-padding-x: $spacer * 0.5;
+$tooltip-margin: 0;
+
+$tooltip-arrow-width: 0.8rem;
+$tooltip-arrow-height: 0.4rem;
+$tooltip-arrow-color: $tooltip-bg;

@@ -1,0 +1,62 @@
+---
+title: Tooltips
+styles: assets/_scss/components/_tooltips.scss
+script: /dist/js/kampmann.umd.min.js
+maturity: draft
+inlinestyles: '<style>.canvas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 280px;
+    min-height: 150px;
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    margin: 5px 5px;
+  }
+</style>'
+
+---
+<div class="canvas">
+
+  <a href="javascript:void(0)" 
+    class="btn btn--primary" 
+    data-bs-toggle="tooltip" 
+    data-bs-placement="top"
+    title="Tooltip on top">
+    Tooltip on top
+  </a>
+
+  <a href="javascript:void(0)" 
+    class="btn btn--primary" 
+    data-bs-toggle="tooltip" 
+    data-bs-placement="right"
+    title="Tooltip on right">
+    Tooltip on right
+  </a>
+
+  <a href="javascript:void(0)" 
+    class="btn btn--primary" 
+    data-bs-toggle="tooltip" 
+    data-bs-placement="bottom"
+    title="Tooltip on bottom">
+    Tooltip on bottom
+  </a>
+
+  <a href="javascript:void(0)" 
+  class="btn btn--primary" 
+  data-bs-toggle="tooltip" 
+  data-bs-placement="left"
+  title="Tooltip on left">
+  Tooltip on left
+</a>
+  
+  <script type="module" src="{{ page.script }}"></script>
+</div>
+
+{{ page.inlinestyles }}
