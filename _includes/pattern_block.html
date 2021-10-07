@@ -30,16 +30,16 @@
   <div class="sg_code" data-styles="{{ pattern.styles }}">
     <!--  Get all Patterns, find the the Pattern that matches the pattern_url, print the Pattern code -->
     {% if pattern.content != '' %}
-    {% highlight html %}
-{{ pattern.content }}
-{% endhighlight %}
-{% endif %}
+      {% highlight html %}
+      {{ pattern.content | replace: '<div class="canvas">' , '' | replace: '</div><!-- norender -->', ''}}
+      {% endhighlight %}
+    {% endif %}
 
-{% if pattern.styles != "" %}
-  {% highlight scss %}
-  {% include {{pattern.styles}}%}
-  {% endhighlight %}
-{% endif %}
+    {% if pattern.styles != "" %}
+      {% highlight scss %}
+      {% include {{pattern.styles}}%}
+      {% endhighlight %}
+    {% endif %}
   </div>
 </section>
 {% endif %}
