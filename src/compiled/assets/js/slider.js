@@ -1,162 +1,79 @@
-document.addEventListener('DOMContentLoaded', function (event) {
-  const sliders = document.querySelectorAll('.slider--teaser')
+import Swiper, { Navigation, Pagination, Autoplay, Controller } from 'swiper'
+Swiper.use([Pagination, Autoplay, Navigation, Controller])
 
-  const adjustHeight = (slider) => {
-    const slideFirst = slider.querySelector(`.slider__slide--active`)
-    slider.style.height = slideFirst.offsetHeight + 'px'
+document.addEventListener('DOMContentLoaded', () => {
+  //slider
+  var elem = {},
+    process = {}
+
+  const startProgress = (slider, i, autoplay, speed) => {
+    let interval = 20,
+      step = Math.floor((100 / ((autoplay + speed) / interval)) * 100) / 100,
+      progressed,
+      width
+
+    if (slider.pagination && slider.pagination.bullets) {
+      if (elem[i]) {
+        elem[i].style.width = 0
+      }
+      elem[i] = slider.pagination.bullets[slider.realIndex].childNodes[0]
+
+      clearInterval(process[i])
+
+      width = 0
+      progressed = 0.0
+
+      process[i] = setInterval(() => {
+        progressed = Math.round((progressed + step) * 100) / 100
+        elem[i].style.width = progressed + '%'
+      }, interval)
+    }
   }
 
-  const slide = (slider, slidesCount) => {
-    const dotActive = slider.querySelector('.navigation__dot--active')
-    const slideActive = parseInt(dotActive.dataset.slide)
-    const slideNext = slideActive == slidesCount ? 0 : slideActive + 1
-    const dotNext = slider.querySelector(`.navigation__dot[data-slide='${slideNext}']`)
+  const sliders = document.querySelectorAll('.slider')
 
-    dotNext.click()
-  }
+  const autoplay = 5000
+  const speed = 600
 
-  if (sliders) {
-    sliders.forEach((slider, index) => {
-      window.addEventListener('load', () => {
-        adjustHeight(slider)
-      })
+  if (sliders.length > 0) {
+    sliders.forEach((slider, i) => {
+      let options = {}
 
-      window.addEventListener('resize', () => {
-        adjustHeight(slider)
-      })
-
-      const slides = slider.querySelectorAll('.slider__slide')
-      const slideContent = slider.querySelector('.slide__content')
-      const dotsWrapper = slider.querySelector('.navigation__dots')
-      const dots = slider.querySelectorAll('.navigation__dot')
-      const slidesCount = dots.length - 1
-
-      //Autoplay
-      var wait = setInterval(() => {
-        slide(slider, slidesCount)
-      }, 5000)
-
-      //PauseOnHover
-      const elemsToPauseOnHover = [slideContent, dotsWrapper]
-      elemsToPauseOnHover.forEach((el, index) => {
-        el.addEventListener('mouseover', (e) => {
-          clearInterval(wait)
-        })
-
-        el.addEventListener('mouseout', (e) => {
-          wait = setInterval(() => {
-            slide(slider, slidesCount)
-          }, 5000)
-        })
-      })
-
-      //Navigation Click
-      slider.addEventListener('click', (e) => {
-        const dot = e.target.closest('.navigation__dot')
-
-        if (dot && !dot.classList.contains('navigation__dot--active')) {
-          slider.dispatchEvent(
-            new CustomEvent('slidechange', {
-              detail: {
-                slideTarget: parseInt(dot.dataset.slide),
-              },
-            })
-          )
+      if (slider.classList.contains("slider--teaser")) {
+        options = {
+          spaceBetween: 0,
+          slidesPerView: 1,
         }
-      })
+      }
 
-      //Touch
-      let touching = false
-      let touchAmount = 0
-      let touchMoveAmount = 0
-      let touchMovePositionPrev = 0
-      let touchStartPosition = 0
-
-      slider.addEventListener('touchstart', (e) => {
-        touchStartPosition = parseInt(getComputedStyle(slides[0]).getPropertyValue('margin-left'))
-        clearInterval(wait)
-        touchAmount = e.changedTouches[0].pageX
-      })
-
-      slider.addEventListener('touchmove', (e) => {
-        if (!touching) {
-          slides[0].style.setProperty('transition', 'none')
-          touchMovePositionPrev = e.changedTouches[0].pageX
-          touchMoveAmount = 0
+      if (slider.classList.contains('slider--small')) {
+        options = {
+          spaceBetween: 20,
+          slidesPerView: 'auto'
         }
-        touching = true
+      }
 
-        touchMoveAmount = touchMoveAmount + (e.changedTouches[0].pageX - touchMovePositionPrev)
-        touchMovePositionPrev = e.changedTouches[0].pageX
-
-        slides[0].style.setProperty('margin-left', touchStartPosition + touchMoveAmount / 2 + 'px')
-      })
-
-      slider.addEventListener('touchend', (e) => {
-        touching = false
-        touchAmount = touchAmount - e.changedTouches[0].pageX
-        const activeSlide = getComputedStyle(slider).getPropertyValue('--active-slide')
-
-        slides[0].style.removeProperty('margin-left')
-        slides[0].style.removeProperty('transition')
-
-        if (touchAmount > 80) {
-          slider.dispatchEvent(
-            new CustomEvent('slidechange', {
-              detail: {
-                slideTarget: parseInt(activeSlide) + 1,
-              },
-            })
-          )
-        } else if (touchAmount < -80) {
-          slider.dispatchEvent(
-            new CustomEvent('slidechange', {
-              detail: {
-                slideTarget: parseInt(activeSlide) - 1,
-              },
-            })
-          )
-        } else {
-          slider.dispatchEvent(
-            new CustomEvent('slidechange', {
-              detail: {
-                slideTarget: parseInt(activeSlide),
-              },
-            })
-          )
-        }
-
-        wait = setInterval(() => {
-          slide(slider, slidesCount)
-        }, 5000)
-      })
-
-      //Slidechange
-      slider.addEventListener('slidechange', (e) => {
-        if (e.detail.slideTarget > slides.length - 1) {
-          e.detail.slideTarget = 0
-        } else if (e.detail.slideTarget < 0) {
-          e.detail.slideTarget = slides.length - 1
-        }
-
-        //Navigation Change
-        const dotPrevActive = slider.querySelector('.navigation__dot--active')
-        dotPrevActive.classList.remove('navigation__dot--active')
-
-        const dotActive = slider.querySelector(`.navigation__dot[data-slide="${e.detail.slideTarget}"]`)
-        dotActive.classList.add('navigation__dot--active')
-
-        //Slide Change
-        const slidePrevActive = slider.querySelector('.slider__slide--active')
-        slidePrevActive.classList.remove('slider__slide--active')
-
-        const slideActive = slider.querySelector(`.slider__slide[data-slide="${e.detail.slideTarget}"]`)
-        slideActive.classList.add('slider__slide--active')
-
-        //Slider Growth
-        slider.style.height = slideActive.offsetHeight + 'px'
-        //Slider Position
-        slider.style.setProperty('--active-slide', e.detail.slideTarget)
+      new Swiper(slider, {
+        speed: speed,
+        autoplay: {
+          delay: autoplay,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          renderBullet: (index, className) => {
+            return `<div class="${className} navigation__dot"><span class="navigation__progress"></span></div>`
+          },
+          bulletClass: 'navigation__dot',
+          bulletActiveClass: 'navigation__dot--active',
+          clickable: true,
+        },
+        on: {
+          init: (swiper) => startProgress(swiper, i, autoplay, speed),
+          slideChange: (swiper) => startProgress(swiper, i, autoplay, speed),
+        },
+        ...options
       })
     })
   }
