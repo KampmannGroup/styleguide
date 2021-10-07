@@ -1,4 +1,4 @@
-@import "bootstrap/scss/alert.scss";
+@import 'bootstrap/scss/alert.scss';
 
 .alert {
   &-primary {
@@ -7,18 +7,18 @@
   }
 
   &-success {
-    color: $success-supportive;
-    border-color: $success-supportive;
+    color: white;
+    border-color: $success;
   }
 
   &-info {
-    color: $info-supportive;
-    border-color: $info-supportive;
+    color: $white;
+    border-color: $info;
   }
 
   &-warning {
     color: $warning-supportive;
-    border-color: $warning-supportive;
+    border-color: $warning;
   }
 
   &-danger {
