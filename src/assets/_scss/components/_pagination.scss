@@ -2,13 +2,37 @@
 @import "bootstrap/scss/pagination.scss";
 
 .pagination {
+  & .page-item {
+    & .page-link {
+      color: $body-color;
+    }
+    &.active .page-link {
+      color: $white;
+      background-color: $body-color;
+      border-color: $body-color;
+    }
+  }
+
+  &--primary {
+    & .page-item {
+      & .page-link {
+        color: $primary;
+      }
+      &.active .page-link {
+        color: $white;
+        background-color: $primary;
+        border-color: $primary;
+      }
+    }
+  }
+
   &--green {
     & .page-item {
       & .page-link {
         color: $green;
       }
       &.active .page-link {
-        color: white;
+        color: $white;
         background-color: $green;
         border-color: $green;
       }
@@ -21,7 +45,7 @@
         color: $teal;
       }
       &.active .page-link {
-        color: white;
+        color: $white;
         background-color: $teal;
         border-color: $teal;
       }
@@ -34,7 +58,7 @@
         color: $aloevera;
       }
       &.active .page-link {
-        color: white;
+        color: $white;
         background-color: $aloevera;
         border-color: $aloevera;
       }
