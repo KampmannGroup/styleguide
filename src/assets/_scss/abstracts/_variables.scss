@@ -41,6 +41,7 @@ $body-color: #8a8882;
 
 $color-contrast-dark: $dark;
 $color-contrast-light: $light;
+$min-contrast-ratio: 1.25;
 
 $colors: (
   'blue': $blue,
@@ -150,3 +151,8 @@ $tooltip-margin: 0;
 $tooltip-arrow-width: 0.8rem;
 $tooltip-arrow-height: 0.4rem;
 $tooltip-arrow-color: $tooltip-bg;
+
+$nav-link-padding-y: 0.3125rem;
+$nav-link-padding-x: 0.28rem;
+$nav-pills-border-radius: 4px;
+$nav-pills-link-active-bg: $teal;

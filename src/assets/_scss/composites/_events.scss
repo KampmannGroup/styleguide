@@ -1,0 +1,18 @@
+.events {
+  padding-bottom: $grid-gutter-width * 2;
+
+  .navigation {
+    &__dots {
+      justify-content: center;
+    }
+
+    &__dot {
+      background: $primary;
+      opacity: 0.7;
+
+      &--active {
+        opacity: 1;
+      }
+    }
+  }
+}

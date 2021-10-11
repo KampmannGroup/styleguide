@@ -1,0 +1,156 @@
+@import 'bootstrap/scss/mixins.scss';
+@import 'bootstrap/scss/functions.scss';
+@import 'bootstrap/scss/utilities.scss';
+@import 'bootstrap/scss/card.scss';
+
+.card {
+  background-color: var(--highlight-color, transparent);
+  margin-bottom: $grid-gutter-width;
+
+  &--teal {
+    --highlight-color: #{$teal};
+    --contrast-color: #{color-contrast($teal)};
+
+    * {
+      color: var(--contrast-color, $blue);
+    }
+  }
+
+  &--green {
+    --highlight-color: #{$green};
+    --contrast-color: #{color-contrast($green)};
+
+    * {
+      color: var(--contrast-color, $blue);
+    }
+  }
+
+  &--cyan {
+    --highlight-color: #{$cyan};
+    --contrast-color: #{color-contrast($cyan)};
+
+    * {
+      color: var(--contrast-color, $blue);
+    }
+  }
+
+  &--gray-light {
+    --highlight-color: #{$gray-light};
+    --contrast-color: #{color-contrast($gray-light)};
+
+    * {
+      color: var(--contrast-color, $blue);
+    }
+  }
+
+  &__slider {
+    &__control {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      z-index: 99;
+      display: flex;
+      padding: $card-spacer-y $card-spacer-x;
+
+      &--prev {
+        transform: rotate(180deg) translateY(50%);
+      }
+
+      &--next {
+        right: 0;
+      }
+
+      &.disabled {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  &__tabs {
+    .list__item-content {
+      color: $body-color;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__links {
+    margin-top: auto;
+    align-self: flex-end;
+    width: 100%;
+  }
+
+  &--news {
+    .card {
+      &__body {
+        padding: 40px;
+      }
+
+      &__data {
+        display: flex;
+        gap: $grid-gutter-width / 2;
+
+        &__item {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &--product {
+    height: calc(100% - #{$grid-gutter-width});
+
+    .card {
+      &__title {
+        background: $gray-light;
+        padding: $card-spacer-y $card-spacer-x;
+
+        .headline {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &--event {
+    overflow: hidden;
+    .card {
+      &__title {
+        margin-bottom: $grid-gutter-width;
+      }
+
+      &__body {
+        padding: $grid-gutter-width * 1.25;
+        &__item {
+          width: 100%;
+        }
+      }
+
+      &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $primary;
+        min-height: $grid-gutter-width * 2;
+      }
+
+      &__data {
+        margin: 0 $grid-gutter-width/-1;
+
+        &__item {
+          display: inline-flex;
+          align-items: center;
+          padding: 0 $grid-gutter-width;
+        }
+
+        img {
+          margin-right: $grid-gutter-width/4;
+        }
+      }
+    }
+  }
+}
