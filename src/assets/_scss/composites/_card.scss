@@ -85,6 +85,13 @@
   }
 
   &--news {
+    transition: 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: $box-shadow;
+    }
+
     .card {
       &__body {
         padding: 40px;
@@ -97,6 +104,14 @@
         &__item {
           color: $white;
         }
+      }
+
+      &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
     }
   }
@@ -142,7 +157,7 @@
           transition: 0.3s;
         }
 
-        &:hover {             
+        &:hover {
           .card__link__icon {
             animation: 1.2s point linear infinite;
           }

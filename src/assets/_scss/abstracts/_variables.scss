@@ -56,6 +56,7 @@ $line-height-base: 1.5;
 
 $font-size-root: 16px;
 $font-size-base: 0.875rem;
+$font-size-xxs: 0.625rem;
 $font-size-xs: 0.75rem;
 $font-size-sm: 0.8125rem;
 $font-size-lg: 1rem;
@@ -77,6 +78,7 @@ $headings-color: $primary;
 $font-sizes: (
   bs: $font-size-base,
   xs: $font-size-xs,
+  xxs: $font-size-xxs,
   sm: $font-size-sm,
   lg: $font-size-lg,
   1: $h1-font-size,
