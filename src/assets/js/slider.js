@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function (event) {
-  const sliders = document.querySelectorAll('.slider')
+  const sliders = document.querySelectorAll('.slider--teaser')
 
   const adjustHeight = (slider) => {
     const slideFirst = slider.querySelector(`.slider__slide--active`)
@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
   }
 
   const slide = (slider, slidesCount) => {
-    const dotActive = slider.querySelector('.slider__dot--active')
+    const dotActive = slider.querySelector('.navigation__dot--active')
     const slideActive = parseInt(dotActive.dataset.slide)
     const slideNext = slideActive == slidesCount ? 0 : slideActive + 1
-    const dotNext = slider.querySelector(`.slider__dot[data-slide='${slideNext}']`)
+    const dotNext = slider.querySelector(`.navigation__dot[data-slide='${slideNext}']`)
 
     dotNext.click()
   }
@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
       const slides = slider.querySelectorAll('.slider__slide')
       const slideContent = slider.querySelector('.slide__content')
-      const dotsWrapper = slider.querySelector('.slider__dots')
-      const dots = slider.querySelectorAll('.slider__dot')
+      const dotsWrapper = slider.querySelector('.navigation__dots')
+      const dots = slider.querySelectorAll('.navigation__dot')
       const slidesCount = dots.length - 1
 
       //Autoplay
@@ -52,9 +52,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
       //Navigation Click
       slider.addEventListener('click', (e) => {
-        const dot = e.target.closest('.slider__dot')
+        const dot = e.target.closest('.navigation__dot')
 
-        if (dot && !dot.classList.contains('slider__dot--active')) {
+        if (dot && !dot.classList.contains('navigation__dot--active')) {
           slider.dispatchEvent(
             new CustomEvent('slidechange', {
               detail: {
@@ -140,11 +140,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
         }
 
         //Navigation Change
-        const dotPrevActive = slider.querySelector('.slider__dot--active')
-        dotPrevActive.classList.remove('slider__dot--active')
+        const dotPrevActive = slider.querySelector('.navigation__dot--active')
+        dotPrevActive.classList.remove('navigation__dot--active')
 
-        const dotActive = slider.querySelector(`.slider__dot[data-slide="${e.detail.slideTarget}"]`)
-        dotActive.classList.add('slider__dot--active')
+        const dotActive = slider.querySelector(`.navigation__dot[data-slide="${e.detail.slideTarget}"]`)
+        dotActive.classList.add('navigation__dot--active')
 
         //Slide Change
         const slidePrevActive = slider.querySelector('.slider__slide--active')

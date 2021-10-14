@@ -1,0 +1,49 @@
+@import "bootstrap/scss/mixins.scss";
+@import "bootstrap/scss/pagination.scss";
+
+.pagination {
+  &--green {
+    & .page-item {
+      & .page-link {
+        color: $green;
+      }
+      &.active .page-link {
+        color: white;
+        background-color: $green;
+        border-color: $green;
+      }
+    }
+  }
+
+  &--teal {
+    & .page-item {
+      & .page-link {
+        color: $teal;
+      }
+      &.active .page-link {
+        color: white;
+        background-color: $teal;
+        border-color: $teal;
+      }
+    }
+  }
+
+  &--aloevera {
+    & .page-item {
+      & .page-link {
+        color: $aloevera;
+      }
+      &.active .page-link {
+        color: white;
+        background-color: $aloevera;
+        border-color: $aloevera;
+      }
+    }
+  }
+
+  & .page-item {
+    &.disabled .page-link {
+      color: $gray;
+    }
+  }
+}
