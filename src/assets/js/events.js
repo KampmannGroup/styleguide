@@ -2,9 +2,8 @@ import Swiper, { Navigation, Pagination, Autoplay, Controller, EffectFade } from
 Swiper.use([Pagination, Autoplay, Navigation, Controller, EffectFade])
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  console.log(12345)
   new Swiper('.events', {
-    effect: 'fade',
+    // effect: 'fade',
     fadeEffect: {
       crossFade: true,
     },

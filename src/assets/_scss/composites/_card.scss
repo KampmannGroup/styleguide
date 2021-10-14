@@ -136,6 +136,17 @@
         align-items: center;
         background: $primary;
         min-height: $grid-gutter-width * 2;
+        transition: 0.3s;
+
+        &__icon {
+          transition: 0.3s;
+        }
+
+        &:hover {             
+          .card__link__icon {
+            animation: 1.2s point linear infinite;
+          }
+        }
       }
 
       &__data {
