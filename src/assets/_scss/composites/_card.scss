@@ -85,6 +85,13 @@
   }
 
   &--news {
+    transition: 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: $box-shadow;
+    }
+
     .card {
       &__body {
         padding: 40px;
@@ -97,6 +104,14 @@
         &__item {
           color: $white;
         }
+      }
+
+      &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
     }
   }
@@ -118,15 +133,62 @@
 
   &--event {
     overflow: hidden;
+
     .card {
       &__title {
-        margin-bottom: $grid-gutter-width;
+        margin-bottom: 0;
       }
 
       &__body {
         padding: $grid-gutter-width * 1.25;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: $grid-gutter-width * 2;
+
+        &__wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          flex: 1 1 auto;
+          gap: $grid-gutter-width;
+        }
+
         &__item {
           width: 100%;
+          width: auto;
+
+          &--details {
+            min-width: 75%;
+            padding-right: $grid-gutter-width;
+            margin-right: auto;
+
+            > * {
+              width: 100%;
+            }
+          }
+
+          &--data {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1 1 0;
+            margin: 0 $grid-gutter-width/-1;
+          }
+        }
+      }
+
+      &__teaser {
+        margin: 0;
+        margin-top: .5em;
+      }
+
+      &__status {
+        &__wrapper {
+          margin-left: $grid-gutter-width * 1.25;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          align-content: center;
+          width: 50px;
+          justify-content: flex-start;
         }
       }
 
@@ -136,11 +198,20 @@
         align-items: center;
         background: $primary;
         min-height: $grid-gutter-width * 2;
+        transition: 0.3s;
+
+        &__icon {
+          transition: 0.3s;
+        }
+
+        &:hover {
+          .card__link__icon {
+            animation: 1.2s point linear infinite;
+          }
+        }
       }
 
       &__data {
-        margin: 0 $grid-gutter-width/-1;
-
         &__item {
           display: inline-flex;
           align-items: center;
@@ -149,6 +220,23 @@
 
         img {
           margin-right: $grid-gutter-width/4;
+        }
+      }
+    }
+
+    @media (max-width: 450px) {
+      .card {
+        &__body {
+          flex-wrap: wrap;
+          gap: 25px;
+        }
+        &__status {
+          display: flex;
+
+          &__wrapper {
+            width: 100%;
+            margin: 0;
+          }
         }
       }
     }
