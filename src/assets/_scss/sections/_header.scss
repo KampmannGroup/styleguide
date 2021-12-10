@@ -2,6 +2,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 99;
 
   &__wrapper {
     display: flex;
@@ -21,6 +22,7 @@
       padding-bottom: 0;
       flex-grow: 1;
       align-items: flex-start;
+      background-color: white;
 
       .header__section-wrapper {
         overflow: visible;
