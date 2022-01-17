@@ -1,9 +1,9 @@
-
 .btn {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   margin-top: $grid-gutter-width/2;
   padding: $input-btn-padding-y $input-btn-padding-x;
@@ -30,8 +30,8 @@
     position: absolute;
     border-radius: $border-radius-lg;
     display: none;
-    left:$grid-gutter-width/-4;
-    top:$grid-gutter-width/-4;
+    left: $grid-gutter-width/-4;
+    top: $grid-gutter-width/-4;
     border: 2px solid rgba($primary, 0.3);
   }
 
@@ -47,7 +47,7 @@
     color: $secondary !important;
     border-color: transparent;
 
-    &:hover{
+    &:hover {
       color: $secondary;
     }
 
@@ -62,7 +62,7 @@
     color: $primary;
     border-color: transparent;
 
-    &:hover{
+    &:hover {
       color: $primary;
     }
 
@@ -81,7 +81,7 @@
     color: $white;
     border-color: transparent;
     pointer-events: none;
-    opacity:1 !important;
+    opacity: 1 !important;
   }
 
   &--outline {
@@ -97,11 +97,12 @@
       border-color: $primary;
       color: $primary;
 
-      &:hover{
+      &:hover {
         color: $primary;
       }
 
-      &:focus:not(:active), &:focus:not(:active):hover{
+      &:focus:not(:active),
+      &:focus:not(:active):hover {
         background-color: transparent;
       }
 
@@ -116,7 +117,7 @@
       border-color: $secondary;
       color: $secondary;
 
-      &:hover{
+      &:hover {
         color: $secondary;
       }
 
@@ -134,16 +135,16 @@
       color: $gray;
       border-color: $gray;
       pointer-events: none;
-      opacity:1 !important;
+      opacity: 1 !important;
     }
   }
 
-  &__icon{
+  &__icon {
     height: #{$line-height-base}em;
     display: flex;
     align-items: center;
 
-    &--before{
+    &--before {
       margin-right: $grid-gutter-width;
     }
   }
