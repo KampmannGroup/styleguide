@@ -24,7 +24,7 @@
   },
   "author": "Kampmann Group <jens.reisenbichler@kampmann.de> (https://www.kampmann.de)",
   "bugs": {
-    "url": "https://bitbucket.org/muuuh/kampmann-styleguide/issues"
+    "url": "https://github.com/KampmannGroup/styleguide/issues"
   },
   "homepage": "https://github.com/KampmannGroup/styleguide#readme",
   "devDependencies": {
