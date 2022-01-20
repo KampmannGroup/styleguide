@@ -22,7 +22,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "author": "Kampmann Group",
+  "author": "Kampmann Group <jens.reisenbichler@kampmann.de> (https://www.kampmann.de)",
   "bugs": {
     "url": "https://bitbucket.org/muuuh/kampmann-styleguide/issues"
   },
