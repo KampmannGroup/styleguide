@@ -1,6 +1,40 @@
 @import "bootstrap/scss/transitions.scss";
 @import "bootstrap/scss/accordion.scss";
 
-.accordion-header {
-  margin-top: 0;
+.accordion {
+  &-item {
+    margin: 16px 0;
+    border-radius: $border-radius;
+
+    &:nth-child(n) {
+      border: 1px solid $gray-dark;
+    }
+  }
+
+  &-button {
+    border-radius: $border-radius;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $primary;
+
+    &:not(.collapsed) {
+      background-color: transparent;
+      box-shadow: none;
+      color: $green;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &-header {
+    margin-top: 0;
+  }
+
+  &-body {
+    color: $primary;
+    font-size: 1rem;
+    font-weight: 200;
+  }
 }
