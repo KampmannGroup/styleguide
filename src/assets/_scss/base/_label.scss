@@ -7,4 +7,14 @@
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1.38px;
+
+  &-headline {
+    font-family: $font-family-base;
+    line-height: $headings-line-height;
+    margin-top: 0;
+    font-size: $font-size-sm;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing;
+  }
 }
