@@ -8,15 +8,17 @@
   &-content {
     border: 1px solid $gray-dark;
     border-radius: 0 $border-radius $border-radius $border-radius;
-    font-weight: 300;
     font-size: $font-size-lg;
     color: $primary;
 
-    & .tab-pane > *:first-child {
-      margin-top: 0;
-    }
-    & .tab-pane > *:last-child {
-      margin-bottom: 0;
+    & .tab-pane {
+      & > *:first-child {
+        margin-top: 0;
+      }
+
+      & > *:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

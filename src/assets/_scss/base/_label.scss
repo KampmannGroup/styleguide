@@ -3,12 +3,16 @@
   line-height: $headings-line-height;
   margin-top: 0;
   margin-bottom: 1em;
-  font-size: $font-size-sm;
-  font-weight: 500;
+  font-size: $font-size-xxs;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: $letter-spacing;
+  letter-spacing: 1.38px;
 
-  &--bold {
+  &--headline {
+    margin-bottom: 0;
+    font-size: $font-size-sm;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing;
   }
 }
