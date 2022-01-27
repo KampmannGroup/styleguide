@@ -16,6 +16,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     color: $primary;
+    font-weight: 700;
 
     &:not(.collapsed) {
       background-color: transparent;
