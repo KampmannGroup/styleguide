@@ -143,6 +143,7 @@
       &__title {
         background: $gray-light;
         padding: $card-spacer-y $card-spacer-x;
+        min-height: 120px;
 
         .headline {
           margin-bottom: 0;
