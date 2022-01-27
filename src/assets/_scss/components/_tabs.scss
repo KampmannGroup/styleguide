@@ -8,9 +8,16 @@
   &-content {
     border: 1px solid $gray-dark;
     border-radius: 0 $border-radius $border-radius $border-radius;
+    font-weight: 300;
+    font-size: $font-size-lg;
     color: $primary;
-    font-size: 1rem;
-    font-weight: 200;
+
+    & .tab-pane > *:first-child {
+      margin-top: 0;
+    }
+    & .tab-pane > *:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -25,10 +32,6 @@
     border-bottom: none !important;
     border-radius: $border-radius $border-radius 0 0;
     border-color: transparent;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: $primary;
-    font-weight: 700;
 
     &:hover {
       border-color: $gray-light !important;
