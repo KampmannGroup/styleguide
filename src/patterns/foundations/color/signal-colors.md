@@ -1,7 +1,7 @@
 ---
 title: Signalfarben
 styles: assets/_scss/abstracts/_variables.scss
-maturity: draft
+maturity: ready
 control: exclude
 colors:
   # - name: Frühlingsgrün
@@ -14,11 +14,13 @@ colors:
     hex: '#FFC107'
     rgb: 'rgba(255,193,7,1)'
     hsl: 'hsla(45,100%,51%,1)'
+    css: 'var(--color-yellow)'
   - name: Rot
     mashinename: $red
     hex: '#DC3545'
     rgb: 'rgba(220,53,69,1)'
     hsl: 'hsla(354,70%,54%,1)'
+    css: 'var(--color-red)'
 ---
 
 <style>
@@ -49,12 +51,14 @@ p {
 <ul class="set">
 {% for item in page.colors %} 
   <li>
-    <div class="color" style="background:{{ item.hex }}"></div> 
-    <p>{{ item.name }}</p>
-    <p>{{ item.mashinename }}</p>
-    {% if item.hex %}<p>{{ item.hex }}</p>{% endif %}
-    {% if item.rgb %}<p>{{ item.rgb }}</p>{% endif %}
-    {% if item.hsl %}<p>{{ item.hsl }}</p>{% endif %}
+    <div class="color" style="background:{{ item.css }}"></div> 
+    <p><strong>{{ item.name }}</strong></p>
+    <p><span class="label">SCSS:</span> {{ item.mashinename }}</p>
+    {% if item.css %}<p><span class="label">CSS:</span> {{ item.css }}</p>{% endif %}
+    {% if item.hex %}<p><span class="label">HEX:</span> {{ item.hex }}</p>{% endif %}
+    {% if item.rgb %}<p><span class="label">RGB:</span> {{ item.rgb }}</p>{% endif %}
+    {% if item.hsl %}<p><span class="label">HSL:</span> {{ item.hsl }}</p>{% endif %}
+    {% if item.cmyk %}<p><span class="label">CYMK:</span> {{ item.cmyk }}</p>{% endif %}
   </li>
 {% endfor %}
 </ul>

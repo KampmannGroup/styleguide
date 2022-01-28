@@ -6,6 +6,7 @@ import { Tab } from 'bootstrap'
 document.addEventListener('DOMContentLoaded', function (event) {
   //Images
   new Swiper('.card__slider', {
+    slidesPerView: 1,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
