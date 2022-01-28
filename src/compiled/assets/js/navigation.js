@@ -3,6 +3,8 @@
  */
 const burgers = document.querySelectorAll('.navigation__burger')
 
+const NAV_DELAY = 600
+
 if (burgers.length > 0) {
   burgers.forEach((burger, index) => {
     burger.addEventListener('click', (e) => {
@@ -24,7 +26,7 @@ if (burgers.length > 0) {
             const collapse = navigation_toggler.animate(
               [{ height: `${navigation_toggler.scrollHeight}px` }, { height: '0' }],
               {
-                duration: 300,
+                duration: NAV_DELAY,
               }
             )
             collapse.onfinish = () => {
@@ -38,7 +40,7 @@ if (burgers.length > 0) {
 
           const expand = navigation_toggler.animate(
             [{ height: '0' }, { height: `${navigation_toggler.scrollHeight}px` }],
-            { duration: 300 }
+            { duration: NAV_DELAY }
           )
 
           expand.onfinish = () => navigation_toggler.style.removeProperty('height')
@@ -134,12 +136,12 @@ if (mainNavElements.length > 0 && subNavElements.length > 0 && window.innerWidth
     el.addEventListener('mouseenter', (e) => {
       const target = e.currentTarget
       clearTimeout(hideNavigation)
-      showNavigation = setTimeout(() => target.classList.add('isHovered'), 300)
+      showNavigation = setTimeout(() => target.classList.add('isHovered'), NAV_DELAY)
     })
     el.addEventListener('mouseleave', (e) => {
       const target = e.currentTarget
       clearTimeout(showNavigation)
-      hideNavigation = setTimeout(() => target.classList.remove('isHovered'), 300)
+      hideNavigation = setTimeout(() => target.classList.remove('isHovered'), NAV_DELAY)
     })
   }
 
@@ -150,7 +152,7 @@ if (mainNavElements.length > 0 && subNavElements.length > 0 && window.innerWidth
       const subnav = el.querySelector('.subnavigation')
       if (subnav) {
         const firstEl = subnav.querySelector('.navigation__element--first')
-        showNavigation = setTimeout(() => firstEl.classList.add('isHovered'), 300)
+        showNavigation = setTimeout(() => firstEl.classList.add('isHovered'), NAV_DELAY)
       }
     })
   })
