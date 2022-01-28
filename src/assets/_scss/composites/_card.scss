@@ -84,6 +84,16 @@
     width: 100%;
   }
 
+  &--basic {
+    .card {
+      &__title {
+        .headline {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
   &--news {
     transition: 0.3s;
 
@@ -143,7 +153,7 @@
       &__title {
         background: $gray-light;
         padding: $card-spacer-y $card-spacer-x;
-        min-height: 120px;
+        min-height: 105px;
 
         .headline {
           margin-bottom: 0;
