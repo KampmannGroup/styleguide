@@ -183,6 +183,12 @@
           margin-bottom: 0;
         }
       }
+
+      &__tabs {
+        .tab-content {
+          border: none !important;
+        }
+      }
     }
   }
 
