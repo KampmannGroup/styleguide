@@ -1,27 +1,51 @@
-// Colors
-
+/**
+  * Colors
+  */
+// Basic colors
 $white: #ffffff;
 $black: #000000;
-
-$blue: #0e2249;
-$green: #95c11f;
-$teal: #008f8c;
-$aloevera: #79c08b;
-$cyan: #58c7da;
 $gray: #cecece;
 $gray-dark: #d7d5cd;
 $gray-medium: #f0efec;
 $gray-light: #f1f0ee;
-$gray-beige-light: #F2F2F0;
+$gray-beige-light: #f2f2f0;
+
+// Primary colors
+$blue: #0e2249;
+$green: #95c11f;
+
+// Accent colors
+$teal: #008f8c;
+$aloevera: #79c08b;
+$cyan: #58c7da;
+
+// Signal colors
 $yellow: #ffc107;
 $red: #dc3545;
 
-//Darkened Colors (lower lightness value in hsl)----------------
+// Colors as CSS custom properties
+:root {
+  --color-black: hsla(0, 0%, 0%, 1);
+  --color-white: hsla(0, 0%, 100%, 1);
+
+  --color-blue: hsla(220, 68%, 17%, 1);
+  --color-green: hsla(76, 72%, 44%, 1);
+
+  --color-teal: hsla(179, 100%, 28%, 1);
+  --color-aloevera: hsla(135, 36%, 61%, 1);
+  --color-cyan: hsla(189, 64%, 60%, 1);
+
+  --color-yellow: hsla(45, 100%, 51%, 1);
+  --color-red: hsla(354, 70%, 54%, 1);
+}
+
+/** 
+  * Darkened Colors (lower lightness value in hsl)
+  */
 $green-dark: hsl(76, 72%, 30%);
 $teal-dark: hsl(179, 100%, 16%);
 $cyan-dark: hsl(189, 64%, 30%);
 $yellow-dark: hsl(45, 100%, 20%);
-//--------------------------------------------------------------
 
 $primary: $blue;
 $secondary: $white;
@@ -61,7 +85,9 @@ $colors: (
 $alert-bg-scale: 0;
 $alert-color-scale: 0;
 
-// Font
+/**
+  * Font families and sizes
+  */
 
 $font-family-sans-serif: 'Circular', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
   'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji',
@@ -105,8 +131,9 @@ $font-sizes: (
   6: $h6-font-size,
 );
 
-// Spaces
-
+/**
+  * Spaces, grid sizes, border radius & breakpoints
+  */
 $container-max-widths: (
   sm: 540px,
   md: 720px,
@@ -140,8 +167,9 @@ $border-radius-sm: 8px;
 $border-radius-lg: 12px;
 $border-radius-full: 1em;
 
-//Tooltips
-
+/**
+  * Tooltip settings
+  */
 $spacer: 1rem;
 $tooltip-font-size: $font-size-sm;
 $tooltip-max-width: 200px;
