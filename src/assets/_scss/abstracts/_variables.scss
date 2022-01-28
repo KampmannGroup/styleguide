@@ -1,6 +1,7 @@
-/**
-  * Colors
-  */
+//----------------------------------------------------------
+// COLORS
+//----------------------------------------------------------
+
 // Basic colors
 $white: #ffffff;
 $black: #000000;
@@ -39,9 +40,7 @@ $red: #dc3545;
   --color-red: hsla(354, 70%, 54%, 1);
 }
 
-/** 
-  * Darkened Colors (lower lightness value in hsl)
-  */
+//Darkened Colors (lower lightness value in hsl)
 $green-dark: hsl(76, 72%, 30%);
 $teal-dark: hsl(179, 100%, 16%);
 $cyan-dark: hsl(189, 64%, 30%);
@@ -85,9 +84,9 @@ $colors: (
 $alert-bg-scale: 0;
 $alert-color-scale: 0;
 
-/**
-  * Font families and sizes
-  */
+//----------------------------------------------------------
+// FONT FAMILIES & SIZES
+//----------------------------------------------------------
 
 $font-family-sans-serif: 'Circular', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
   'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji',
@@ -131,9 +130,10 @@ $font-sizes: (
   6: $h6-font-size,
 );
 
-/**
-  * Spaces, grid sizes, border radius & breakpoints
-  */
+//----------------------------------------------------------
+// GRIDS & SPACES
+//----------------------------------------------------------
+
 $container-max-widths: (
   sm: 540px,
   md: 720px,
@@ -160,6 +160,10 @@ $input-btn-padding-x: 1.25rem;
 $btn-padding-y: 1rem;
 $btn-padding-x: 2.875rem;
 
+//----------------------------------------------------------
+// BORDER SETTINGS
+//----------------------------------------------------------
+
 $border-width: 1px;
 $border-radius: 10px;
 $border-radius-xs: 4px;
@@ -167,9 +171,10 @@ $border-radius-sm: 8px;
 $border-radius-lg: 12px;
 $border-radius-full: 1em;
 
-/**
-  * Tooltip settings
-  */
+//----------------------------------------------------------
+// TOOLTIP SETTINGS
+//----------------------------------------------------------
+
 $spacer: 1rem;
 $tooltip-font-size: $font-size-sm;
 $tooltip-max-width: 200px;
