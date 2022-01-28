@@ -26,18 +26,31 @@ $red: #dc3545;
 
 // Colors as CSS custom properties
 :root {
-  --color-black: hsla(0, 0%, 0%, 1);
-  --color-white: hsla(0, 0%, 100%, 1);
+  --hsl-black: hsl(0, 0%, 0%);
+  --hsl-white: hsl(0, 0%, 100%);
 
-  --color-blue: hsla(220, 68%, 17%, 1);
-  --color-green: hsla(76, 72%, 44%, 1);
+  --hsl-blue: hsl(220, 68%, 17%);
+  --hsl-green: hsl(76, 72%, 44%);
 
-  --color-teal: hsla(179, 100%, 28%, 1);
-  --color-aloevera: hsla(135, 36%, 61%, 1);
-  --color-cyan: hsla(189, 64%, 60%, 1);
+  --hsl-teal: hsl(179, 100%, 28%);
+  --hsl-aloevera: hsl(135, 36%, 61%);
+  --hsl-cyan: hsl(189, 64%, 60%);
 
-  --color-yellow: hsla(45, 100%, 51%, 1);
-  --color-red: hsla(354, 70%, 54%, 1);
+  --hsl-yellow: hsl(45, 100%, 51%);
+  --hsl-red: hsl(354, 70%, 54%);
+
+  --color-black: hsla(var(--hsl-black), 1);
+  --color-white: hsla(var(--hsl-white), 1);
+
+  --color-blue: hsla(var(--hsl-blue), 1);
+  --color-green: hsla(var(--hsl-green), 1);
+
+  --color-teal: hsla(var(--hsl-teal), 1);
+  --color-aloevera: hsla(var(--hsl-aloevera), 1);
+  --color-cyan: hsla(var(--hsl-cyan), 1);
+
+  --color-yellow: hsla(var(--hsl-yellow), 1);
+  --color-red: hsla(var(--hsl-red), 1);
 }
 
 //Darkened Colors (lower lightness value in hsl)
