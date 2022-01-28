@@ -26,18 +26,18 @@ $red: #dc3545;
 
 // Colors as CSS custom properties
 :root {
-  --hsl-black: hsl(0, 0%, 0%);
-  --hsl-white: hsl(0, 0%, 100%);
+  --hsl-black: 0, 0%, 0%;
+  --hsl-white: 0, 0%, 100%;
 
-  --hsl-blue: hsl(220, 68%, 17%);
-  --hsl-green: hsl(76, 72%, 44%);
+  --hsl-blue: 220, 68%, 17%;
+  --hsl-green: 76, 72%, 44%;
 
-  --hsl-teal: hsl(179, 100%, 28%);
-  --hsl-aloevera: hsl(135, 36%, 61%);
-  --hsl-cyan: hsl(189, 64%, 60%);
+  --hsl-teal: 179, 100%, 28%;
+  --hsl-aloevera: 135, 36%, 61%;
+  --hsl-cyan: 189, 64%, 60%;
 
-  --hsl-yellow: hsl(45, 100%, 51%);
-  --hsl-red: hsl(354, 70%, 54%);
+  --hsl-yellow: 45, 100%, 51%;
+  --hsl-red: 354, 70%, 54%;
 
   --color-black: hsla(var(--hsl-black), 1);
   --color-white: hsla(var(--hsl-white), 1);
