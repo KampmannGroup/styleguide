@@ -1,0 +1,15 @@
+@import "bootstrap/scss/tables.scss";
+
+.datatable {
+  &__header {
+    color: $white;
+    border: none;
+    text-align: left;
+  }
+  &__headline {
+    text-transform: uppercase;
+    font-weight: 200;
+    background-color: $blue;
+    padding: 14px 16px;
+  }
+}
