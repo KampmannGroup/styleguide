@@ -22,12 +22,12 @@
 
     &--primary {
       color: $secondary;
-      background: $primary;
+      background: $primary !important;
     }
 
     &--secondary {
       color: $body-color;
-      background: $secondary;
+      background: $secondary !important;
     }
   }
 

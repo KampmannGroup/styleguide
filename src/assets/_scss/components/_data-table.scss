@@ -1,15 +1,28 @@
 @import "bootstrap/scss/tables.scss";
 
 .datatable {
+  border-spacing: 0;
+
+  th,
+  td {
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 18px 16px;
+    color: $primary;
+    font-size: $font-size-sm;
+    font-weight: 200px;
+  }
+
+  th {
+    padding: 14px 16px;
+    background-color: $primary;
+  }
+
   &__header {
     color: $white;
     border: none;
     text-align: left;
-  }
-  &__headline {
-    text-transform: uppercase;
-    font-weight: 200;
-    background-color: $blue;
-    padding: 14px 16px;
   }
 }
