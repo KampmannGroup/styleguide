@@ -34,17 +34,22 @@
   &__sort {
     display: flex;
     flex-direction: column;
+    margin-top: -10px;
+    margin-bottom: -10px;
 
     &__item {
       display: flex;
-      height: 10px;
+      height: 20px;
       width: 30px;
       align-items: center;
       justify-content: center;
       transition: 0.3s;
+      padding-top: 10px;
 
       &:hover,
-      &--active {
+      &--active,
+      [aria-sort='ascending'] &--asc,
+      [aria-sort='descending'] &--desc {
         color: $green;
       }
 
