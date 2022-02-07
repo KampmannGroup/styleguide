@@ -1,16 +1,9 @@
----
-title: Primäre Tabelle
-styles: assets/_scss/components/_table.scss
-script: /dist/js/kampmann.umd.min.js
-maturity: draft
----
-
 <table class="table active table--data-table" cellspacing="0" cellpadding="0">
   <thead>
     <tr class="table__row table__row--header">
       <th
         data-target="title"
-        class="table__head table__head--primary table__head--title"
+        class="table__head table__head--secondary table__head--title"
       >
         <div class="table__head__wrapper">
           Titel
@@ -52,7 +45,7 @@ maturity: draft
       </th>
       <th
         data-target="type"
-        class="table__head table__head--primary table__head--type"
+        class="table__head table__head--secondary table__head--type"
       >
         <div class="table__head__wrapper">
           Typ
@@ -94,7 +87,7 @@ maturity: draft
       </th>
       <th
         data-target="language"
-        class="table__head table__head--primary table__head--language"
+        class="table__head table__head--secondary table__head--language"
       >
         <div class="table__head__wrapper">
           Sprache
@@ -136,7 +129,7 @@ maturity: draft
       </th>
       <th
         data-target="mime"
-        class="table__head table__head--primary table__head--mime"
+        class="table__head table__head--secondary table__head--mime"
       >
         <div class="table__head__wrapper">
           Dateityp
@@ -290,4 +283,4 @@ maturity: draft
   </tbody>
 </table>
 
-<script src="{{ page.script }}"></script>
+<script src="/dist/js/kampmann.umd.min.js"></script>
