@@ -45,6 +45,8 @@
     "@rollup/plugin-node-resolve": "^13.0.5",
     "bootstrap": "^5.1.1",
     "masonry-layout": "^4.2.2",
+    "datatables.net": "^1.11.4",
+    "jquery": "^3.6.0",
     "swiper": "^7.0.6"
   }
 }

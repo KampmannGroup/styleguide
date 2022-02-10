@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       const mobilizeTable = () => {
         if (window.innerWidth < 768) {
           if (!isMobile) {
-            const table_heads = table.querySelectorAll('.table__head[data-target]')
+            const table_heads = table.querySelectorAll('.table__head--title[data-target]')
 
             if (table_heads) {
               table_heads.forEach((table_head, index) => {

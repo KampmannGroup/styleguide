@@ -1,3 +1,5 @@
+@import 'bootstrap/scss/tables.scss';
+
 .table {
   width: 100%;
   text-align: left;
@@ -11,10 +13,13 @@
   }
 
   &__head {
+    font-size: $font-size-base;
     padding: $grid-gutter-width 1rem;
     text-transform: uppercase;
     cursor: pointer;
     font-weight: 400;
+    letter-spacing: $letter-spacing;
+    border-bottom: 1px solid $primary !important;
 
     &__wrapper {
       display: flex;
@@ -22,29 +27,34 @@
 
     &--primary {
       color: $secondary;
-      background: $primary;
+      background: $primary !important;
     }
 
     &--secondary {
       color: $body-color;
-      background: $secondary;
+      background: $secondary !important;
     }
   }
 
   &__sort {
     display: flex;
     flex-direction: column;
+    margin-top: -10px;
+    margin-bottom: -10px;
 
     &__item {
       display: flex;
-      height: 10px;
+      height: 20px;
       width: 30px;
       align-items: center;
       justify-content: center;
       transition: 0.3s;
+      padding-top: 10px;
 
       &:hover,
-      &--active {
+      &--active,
+      [aria-sort='ascending'] &--asc,
+      [aria-sort='descending'] &--desc {
         color: $green;
       }
 
