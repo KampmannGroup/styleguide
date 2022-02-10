@@ -132,11 +132,25 @@
     }
 
     &-highlight {
-      .row > *:first-child {
-        padding-right: 0;
+      @include media-breakpoint-up(md) {
+        .row > *:first-child {
+          padding-right: 0;
+        }
+        .row > *:last-child {
+          padding-left: 0;
+        }
       }
-      .row > *:last-child {
-        padding-left: 0;
+
+      .card__image {
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+
+        @include media-breakpoint-up(md) {
+          border-top-right-radius: 0px !important;
+          border-bottom-left-radius: 10px !important;
+          object-fit: cover;
+          height: 100%;
+        }
       }
 
       .card__body {

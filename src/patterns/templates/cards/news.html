@@ -12,10 +12,10 @@ control: exclude
     <div class="col-12">
       <div class="news__item card card--news card--news-highlight card--{{ news.color }}">
         <div class="row">
-          <div class="col-6 col-lg-7">
-            <img src="{{ news.img }}" class="card__image rounded-start" alt="..." />
+          <div class="col-12 col-md-6 col-lg-7">
+            <img src="{{ news.img }}" class="card__image" alt="..." />
           </div>
-          <div class="col-6 col-lg-5 d-flex">
+          <div class="col-12 col-md-6 col-lg-5 d-flex">
             <div class="card__body card-body">
               <div class="card__data">
                 <p class="card__data__item label tag">{{ news.date }}</p>
@@ -29,6 +29,8 @@ control: exclude
         </div>
       </div>
     </div>
+  </div>
+  <div class="row" data-masonry='{"percentPosition": true, "horizontalOrder": true }'>
     {% endfor %} {% for news in site.data.news %}
     <div class="col-12 col-md-6 col-lg-4">
       <div class="news__item card card--news card--{{ news.color }}">

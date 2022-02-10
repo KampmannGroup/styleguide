@@ -1,7 +1,8 @@
 import Swiper, { Navigation, Pagination, Autoplay, Controller } from 'swiper'
-Swiper.use([Pagination, Autoplay, Navigation, Controller])
-
 import { Tab } from 'bootstrap'
+import Masonry from 'masonry-layout'
+
+Swiper.use([Pagination, Autoplay, Navigation, Controller])
 
 document.addEventListener('DOMContentLoaded', function (event) {
   //Images

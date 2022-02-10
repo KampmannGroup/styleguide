@@ -5,6 +5,7 @@ import copy from 'rollup-plugin-copy'
 import { babel } from '@rollup/plugin-babel'
 import resolve from '@rollup/plugin-node-resolve'
 import replace from '@rollup/plugin-replace'
+import commonjs from '@rollup/plugin-commonjs'
 
 export default {
   input: 'src/assets/js/index.js',
@@ -25,6 +26,7 @@ export default {
         { src: ['src/assets/fonts/circular/*.woff', 'src/assets/fonts/circular/*.woff2'], dest: 'dist/fonts/circular' },
       ],
     }),
+    commonjs(),
     babel({ babelHelpers: 'bundled' }),
   ],
   output: [

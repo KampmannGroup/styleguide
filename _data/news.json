@@ -21,6 +21,30 @@
     "date": "21.09.2021",
     "label": "News",
     "headline": "Ein Abschied nach über 40 Jahren.",
-    "text": " Nach fast 41 Jahren Betriebszugehörigkeit verabschiedet sich Hermann Ensink als Leiter Innovation & Technik in den wohlverdienten Ruhestand. Ein ausgewiesener Experte im Bereich Heizungs- Lüftungs- und Klimatechnik, der mit zahlreichen Produktentwicklungen vieles bewegt hat und dabei immer den Markt und technische Trends im Blick hatte."
+    "text": " Nach fast 41 Jahren Betriebszugehörigkeit verabschiedet sich Hermann Ensink als Leiter Innovation & Technik in den wohlverdienten Ruhestand. Ein ausgewiesener Experte im Bereich Heizungs- Lüftungs- und Klimatechnik, der mit zahlreichen Produktentwicklungen vieles bewegt hat und dabei immer den Markt und technische Trends im Blick hatte. Ein ausgewiesener Experte im Bereich Heizungs- Lüftungs- und Klimatechnik."
+  },
+  {
+    "color": "green",
+    "img": "/src/compiled/assets/images/pictures/kampmann-industrial-design.png",
+    "date": "21.09.2021",
+    "label": "News",
+    "headline": "Der neue Luftreiniger KA-520 wirkt!",
+    "text": "Der Bedarf an Luftreinigern steigt und damit die Nachfrage nach Sicherheit. Ziel ist es die Ansteckungsgefahr in sämtlichen Lebens- und Arbeitsbereichen zu minimieren. Und hier steht noch mehr längerer Text, damit diese Box länger wird und Wir sehen können wie sich das Bild verändert."
+  },
+  {
+    "color": "cyan",
+    "img": "/src/compiled/assets/images/pictures/kampmann-industrial-design.png",
+    "date": "21.09.2021",
+    "label": "Reportage",
+    "headline": "Genaues Klima für präzise Maschinen!",
+    "text": "Man sieht sie schon von weitem. Auf dem Dach der Industriehallen des Werkzeug-maschinenherstellers Gildemeister in Bielefeld stehen sehr große Lüftungsanlagen."
+  },
+  {
+    "color": "teal",
+    "img": "/src/compiled/assets/images/pictures/kampmann-industrial-design.png",
+    "date": "21.09.2021",
+    "label": "News",
+    "headline": "Ein Abschied nach über 40 Jahren.",
+    "text": " Nach fast 41 Jahren Betriebszugehörigkeit verabschiedet sich Hermann Ensink als Leiter Innovation & Technik in den wohlverdienten Ruhestand. Ein ausgewiesener Experte im Bereich Heizungs- Lüftungs- und Klimatechnik."
   }
 ]
