@@ -1,5 +1,5 @@
 import $ from 'jquery'
-import 'datatables.net'
+import DataTable from 'datatables.net'
 
 document.addEventListener('DOMContentLoaded', () => {
   const datatable = new DataTable('.table--data-table', {
