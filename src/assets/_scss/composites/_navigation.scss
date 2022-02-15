@@ -72,6 +72,9 @@
   }
 
   &--meta {
+    align-self: stretch;
+    display: flex;
+
     .navigation {
       &__list {
         display: flex;
@@ -83,6 +86,15 @@
         padding-left: $grid-gutter-width / 2;
         padding-right: $grid-gutter-width / 2;
         font-size: 0;
+
+        &:hover {
+          color: $green;
+        }
+      }
+
+      &__element-wrapper {
+        height: 100%;
+        display: flex;
       }
     }
   }
