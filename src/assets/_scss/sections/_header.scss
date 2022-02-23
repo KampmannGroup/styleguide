@@ -38,6 +38,17 @@
         color: $secondary;
       }
     }
+
+    &--language {
+      background-color: rgba($gray, 0.35);
+      padding-top: 0;
+      padding-bottom: 0;
+
+      .header__section-wrapper {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+    }
   }
 
   &__part {
@@ -60,6 +71,7 @@
     padding-left: $grid-gutter-width;
     padding-right: $grid-gutter-width/2;
     align-self: center;
+    margin-left: auto;
   }
 }
 
