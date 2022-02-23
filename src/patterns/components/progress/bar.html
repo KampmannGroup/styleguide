@@ -1,44 +1,46 @@
 ---
 title: Progressbar
 styles: assets/_scss/components/_progress.scss
-maturity: draft
+script: /dist/js/kampmann.umd.min.js
+maturity: ready
 ---
 
 <div class="progress progress--bar my-3">
-  <div class="progress__status progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  <div
+    class="progress__status progress-bar"
+    role="progressbar"
+    aria-valuenow="0"
+    aria-valuemin="0"
+    aria-valuemax="100"
+  ></div>
 </div>
 
 <div class="progress progress--bar my-3">
-  <div class="progress__status progress__status--teal progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  <div
+    class="progress__status progress__status--teal progress-bar"
+    role="progressbar"
+    aria-valuenow="0"
+    aria-valuemin="0"
+    aria-valuemax="100"
+  ></div>
 </div>
 
 <div class="progress progress--bar my-3">
-  <div class="progress__status progress__status--cyan progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  <div
+    class="progress__status progress__status--cyan progress-bar"
+    role="progressbar"
+    aria-valuenow="0"
+    aria-valuemin="0"
+    aria-valuemax="100"
+  ></div>
 </div>
 
 <div class="progress progress--bar my-3">
-  <div class="progress__status progress__status--green progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  <div
+    class="progress__status progress__status--green progress-bar"
+    role="progressbar"
+    aria-valuenow="0"
+    aria-valuemin="0"
+    aria-valuemax="100"
+  ></div>
 </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function (event) {
-    const progresses = document.querySelectorAll('.progress__status')
-
-    if (progresses.length) {
-      progresses.forEach((progress) => {
-        let status = 0
-
-        const load = setInterval(() => {
-          status += .5
-
-          if (status > 100) {
-            clearInterval(load)
-          } else {
-            progress.setAttribute('aria-valuenow', status)
-            progress.style.setProperty('--status', status)
-          }
-        }, 7)
-      })
-    }
-  })
-</script>
