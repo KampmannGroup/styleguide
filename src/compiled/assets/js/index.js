@@ -1,4 +1,5 @@
 import '../_scss/index.scss'
+import bootstrap from 'bootstrap'
 
 import './form'
 import './navigation'
