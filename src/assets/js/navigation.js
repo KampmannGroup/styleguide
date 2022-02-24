@@ -1,8 +1,6 @@
 /**
  * Open and animate menu on click on burger button (mobile)
  */
-import { Accordion } from 'bootstrap'
-
 const burgers = document.querySelectorAll('.navigation__burger')
 
 const NAV_DELAY = 600
