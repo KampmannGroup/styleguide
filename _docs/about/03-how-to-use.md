@@ -1,5 +1,5 @@
 ---
-title: Technische Nutze
+title: Technische Nutzung
 info: To Be Added
 ---
 
