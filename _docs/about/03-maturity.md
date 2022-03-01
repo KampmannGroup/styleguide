@@ -5,37 +5,36 @@ info: Die Statusanzeige gibt Auskunft über den vorangeschrittenen Prozess der F
 
 <span class="sg_label planned">Planned</span>
 
-- The user need has been identified, but the approach to solving the problem has not yet been decided.
-- The team has decided to tackle this UI pattern.
-- Pattern has been listed in the [Roadmap]({{ site.baseurl }}/docs/about/roadmap.html).
+- Der Bedarf des Nutzers ist ermittelt, aber der Ansatz zur Lösung des Problems steht noch nicht fest.
+- Das Team hat beschlossen, dieses Pattern / diese Komponente in Angriff zu nehmen.
+- Das Muster / die Komponente ist in der [Roadmap]({{ site.baseurl }}/docs/about/roadmap.html) aufgeführt.
 
-____
+---
 
 <span class="sg_label draft">Draft</span>
 
-Includes everything from the Planned phase, as well as:
+Beinhaltet alles aus der Planungsphase, sowie:
 
-- Pattern is actively being defined. Use at risk, and with caution.
-- Pattern may be generally usable for people with relatively "normal" digital literacy.
-- Pattern is not approved for for use in production. 
-- Documentation may/may not be complete. 
+- Das Muster wird gerade definiert. Verwendung auf eigenes Risiko und mit Vorsicht!
+- Die Muster können im Allgemeinen von Personen mit relativ "normalen" digitalen Kenntnissen genutzt werden.
+- Das Muster ist nicht für den Einsatz in der Produktion zugelassen bzw. ausreichend getestet.
+- Die Dokumentation kann/kann nicht vollständig sein.
 
-___
+---
 
 <span class="sg_label ready">Ready</span>
 
-Includes everything in the Planned and Draft phases, as well as:
+Enthält alles, was in der Planungs- und Entwurfsphase enthalten ist, sowie:
 
-- Pattern works in multiple configurations, and with other patterns in the Style Guide.
-- Pattern is usable, on multiple devices/browsers.
-- Pattern considers people with multiple disabilities (blind, low vision, cognitive disabilities, motor disabilities, low language skills, low digital literacy, etc.).
-- Pattern has been reviewed by internal/external teams.
-- The pattern has passed any heuristic assessments.
-- Documentation is complete.
+- Das Muster funktioniert in verschiedenen Konfigurationen und mit anderen Mustern im Styleguide.
+- Das Muster ist auf mehreren Geräten/Browsern verwendbar.
+- Das Muster wurde von internen/externen Teams überprüft.
+- Das Muster hat alle heuristischen Bewertungen bestanden.
+- Die Dokumentation ist vollständig.
 
-___
+---
 
 <span class="sg_label retired">Retired</span>
-.
-- Pattern is no longer fit for purpose
-- It should be removed from production, and will be removed from the Style Guide in due course.
+
+- Das Muster ist nicht mehr zweckmäßig.
+- Er sollte aus der Produktion genommen werden und wird zu gegebener Zeit auch aus dem Styleguide entfernt werden.
