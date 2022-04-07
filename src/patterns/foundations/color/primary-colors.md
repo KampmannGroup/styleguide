@@ -9,13 +9,15 @@ colors:
     hex: '#0E2249'
     rgb: 'rgba(14,34,73,1)'
     hsl: 'hsla(220,68%,17%,1)'
-    cmyk: 'CMYK 100/70/10/50'
+    cmyk: '100/70/10/50'
+    css: 'var(--color-blue)'
   - name: Frühlingsgrün
     mashinename: $green
     hex: '#95C11F'
     rgb: 'rgba(149,193,31,1)'
     hsl: 'hsla(76,72%,44%,1)'
-    cmyk: 'CMYK 50/0/100/0'
+    cmyk: '50/0/100/0'
+    css: 'var(--color-green)'
 ---
 
 <style>
@@ -46,13 +48,14 @@ p {
 <ul class="set">
 {% for item in page.colors %} 
   <li>
-    <div class="color" style="background:{{ item.hex }}"></div> 
-    <p>{{ item.name }}</p>
-    <p>{{ item.mashinename }}</p>
-    {% if item.hex %}<p>{{ item.hex }}</p>{% endif %}
-    {% if item.rgb %}<p>{{ item.rgb }}</p>{% endif %}
-    {% if item.hsl %}<p>{{ item.hsl }}</p>{% endif %}
-    {% if item.cmyk %}<p>{{ item.cmyk }}</p>{% endif %}
+    <div class="color" style="background:{{ item.css }}"></div> 
+    <p><strong>{{ item.name }}</strong></p>
+    <p><span class="label">SCSS:</span> {{ item.mashinename }}</p>
+    {% if item.css %}<p><span class="label">CSS:</span> {{ item.css }}</p>{% endif %}
+    {% if item.hex %}<p><span class="label">HEX:</span> {{ item.hex }}</p>{% endif %}
+    {% if item.rgb %}<p><span class="label">RGB:</span> {{ item.rgb }}</p>{% endif %}
+    {% if item.hsl %}<p><span class="label">HSL:</span> {{ item.hsl }}</p>{% endif %}
+    {% if item.cmyk %}<p><span class="label">CYMK:</span> {{ item.cmyk }}</p>{% endif %}
   </li>
 {% endfor %}
 </ul>

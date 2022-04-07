@@ -1,27 +1,63 @@
-// Colors
+//----------------------------------------------------------
+// COLORS
+//----------------------------------------------------------
 
+// Basic colors
 $white: #ffffff;
 $black: #000000;
-
-$blue: #0e2249;
-$green: #95c11f;
-$teal: #008f8c;
-$aloevera: #79c08b;
-$cyan: #58c7da;
 $gray: #cecece;
 $gray-dark: #d7d5cd;
 $gray-medium: #f0efec;
 $gray-light: #f1f0ee;
 $gray-beige-light: #f2f2f0;
+
+// Primary colors
+$blue: #0e2249;
+$green: #95c11f;
+
+// Accent colors
+$teal: #008f8c;
+$aloevera: #79c08b;
+$cyan: #58c7da;
+
+// Signal colors
 $yellow: #ffc107;
 $red: #dc3545;
 
-//Darkened Colors (lower lightness value in hsl)----------------
+// Colors as CSS custom properties
+:root {
+  --hsl-black: 0, 0%, 0%;
+  --hsl-white: 0, 0%, 100%;
+
+  --hsl-blue: 220, 68%, 17%;
+  --hsl-green: 76, 72%, 44%;
+
+  --hsl-teal: 179, 100%, 28%;
+  --hsl-aloevera: 135, 36%, 61%;
+  --hsl-cyan: 189, 64%, 60%;
+
+  --hsl-yellow: 45, 100%, 51%;
+  --hsl-red: 354, 70%, 54%;
+
+  --color-black: hsla(var(--hsl-black), 1);
+  --color-white: hsla(var(--hsl-white), 1);
+
+  --color-blue: hsla(var(--hsl-blue), 1);
+  --color-green: hsla(var(--hsl-green), 1);
+
+  --color-teal: hsla(var(--hsl-teal), 1);
+  --color-aloevera: hsla(var(--hsl-aloevera), 1);
+  --color-cyan: hsla(var(--hsl-cyan), 1);
+
+  --color-yellow: hsla(var(--hsl-yellow), 1);
+  --color-red: hsla(var(--hsl-red), 1);
+}
+
+//Darkened Colors (lower lightness value in hsl)
 $green-dark: hsl(76, 72%, 30%);
 $teal-dark: hsl(179, 100%, 16%);
 $cyan-dark: hsl(189, 64%, 30%);
 $yellow-dark: hsl(45, 100%, 20%);
-//--------------------------------------------------------------
 
 $primary: $blue;
 $secondary: $white;
@@ -45,27 +81,28 @@ $color-contrast-light: $light;
 $min-contrast-ratio: 1.25;
 
 $colors: (
-  "blue": $blue,
-  "green": $green,
-  "teal": $teal,
-  "cyan": $cyan,
-  "aloevera": $aloevera,
-  "white": $white,
-  "gray": $gray,
-  "gray-dark": $gray-dark,
-  "gray-medium": $gray-medium,
-  "gray-light": $gray-light,
-  "gray-beige-light": $gray-beige-light,
+  'blue': $blue,
+  'green': $green,
+  'teal': $teal,
+  'cyan': $cyan,
+  'aloevera': $aloevera,
+  'white': $white,
+  'gray': $gray,
+  'gray-dark': $gray-dark,
+  'gray-medium': $gray-medium,
+  'gray-light': $gray-light,
+  'gray-beige-light': $gray-beige-light,
 );
 
 $alert-bg-scale: 0;
 $alert-color-scale: 0;
 
-// Font
+//----------------------------------------------------------
+// FONT FAMILIES & SIZES
+//----------------------------------------------------------
 
-$font-family-sans-serif: "Circular", system-ui, -apple-system, "Segoe UI",
-  Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji",
+$font-family-sans-serif: 'Circular', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+  'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji',
   sans-serif;
 $font-family-base: $font-family-sans-serif;
 
@@ -108,7 +145,9 @@ $font-sizes: (
   6: $h6-font-size,
 );
 
-// Spaces
+//----------------------------------------------------------
+// GRIDS & SPACES
+//----------------------------------------------------------
 
 $container-max-widths: (
   sm: 540px,
@@ -136,6 +175,10 @@ $input-btn-padding-x: 1.25rem;
 $btn-padding-y: 1rem;
 $btn-padding-x: 2.875rem;
 
+//----------------------------------------------------------
+// BORDER SETTINGS
+//----------------------------------------------------------
+
 $border-width: 1px;
 $border-radius: 10px;
 $border-radius-xs: 4px;
@@ -143,7 +186,9 @@ $border-radius-sm: 8px;
 $border-radius-lg: 12px;
 $border-radius-full: 1em;
 
-//Tooltips
+//----------------------------------------------------------
+// TOOLTIP SETTINGS
+//----------------------------------------------------------
 
 $spacer: 1rem;
 $tooltip-font-size: $font-size-sm;
@@ -164,3 +209,10 @@ $nav-link-padding-y: 0.3125rem;
 $nav-link-padding-x: 0.28rem;
 $nav-pills-border-radius: 4px;
 $nav-pills-link-active-bg: $teal;
+
+//----------------------------------------------------------
+// TABLES
+//----------------------------------------------------------
+
+$table-cell-padding-y:        20px;
+$table-cell-padding-x:        1rem;

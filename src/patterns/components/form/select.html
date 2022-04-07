@@ -3,15 +3,22 @@ title: Select
 styles: assets/_scss/components/_form.scss
 script: /src/assets/js/form.js
 maturity: ready
-inlinestyles: '<style>.form{padding-top:30px;}</style>'
+inlinestyles: '<style>.form{padding-top:30px;} .formelement__wrapper + .formelement__wrapper{margin-top:60px}</style>'
 ---
 
 <div class="form">
   <div class="formelement__wrapper formelement__wrapper--select">
-    <input class="formelement__value" type="hidden">
-    <div id="select" class="formelement formelement--select formelement--placeholder" type="text" placeholder="Placeholder">
+    <input class="formelement__value" type="hidden" />
+    <div
+      id="select"
+      class="formelement formelement--select formelement--placeholder"
+      type="text"
+      placeholder="Placeholder"
+    >
       <div class="formelement__selected">
-        <div class="formelement__option formelement__option--selected formelement__option--placeholder">Placeholder</div>
+        <div class="formelement__option formelement__option--selected formelement__option--placeholder">
+          Placeholder
+        </div>
       </div>
       <div class="formelement__options">
         <div class="formelement__option" data-value="os">Osnabrück</div>

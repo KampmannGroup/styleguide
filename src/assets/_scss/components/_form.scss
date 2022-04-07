@@ -10,13 +10,14 @@
   outline: none;
   padding: $input-btn-padding-y/1.5 $input-btn-padding-x;
   appearance: none;
-  background:transparent;
+  background: transparent;
 
   &__wrapper {
     position: relative;
     color: $body-color;
 
-    &:after, .formelement__icon {
+    &:after,
+    .formelement__icon {
       position: absolute;
       right: $input-btn-padding-x;
       top: 50%;
@@ -25,15 +26,17 @@
       filter: grayscale(1);
     }
 
-    &--active{
+    &--active {
       color: $primary;
 
-      &:after{
-        filter:none;
+      &:after {
+        filter: none;
       }
     }
 
     &--select {
+      cursor: pointer;
+
       &:after {
         content: url("data:image/svg+xml,%0A%3Csvg width='15px' height='8px' viewBox='0 0 15 8' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Arrow/Down/Blue' fill='%230E2249' fill-rule='nonzero'%3E%3Cg id='Icon/Arrow-Down'%3E%3Cpath d='M14.1998092,0.237903236 C14.382876,0.0548535132 14.679672,0.054867357 14.8627218,0.237934157 C15.0228903,0.398117607 15.0429007,0.64537504 14.9227603,0.827315545 L14.8626908,0.900846764 L8.16294226,7.59997018 C7.98720591,7.775957 7.7487059,7.87484644 7.5,7.87484644 C7.29274509,7.87484644 7.09257759,7.80617322 6.93005839,7.68158351 L6.83730916,7.60022176 L0.137309157,0.900846764 C-0.045757643,0.717797041 -0.0457714868,0.421000957 0.137278236,0.237934157 C0.297446744,0.077750707 0.544702309,0.0577171766 0.726654021,0.177840674 L0.800190843,0.237903236 L7.5,6.937 L14.1998092,0.237903236 Z' id='Path'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       }
@@ -51,11 +54,12 @@
       // }
     }
 
-    &--checkbox{
-      &:focus, &:active{
-        .formelement__label{
-          &:before{
-            border-color: rgba(14,34,73,0.3);
+    &--checkbox {
+      &:focus,
+      &:active {
+        .formelement__label {
+          &:before {
+            border-color: rgba(14, 34, 73, 0.3);
             border-width: 2px;
           }
         }
@@ -75,7 +79,7 @@
     border-top-right-radius: 0;
     border-top-width: 0;
     background: $white;
-    z-index:999;
+    z-index: 999;
   }
 
   &__option {
@@ -86,6 +90,44 @@
 
       &:hover {
         background-color: rgba($blue, 0.1);
+      }
+    }
+
+    &--selected {
+      .formelement__option__check {
+        display: none;
+      }
+    }
+
+    &--active,
+    &:hover {
+      .formelement__option__check {
+        background-color: $primary;
+
+        > * {
+          stroke-dashoffset: 0;
+        }
+      }
+    }
+
+    &:not(.formelement__option--active):hover {
+      .formelement__option__check {
+        background: rgba($primary, 0.25);
+      }
+    }
+
+    &__check {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      border: 1px solid $primary;
+      border-radius: $border-radius-xs;
+      transition: 0.3s;
+
+      > * {
+        stroke-dasharray: 32px;
+        stroke-dashoffset: 32px;
+        transition: 0.5s 0.2s;
       }
     }
   }
@@ -108,6 +150,37 @@
     }
   }
 
+  &--select-multi {
+    .formelement {
+      &__selected {
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      &__options {
+        > * {
+          display: flex;
+
+          .formelement__option__text {
+            width: 100%;
+          }
+        }
+      }
+
+      &__option {
+        &--selected {
+          white-space: nowrap;
+          display: inline;
+
+          &:not(:last-child):after {
+            content: ', ';
+            margin-left: -0.2em;
+          }
+        }
+      }
+    }
+  }
+
   &--input {
     &:focus {
       color: $primary;
@@ -124,19 +197,19 @@
     padding-right: calc(#{$input-btn-padding-x} * 2);
   }
 
-  &--checkbox{
+  &--checkbox {
     position: absolute;
     opacity: 0;
     pointer-events: none;
 
-    &:checked{
-      + .formelement__label{
-        &:after{
-          display:block;
+    &:checked {
+      + .formelement__label {
+        &:after {
+          display: block;
         }
 
-        &:before{
-          border-color: rgba(14,34,73,0.3);
+        &:before {
+          border-color: rgba(14, 34, 73, 0.3);
           border-width: 2px;
         }
       }
@@ -165,45 +238,45 @@
   }
 
   &__label {
-    &:not(.formelement__label--checkbox){
+    &:not(.formelement__label--checkbox) {
       position: absolute;
       text-transform: uppercase;
       letter-spacing: 1.38px;
       font-size: $font-size-xs;
       top: 0;
       transform: translateY(-50%);
-      background: var(--background-color,$white);
+      background: var(--background-color, $white);
       left: calc(#{$input-btn-padding-x} - 0.5rem);
       padding: 0 0.5rem;
       line-height: 1;
     }
 
-    &--checkbox{
-      display:flex;
-      position:relative;
-      cursor:pointer;
+    &--checkbox {
+      display: flex;
+      position: relative;
+      cursor: pointer;
       font-size: 9px;
 
-      &:before{
-        content:"";
-        display:block;
-        width:$grid-gutter-width/1.25;
-        height:$grid-gutter-width/1.25;
+      &:before {
+        content: '';
+        display: block;
+        width: $grid-gutter-width/1.25;
+        height: $grid-gutter-width/1.25;
         border-radius: 100%;
-        border-color: rgba($body-color, .82);
+        border-color: rgba($body-color, 0.82);
         border-width: 1px;
         border-style: solid;
         flex-shrink: 0;
-        margin-right:$grid-gutter-width/2;
+        margin-right: $grid-gutter-width/2;
       }
 
-      &:after{
-        content: "";
+      &:after {
+        content: '';
         display: none;
         width: 8px;
         height: 8px;
         border-radius: 100%;
-        background-color: #0E2249;
+        background-color: #0e2249;
         flex-shrink: 0;
         position: absolute;
         top: 4px;
@@ -213,8 +286,8 @@
   }
 }
 
-@include media-breakpoint-up(md){
-  .formelement{
+@include media-breakpoint-up(md) {
+  .formelement {
     padding: $input-btn-padding-y $input-btn-padding-x;
   }
 }

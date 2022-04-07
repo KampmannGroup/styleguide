@@ -12,3 +12,4 @@ nav: true
 # Select
 
 {% include pattern_block.html url='/src/patterns/components/form/select.html' %}
+{% include pattern_block.html url='/src/patterns/components/form/multiselect.html' %}

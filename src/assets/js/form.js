@@ -32,15 +32,18 @@ const selects = document.querySelectorAll('.formelement--select')
 if (selects) {
   //Hide list on body click
   document.querySelector('body').addEventListener('click', (e) => {
-    const select = e.target.closest('.formelement--select')
-    if (!select) {
-      selects.forEach((select) => {
+    const selectclicked = e.target.closest('.formelement--select')
+  
+    selects.forEach((select) => {
+      if ((selectclicked && select != selectclicked) || !selectclicked) {
         select.classList.remove('formelement--active')
-      })
-    }
+      }
+    })
   })
 
   selects.forEach((select) => {
+    const placeholder = select.querySelector('.formelement__option--placeholder')
+      
     select.addEventListener('click', (e) => {
       const option = e.target.closest('.formelement__option:not(.formelement__option--selected)')
       const select = e.target.closest('.formelement--select')
@@ -53,11 +56,52 @@ if (selects) {
         const clone = option.cloneNode(true)
         clone.classList.add('formelement__option--selected')
 
-        selected.innerHTML = ''
-        selected.append(clone)
+        //Multiselect
+        if (select.classList.contains('formelement--select-multi')) {
+          //Add active class
+          if (option.classList.contains('formelement__option--active')) {
+            option.classList.remove('formelement__option--active')
+            select.querySelector(`.formelement__option--selected[data-value="${option.dataset.value}"]`).remove()
+          } else {
+            option.classList.add('formelement__option--active')
+            selected.append(clone)
+          }
+          const optionsactive = select.querySelectorAll('.formelement__option--active')
 
-        //Change hidden value
-        value.value = option.dataset.value
+          if (!optionsactive.length) {
+            selected.append(placeholder)
+            value.value = ''
+            
+            //Change select class to style ad active
+            select.classList.add('formelement--placeholder')
+          } else {
+            placeholder.remove()
+            const optionsselected = select.querySelectorAll('.formelement__option--selected')
+
+            const selectedvalues = []
+            optionsselected.forEach((optionselected) => {
+              selectedvalues.push(optionselected.dataset.value)
+            })
+
+            value.value = selectedvalues.join(', ')
+
+            //Change select class to style ad active
+            select.classList.remove('formelement--placeholder')
+          }
+
+          if (e.target.closest(".formelement__options")) {
+            return
+          }
+        }
+        //Normal Select
+        else {
+          selected.innerHTML = ''
+
+          //Change hidden value
+          value.value = option.dataset.value
+          selected.append(clone)
+        }
+
 
         //Change select class to style ad active
         select.classList.remove('formelement--placeholder')

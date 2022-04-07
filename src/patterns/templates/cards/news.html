@@ -1,6 +1,6 @@
 ---
 title: News
-maturity: draft
+maturity: ready
 styles: ''
 script: /dist/js/kampmann.umd.min.js
 control: exclude
@@ -8,58 +8,45 @@ control: exclude
 
 <div class="news container">
   <div class="row">
+    {% for news in site.data.news_highlight %}
+    <div class="col-12">
+      <div class="news__item card card--news card--news-highlight card--{{ news.color }}">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-7">
+            <img src="{{ news.img }}" class="card__image" alt="..." />
+          </div>
+          <div class="col-12 col-md-6 col-lg-5 d-flex">
+            <div class="card__body card-body">
+              <div class="card__data">
+                <p class="card__data__item label tag">{{ news.date }}</p>
+                <p class="card__data__item label tag">{{ news.label }}</p>
+              </div>
+              <h3 class="news__title card-title headline headline--h3">{{ news.headline }}</h3>
+              <p class="card-text">{{ news.text }}</p>
+            </div>
+            <a class="card__link" href="javascript:void(0)"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" data-masonry='{"percentPosition": true, "horizontalOrder": true }'>
+    {% endfor %} {% for news in site.data.news %}
     <div class="col-12 col-md-6 col-lg-4">
-      <div class="news__item card card--news card--teal">
-        <img src="/src/compiled/assets/images/pictures/kampmann-industrial-design.png" class="card-img-top" alt="..." />
+      <div class="news__item card card--news card--{{ news.color }}">
+        <img src="{{ news.img }}" class="card__image card-img-top" alt="..." />
         <div class="card__body card-body">
           <div class="card__data">
-            <p class="card__data__item label tag">21.09.2021</p>
-            <p class="card__data__item label tag">News</p>
+            <p class="card__data__item label tag">{{ news.date }}</p>
+            <p class="card__data__item label tag">{{ news.label }}</p>
           </div>
-          <h3 class="news__title card-title headline headline--h3">Der neue Luftreiniger KA-520 wirkt!</h3>
-          <p class="card-text">
-            Der Bedarf an Luftreinigern steigt und damit die Nachfrage nach Sicherheit. Ziel ist es die
-            Ansteckungsgefahr in sämtlichen Lebens- und Arbeitsbereichen zu minimieren. Und hier steht noch mehr
-            längerer Text, damit diese Box länger wird und Wir sehen können wie sich das Bild verändert.
-          </p>
+          <h3 class="news__title card-title headline headline--h3">{{ news.headline }}</h3>
+          <p class="card-text">{{ news.text }}</p>
         </div>
         <a class="card__link" href="javascript:void(0)"></a>
       </div>
     </div>
-
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="news__item card card--news card--gray-light">
-        <img src="/src/compiled/assets/images/pictures/kampmann-industrial-design.png" class="card-img-top" alt="..." />
-        <div class="card__body card-body">
-          <div class="card__data">
-            <p class="card__data__item label tag">21.09.2021</p>
-            <p class="card__data__item label tag">Reportage</p>
-          </div>
-          <h3 class="news__title card-title headline headline--h3">Genaues Klima für präzise Maschinen!</h3>
-          <p class="card-text">
-            Man sieht sie schon von weitem. Auf dem Dach der Industriehallen des Werkzeug-maschinenherstellers Gildemeister in Bielefeld stehen sehr große Lüftungsanlagen. 
-          </p>
-        </div>
-        <a class="card__link" href="javascript:void(0)"></a>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="news__item card card--news card--green">
-        <img src="/src/compiled/assets/images/pictures/kampmann-industrial-design.png" class="card-img-top" alt="..." />
-        <div class="card__body card-body">
-          <div class="card__data">
-            <p class="card__data__item label tag">21.09.2021</p>
-            <p class="card__data__item label tag">News</p>
-          </div>
-          <h3 class="news__title card-title headline headline--h3">Ein Abschied nach über 40 Jahren.</h3>
-          <p class="card-text">
-            Nach fast 41 Jahren Betriebszugehörigkeit verabschiedet sich Hermann Ensink als Leiter Innovation & Technik in den wohlverdienten Ruhestand. Ein ausgewiesener Experte im Bereich Heizungs- Lüftungs- und Klimatechnik, der mit zahlreichen Produktentwicklungen vieles bewegt hat und dabei immer den Markt und technische Trends im Blick hatte. 
-          </p>
-        </div>
-        <a class="card__link" href="javascript:void(0)"></a>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </div>
 
