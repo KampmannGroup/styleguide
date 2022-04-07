@@ -28,4 +28,9 @@
   &--lower{
     text-transform: none !important;
   }
+
+  &--small{
+    font-size: $font-size-base;
+    color: $body-color;
+  }
 }
