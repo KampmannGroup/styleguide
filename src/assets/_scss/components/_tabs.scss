@@ -1,5 +1,5 @@
-@import "bootstrap/scss/transitions.scss";
-@import "bootstrap/scss/nav.scss";
+@import 'bootstrap/scss/transitions.scss';
+@import 'bootstrap/scss/nav.scss';
 
 .tab {
   &-pane {
@@ -26,6 +26,19 @@
 
 .nav-tabs {
   border-bottom: none;
+  flex-wrap: nowrap;
+  overflow: auto;
+  margin-right: 20px;
+  margin-bottom: -1px;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  scrollbar-visibility: hidden;
 
   .nav-link {
     padding: 16px 24px;
@@ -35,6 +48,9 @@
     border-bottom: none;
     border-radius: $border-radius $border-radius 0 0;
     border-color: transparent;
+    white-space: nowrap;
+    margin-bottom: -1px;
+    cursor: pointer;
 
     &:hover {
       border-color: $gray-light;
