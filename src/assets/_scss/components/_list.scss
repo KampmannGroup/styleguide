@@ -24,6 +24,48 @@
       top: 1px;
     }
   }
+
+  &--items {
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    .list {
+      &__item {
+        background: $gray-light;
+        transition: 0.3s;
+        margin-bottom: 0;
+        padding: 15px 22px;
+
+        p {
+          margin: 0;
+        }
+
+        &--linked {
+          &:hover {
+            background: darken($gray-light, 10);
+          }
+        }
+
+        &:not(:hover) {
+          .icon__animated-part {
+            animation: none;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 1px;
+        }
+      }
+
+      &__link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
 }
 
 // Unordered list styles

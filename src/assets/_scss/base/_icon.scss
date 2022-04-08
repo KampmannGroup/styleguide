@@ -1,0 +1,11 @@
+.icon {
+  overflow: visible;
+  
+  &--download {
+    .icon {
+      &__animated-part {
+        animation: 1s pointY infinite linear;
+      }
+    }
+  }
+}
