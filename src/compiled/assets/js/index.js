@@ -2,6 +2,7 @@ import '../_scss/index.scss'
 import bootstrap from 'bootstrap'
 
 import './form'
+import './header'
 import './navigation'
 import './slider'
 import './tooltip'

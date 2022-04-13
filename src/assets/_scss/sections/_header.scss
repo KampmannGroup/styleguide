@@ -3,6 +3,7 @@
   position: sticky;
   top: 0;
   z-index: 99;
+  transition: transform .25s ease-in-out;
 
   &__wrapper {
     display: flex;
@@ -31,8 +32,8 @@
 
     &--meta {
       background-color: $primary;
-      padding-top: $grid-gutter-width/4;
-      padding-bottom: $grid-gutter-width/4;
+        padding-top: $grid-gutter-width/4;
+        padding-bottom: $grid-gutter-width/4;
 
       * {
         color: $secondary;
@@ -40,7 +41,7 @@
     }
 
     &--language {
-      background-color: rgba($gray, 0.35);
+      background-color: rgba(240, 239, 236, 1);
       padding-top: 0;
       padding-bottom: 0;
 
