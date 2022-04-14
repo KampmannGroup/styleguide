@@ -6,7 +6,7 @@ const burgers = document.querySelectorAll('.navigation__burger')
 const NAV_DELAY = 600
 
 if (burgers.length > 0) {
-  burgers.forEach((burger, index) => {
+  burgers.forEach((burger) => {
     burger.addEventListener('click', (e) => {
       const el = e.target.closest('[data-navigation]')
 
