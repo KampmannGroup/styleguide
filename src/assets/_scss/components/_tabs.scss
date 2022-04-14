@@ -24,6 +24,23 @@
   }
 }
 
+.tabs-container {
+  --nav-height: 45px;
+  position: relative;
+
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 20px;
+    width: 40px;
+    height: var(--nav-height);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  }
+}
+
 .nav-tabs {
   border-bottom: none;
   flex-wrap: nowrap;
@@ -33,12 +50,11 @@
 
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scrollbar-visibility: hidden;
 
   &::-webkit-scrollbar {
     display: none;
   }
-
-  scrollbar-visibility: hidden;
 
   .nav-link {
     padding: 16px 24px;
