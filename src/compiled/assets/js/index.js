@@ -21,14 +21,16 @@ const init = (target = document) => {
   table(target)
   tooltip(target)
   card(target)
-  carousel(target) 
+  carousel(target)
   events(target)
 }
 
-document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener('DOMContentLoaded', () => {
   init(document)
 })
 
-window.addEventListener('ajaxLoaded', (e)=>{
-  init(e.detail.target)
+window.addEventListener('ajaxLoaded', (e) => {
+  if (e.detail && e.detail.target) {
+    init(e.detail.target)
+  }
 })
