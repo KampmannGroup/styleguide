@@ -32,14 +32,3 @@ document.addEventListener("DOMContentLoaded", ()=>{
 window.addEventListener('ajaxLoaded', (e)=>{
   init(e.detail.target)
 })
-
-
-// const ajaxLoaded = new CustomEvent('ajaxLoaded', {
-//   detail: {
-//     target: document.querySelector('body')
-//   }
-// });
-
-// document.querySelector('body').addEventListener('click',()=>{
-//   window.dispatchEvent(ajaxLoaded)
-// })
