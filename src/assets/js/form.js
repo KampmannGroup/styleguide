@@ -1,5 +1,12 @@
 const wrappers = document.querySelectorAll('.formelement__wrapper')
 
+const htmlToElem = (html) => {
+  let temp = document.createElement('template')
+  html = html.trim() // Never return a space text node as a result
+  temp.innerHTML = html
+  return temp.content.firstChild
+}
+
 if (wrappers) {
   //Remove active class on body click
   document.querySelector('body').addEventListener('click', (e) => {
@@ -33,7 +40,7 @@ if (selects) {
   //Hide list on body click
   document.querySelector('body').addEventListener('click', (e) => {
     const selectclicked = e.target.closest('.formelement--select')
-  
+
     selects.forEach((select) => {
       if ((selectclicked && select != selectclicked) || !selectclicked) {
         select.classList.remove('formelement--active')
@@ -42,8 +49,16 @@ if (selects) {
   })
 
   selects.forEach((select) => {
-    const placeholder = select.querySelector('.formelement__option--placeholder')
-      
+    const placeholder =
+      select.querySelector('.formelement__option--placeholder') ||
+      (select.dataset.placeholder
+        ? htmlToElem(
+            '<div class="formelement__option formelement__option--selected formelement__option--placeholder">' +
+              select.dataset.placeholder +
+              '</div>'
+          )
+        : null)
+
     select.addEventListener('click', (e) => {
       const option = e.target.closest('.formelement__option:not(.formelement__option--selected)')
       const select = e.target.closest('.formelement--select')
@@ -69,13 +84,17 @@ if (selects) {
           const optionsactive = select.querySelectorAll('.formelement__option--active')
 
           if (!optionsactive.length) {
-            selected.append(placeholder)
+            if (placeholder) {
+              selected.append(placeholder)
+            }
             value.value = ''
-            
+
             //Change select class to style ad active
             select.classList.add('formelement--placeholder')
           } else {
-            placeholder.remove()
+            if (placeholder) {
+              placeholder.remove()
+            }
             const optionsselected = select.querySelectorAll('.formelement__option--selected')
 
             const selectedvalues = []
@@ -89,7 +108,7 @@ if (selects) {
             select.classList.remove('formelement--placeholder')
           }
 
-          if (e.target.closest(".formelement__options")) {
+          if (e.target.closest('.formelement__options')) {
             return
           }
         }
@@ -101,7 +120,6 @@ if (selects) {
           value.value = option.dataset.value
           selected.append(clone)
         }
-
 
         //Change select class to style ad active
         select.classList.remove('formelement--placeholder')
