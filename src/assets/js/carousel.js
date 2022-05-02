@@ -1,7 +1,7 @@
 import Swiper, { Navigation, Pagination, Autoplay, Controller } from 'swiper'
 Swiper.use([Pagination, Autoplay, Navigation, Controller])
 
-document.addEventListener('DOMContentLoaded', () => {
+export const carousel = (target = document) => {
   //Carousel
   var elem = {},
     process = {}
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  const carousels = document.querySelectorAll('.carousel')
+  const carousels = target.querySelectorAll('.carousel')
 
   const autoplay = 5000
   const speed = 600
@@ -62,4 +62,4 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     })
   }
-})
+}

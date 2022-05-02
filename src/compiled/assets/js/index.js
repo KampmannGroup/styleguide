@@ -1,16 +1,36 @@
 import '../_scss/index.scss'
 import bootstrap from 'bootstrap'
 
-import './form'
-import './navigation'
-import './slider'
-import './tooltip'
-import './carousel'
-import './card'
-import './events'
-import './tabs'
-import './table'
+import { form } from './form.js'
+import { navigation } from './navigation.js'
+import { slider } from './slider.js'
+import { tooltip } from './tooltip.js'
+import { carousel } from './carousel.js'
+import { card } from './card.js'
+import { events } from './events.js'
+import { table } from './table.js'
 import './modal'
 import './accordion'
-import './progressbar'
-import './scrollbar'
+import { progressbar } from './progressbar.js'
+
+const init = (target = document) => {
+  form(target)
+  navigation(target)
+  progressbar(target)
+  slider(target)
+  table(target)
+  tooltip(target)
+  card(target)
+  carousel(target)
+  events(target)
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  init(document)
+})
+
+window.addEventListener('ajaxLoaded', (e) => {
+  if (e.detail && e.detail.target) {
+    init(e.detail.target)
+  }
+})

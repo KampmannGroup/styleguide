@@ -1,7 +1,9 @@
+export const navigation = (targetwrapper = targetwrapper)=>{
+  
 /**
  * Open and animate menu on click on burger button (mobile)
  */
-const burgers = document.querySelectorAll('.navigation__burger')
+const burgers = targetwrapper.querySelectorAll('.navigation__burger')
 
 const NAV_DELAY = 600
 
@@ -18,7 +20,7 @@ if (burgers.length > 0) {
 
       if (el) {
         const navigation_selector = el.dataset.navigation
-        const navigation_toggler = document.querySelector(navigation_selector)
+        const navigation_toggler = targetwrapper.querySelector(navigation_selector)
         const navigation = navigation_toggler.closest('.navigation')
 
         if (navigation_toggler) {
@@ -53,7 +55,7 @@ if (burgers.length > 0) {
 /**
  * Set subnavigation list active on click of subnavigation trigger
  */
-const subnavigation_triggers = document.querySelectorAll('.navigation__subnavigation-trigger')
+const subnavigation_triggers = targetwrapper.querySelectorAll('.navigation__subnavigation-trigger')
 
 if (subnavigation_triggers.length > 0) {
   subnavigation_triggers.forEach((trigger) => {
@@ -85,7 +87,7 @@ if (subnavigation_triggers.length > 0) {
 /**
  * Check and jump to breadcrumb data level
  */
-const level_breadcrumbs = document.querySelectorAll('[data-level]')
+const level_breadcrumbs = targetwrapper.querySelectorAll('[data-level]')
 
 if (level_breadcrumbs.length > 0) {
   level_breadcrumbs.forEach((breadcrumb) => {
@@ -124,8 +126,8 @@ const showAndHideSubNavEl = (el) => {}
  * Hover effect with delay for better navigation on subnavigation elements AND
  * Set first element of subnav to active when hovering main nav element
  */
-const subNavElements = document.querySelectorAll('.subnavigation .navigation__element')
-const mainNavElements = document.querySelectorAll('.navigation--main .navigation__list--level-0 > .navigation__element')
+const subNavElements = targetwrapper.querySelectorAll('.subnavigation .navigation__element')
+const mainNavElements = targetwrapper.querySelectorAll('.navigation--main .navigation__list--level-0 > .navigation__element')
 
 if (mainNavElements.length > 0 && subNavElements.length > 0 && window.innerWidth >= 768) {
   let showNavigation
@@ -161,15 +163,17 @@ if (mainNavElements.length > 0 && subNavElements.length > 0 && window.innerWidth
 /**
  * Calculates and sets height of subnavigation
  */
-const subnavigations = document.querySelectorAll('.subnavigation')
+const subnavigations = targetwrapper.querySelectorAll('.subnavigation')
 
 const calcAndSetSubnavHeight = () => {
   if (subnavigations.length > 0) {
     subnavigations.forEach((subnavigation) => {
-      const subnavheight = window.innerHeight - document.querySelector('.header__wrapper').offsetHeight + 'px'
+      const subnavheight = window.innerHeight - targetwrapper.querySelector('.header__wrapper').offsetHeight + 'px'
       subnavigation.style.height = subnavheight
     })
   }
 }
 window.addEventListener('load', calcAndSetSubnavHeight)
 window.addEventListener('resize', calcAndSetSubnavHeight)
+
+}

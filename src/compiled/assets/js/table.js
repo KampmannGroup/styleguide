@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', function (event) {
-  const tables = document.querySelectorAll('.table')
+export const table = (targetwrapper = document) => {
+  const tables = targetwrapper.querySelectorAll('.table')
 
   if (tables) {
     tables.forEach((table, index) => {
@@ -100,4 +100,4 @@ document.addEventListener('DOMContentLoaded', function (event) {
       })
     })
   }
-})
+}

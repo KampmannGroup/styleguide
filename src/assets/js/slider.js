@@ -1,7 +1,7 @@
 import Swiper, { Navigation, Pagination, Autoplay, Controller } from 'swiper'
 Swiper.use([Pagination, Autoplay, Navigation, Controller])
 
-document.addEventListener('DOMContentLoaded', () => {
+export const slider = (target = document) => {
   //slider
   var elem = {},
     process = {}
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  const sliders = document.querySelectorAll('.slider')
+  const sliders = target.querySelectorAll('.slider')
 
   const autoplay = 5000
   const speed = 600
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sliders.forEach((slider, i) => {
       let options = {}
 
-      if (slider.classList.contains("slider--teaser")) {
+      if (slider.classList.contains('slider--teaser')) {
         options = {
           spaceBetween: 0,
           slidesPerView: 1,
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (slider.classList.contains('slider--small')) {
         options = {
           spaceBetween: 20,
-          slidesPerView: 'auto'
+          slidesPerView: 'auto',
         }
       }
 
@@ -73,8 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
           init: (swiper) => startProgress(swiper, i, autoplay, speed),
           slideChange: (swiper) => startProgress(swiper, i, autoplay, speed),
         },
-        ...options
+        ...options,
       })
     })
   }
-})
+}

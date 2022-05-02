@@ -1,10 +1,9 @@
 import Swiper, { Navigation, Pagination, Autoplay, Controller } from 'swiper'
 import { Tab } from 'bootstrap'
 import Masonry from 'masonry-layout'
-
 Swiper.use([Pagination, Autoplay, Navigation, Controller])
 
-document.addEventListener('DOMContentLoaded', function (event) {
+export const card = (target = document) => {
   //Images
   new Swiper('.card__slider', {
     slidesPerView: 1,
@@ -16,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   })
 
   //Tabs
-  var triggerTabList = [].slice.call(document.querySelectorAll('.card__tab'))
+  var triggerTabList = [].slice.call(target.querySelectorAll('.card__tab'))
   triggerTabList.forEach(function (triggerEl) {
     var tabTrigger = new Tab(triggerEl)
 
@@ -25,4 +24,4 @@ document.addEventListener('DOMContentLoaded', function (event) {
       tabTrigger.show()
     })
   })
-})
+}

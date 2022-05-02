@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', function (event) {
-  const progresses = document.querySelectorAll('.progress__status')
+export const progressbar = (target = target) => {
+  const progresses = target.querySelectorAll('.progress__status')
 
   if (progresses.length) {
     progresses.forEach((progress) => {
@@ -17,4 +17,4 @@ document.addEventListener('DOMContentLoaded', function (event) {
       }, 7)
     })
   }
-})
+}
