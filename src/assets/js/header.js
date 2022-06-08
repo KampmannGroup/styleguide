@@ -23,20 +23,20 @@ document.addEventListener('DOMContentLoaded', function (event) {
     oldValue = newValue
     scrollPos = window.pageYOffset
 
-    // timer = setTimeout(setHeaderState, 50, direction, scrollPos)
+    timer = setTimeout(setHeaderState, 50, direction, scrollPos)
   }
 
-  // const setHeaderState = (dir, pos) => {
-  //   if (pos === 0 || languageSwitch.classList.contains('show') || dir === 'Up') {
-  //     header.style.transform = 'translateY(0)'
-  //     return
-  //   }
+  const setHeaderState = (dir, pos) => {
+    if (pos === 0 || languageSwitch.classList.contains('show') || dir === 'Up') {
+      header.style.transform = 'translateY(0)'
+      return
+    }
 
-  //   if (dir === 'Down' && pos > 0) {
-  //     header.style.transform = `translateY(-${headerMeta.offsetHeight}px)`
-  //     return
-  //   }
-  // }
+    if (dir === 'Down' && pos > 0) {
+      header.style.transform = `translateY(-${headerMeta.offsetHeight}px)`
+      return
+    }
+  }
 
   window.addEventListener('scroll', (e) => checkScrollDirectionAndPosition(e))
 })
