@@ -27,13 +27,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
   }
 
   const setHeaderState = (dir, pos) => {
+    const meta = header.querySelector('.header__section--meta')
     if (pos === 0 || languageSwitch.classList.contains('show') || dir === 'Up') {
-      header.style.transform = 'translateY(0)'
+      meta.style.marginTop = ''
       return
     }
 
     if (dir === 'Down' && pos > 0) {
-      header.style.transform = `translateY(-${headerMeta.offsetHeight}px)`
+      meta.style.marginTop = `-${headerMeta.offsetHeight}px`
       return
     }
   }

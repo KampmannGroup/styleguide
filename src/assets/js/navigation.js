@@ -7,8 +7,10 @@ const NAV_DELAY = 600
 
 if (burgers.length > 0) {
   burgers.forEach((burger) => {
+    const header = burger.closest('.header')
+
     burger.addEventListener('click', (e) => {
-      const el = e.target.closest('[data-navigation]')
+      const el = e.target.closest('[data-navigation]')y
 
       if (burger.classList.contains('--active')) {
         burger.classList.remove('--active')
@@ -32,11 +34,17 @@ if (burgers.length > 0) {
             collapse.onfinish = () => {
               navigation_toggler.style.removeProperty('height')
               navigation.classList.remove('--active')
+              if(header){
+                header.classList.remove('header--open')
+              }
             }
             return
           }
 
           navigation.classList.add('--active')
+          if(header){
+            header.classList.add('header--open')
+          }
 
           const expand = navigation_toggler.animate(
             [{ height: '0' }, { height: `${navigation_toggler.scrollHeight}px` }],
