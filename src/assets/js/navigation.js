@@ -10,7 +10,7 @@ if (burgers.length > 0) {
     const header = burger.closest('.header')
 
     burger.addEventListener('click', (e) => {
-      const el = e.target.closest('[data-navigation]')y
+      const el = e.target.closest('[data-navigation]')
 
       if (burger.classList.contains('--active')) {
         burger.classList.remove('--active')
@@ -34,7 +34,7 @@ if (burgers.length > 0) {
             collapse.onfinish = () => {
               navigation_toggler.style.removeProperty('height')
               navigation.classList.remove('--active')
-              if(header){
+              if (header) {
                 header.classList.remove('header--open')
               }
             }
@@ -42,7 +42,7 @@ if (burgers.length > 0) {
           }
 
           navigation.classList.add('--active')
-          if(header){
+          if (header) {
             header.classList.add('header--open')
           }
 
