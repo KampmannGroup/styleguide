@@ -6,6 +6,24 @@
   transition: transform 0.25s ease-in-out;
   height: 100px;
 
+  &-dummy-hero {
+    background-color: $gray-dark;
+    height: 500px;
+    width: 100vw;
+  }
+
+  &-third-nav-dummy {
+    background-color: $teal;
+    height: 64px;
+    width: 100vw;
+    position: sticky;
+    top: var(--header-height, 0);
+    left: 0;
+    right: 0;
+    z-index: 98;
+    transition: 0.25s ease-in-out;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -141,6 +159,8 @@
         background: white;
         position: absolute;
         z-index: -1;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
   }
