@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   const metaHeight = meta.offsetHeight
   const main = header.querySelector('.header__section--main')
   const mainHeight = main.offsetHeight
-  const thirdNav = document.querySelector('.header-third-nav-dummy')
+  const thirdNav = document.querySelector('[data-navigation="onpage"]')
   const languageSwitch = header.querySelector('#language-switch')
 
   let oldValue = 0
@@ -35,21 +35,21 @@ document.addEventListener('DOMContentLoaded', function (event) {
     const meta = header.querySelector('.header__section--meta')
     if (pos === 0 || languageSwitch.classList.contains('show') || dir === 'Up') {
       meta.style.marginTop = ''
-      if(thirdNav){
-        thirdNav.style.top = `${(mainHeight + metaHeight - 1)}px`
+      if (thirdNav) {
+        thirdNav.style.top = `${mainHeight + metaHeight - 1}px`
       }
       return
     }
 
     if (dir === 'Down' && pos > 0) {
-      meta.style.marginTop = `-${(metaHeight + 1)}px`
-      if(thirdNav){
-        thirdNav.style.top = `${(mainHeight - 2)}px`
+      meta.style.marginTop = `-${metaHeight + 1}px`
+      if (thirdNav) {
+        thirdNav.style.top = `${mainHeight - 2}px`
       }
       return
     }
   }
-  if(thirdNav){
+  if (thirdNav) {
     thirdNav.style.top = `${mainHeight - 2}px`
   }
 
