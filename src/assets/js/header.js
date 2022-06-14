@@ -1,11 +1,11 @@
-document.addEventListener('DOMContentLoaded', function (event) {
-  const header = document.querySelector('header.header')
+export const header = (targetwrapper = targetwrapper) => {
+  const header = targetwrapper.querySelector('header.header')
   const headerMeta = header.querySelector('.header__section--meta')
   const meta = header.querySelector('.header__section--meta')
   const metaHeight = meta.offsetHeight
   const main = header.querySelector('.header__section--main')
   const mainHeight = main.offsetHeight
-  const thirdNav = document.querySelector('[data-navigation="onpage"]')
+  const thirdNav = targetwrapper.querySelector('[data-navigation="onpage"]')
   const languageSwitch = header.querySelector('#language-switch')
 
   let oldValue = 0
@@ -54,4 +54,4 @@ document.addEventListener('DOMContentLoaded', function (event) {
   }
 
   window.addEventListener('scroll', (e) => checkScrollDirectionAndPosition(e))
-})
+}

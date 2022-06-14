@@ -12,8 +12,10 @@ import { table } from './table.js'
 import './modal'
 import './accordion'
 import { progressbar } from './progressbar.js'
+import { header } from './header.js'
 
 const init = (target = document) => {
+  header(target)
   form(target)
   navigation(target)
   progressbar(target)
