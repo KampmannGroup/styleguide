@@ -114,6 +114,7 @@
         margin-left: 50%;
         transform: translateX(-50%);
         background: rgba($gray, 0.35);
+        background: #efefef;
 
         height: 0;
         overflow: hidden;
@@ -671,5 +672,13 @@
         }
       }
     }
+  }
+}
+
+
+
+@include media-breakpoint-between(md, lg){
+  .subnavigation{
+    height:100vh !important;
   }
 }

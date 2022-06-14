@@ -4,3 +4,4 @@ info: Unter dem Navigationspunkt Produkte > Produktfamilien > Lufterhitzer > Kat
 ---
 
 {% include pattern_block.html url='/src/patterns/templates/header/header.html' %}
+{% include pattern_block.html url='/src/patterns/templates/header/header_onpage.html' %}
