@@ -9,7 +9,7 @@
   &-dummy-hero {
     background-color: $gray-dark;
     height: 500px;
-    width: 100vw;
+    width: 100%;
   }
 
   &__wrapper {
@@ -86,9 +86,7 @@
 
 // Dummy purposes
 [data-navigation='onpage'] {
-  background-color: $teal;
-  height: 64px;
-  width: 100vw;
+  width: 100%;
   position: sticky;
   top: var(--header-height, 0);
   left: 0;
