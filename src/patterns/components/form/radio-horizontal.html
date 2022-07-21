@@ -1,0 +1,28 @@
+---
+title: Radio Horizontal
+styles: assets/_scss/components/_form.scss
+script: /src/assets/js/form.js
+maturity: draft
+inlinestyles: '<style>.form{padding-top:30px;}</style>'
+---
+
+<div class="form">
+  <div class="formelement__wrapper formelement__wrapper--horizontal">
+    <div class="formelement formelement--radio">
+      <input id="radio_0" name="radio" class="formelement__option" type="radio" />
+      <label for="radio_0" class="formelement__label formelement__label--radio">Label 1</label>
+    </div>
+    <div class="formelement formelement--radio">
+      <input id="radio_1" name="radio" class="formelement__option" type="radio" />
+      <label for="radio_1" class="formelement__label formelement__label--radio">Label 2</label>
+    </div>
+    <div class="formelement formelement--radio">
+      <input id="radio_2" name="radio" class="formelement__option" type="radio" />
+      <label for="radio_2" class="formelement__label formelement__label--radio">Label 3</label>
+    </div>
+  </div>
+</div>
+
+<script src="{{ page.script }}"></script>
+
+{{ page.inlinestyles }}
