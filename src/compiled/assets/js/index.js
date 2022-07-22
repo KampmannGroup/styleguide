@@ -1,6 +1,8 @@
 import '../_scss/index.scss'
 import bootstrap from 'bootstrap'
 
+import './modal'
+import './accordion'
 import { form } from './form.js'
 import { navigation } from './navigation.js'
 import { slider } from './slider.js'
@@ -9,8 +11,6 @@ import { carousel } from './carousel.js'
 import { card } from './card.js'
 import { events } from './events.js'
 import { table } from './table.js'
-import './modal'
-import './accordion'
 import { progressbar } from './progressbar.js'
 import { header } from './header.js'
 
