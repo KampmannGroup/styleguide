@@ -4,7 +4,7 @@ export const navigation = (targetwrapper = targetwrapper) => {
    */
   const burgers = targetwrapper.querySelectorAll('.navigation__burger')
 
-  const NAV_DELAY = 600
+  const NAV_DELAY = 400
 
   if (burgers.length > 0) {
     burgers.forEach((burger) => {
@@ -164,6 +164,24 @@ export const navigation = (targetwrapper = targetwrapper) => {
         if (subnav) {
           const firstEl = subnav.querySelector('.navigation__element--first')
           showNavigation = setTimeout(() => firstEl.classList.add('isHovered'), NAV_DELAY)
+
+          const subnavigation_wrapper = subnav.closest('.subnavigation')
+
+          if (subnavigation_wrapper) {
+            if (window.innerWidth > 768) {
+              const lists = subnavigation_wrapper.querySelectorAll('ul')
+              if (lists.length) {
+                let maxHeight = 0
+                lists.forEach((list) => {
+                  if (list.scrollHeight > maxHeight) {
+                    maxHeight = list.scrollHeight
+                  }
+                })
+                maxHeight += 30
+                subnavigation_wrapper.style.setProperty('max-height', `${maxHeight}px`)
+              }
+            } 
+          }
         }
       })
     })
