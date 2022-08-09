@@ -4,7 +4,7 @@ export const navigation = (targetwrapper = targetwrapper) => {
    */
   const burgers = targetwrapper.querySelectorAll('.navigation__burger')
 
-  const NAV_DELAY = 400
+  const NAV_DELAY = 300
 
   if (burgers.length > 0) {
     burgers.forEach((burger) => {
