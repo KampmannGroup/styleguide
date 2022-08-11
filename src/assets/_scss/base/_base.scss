@@ -1,34 +1,37 @@
-html{
+html {
   font-size: $font-size-root;
 }
 
-body{
+body {
   font-family: $font-family-sans-serif;
   font-size: $font-size-base;
   line-height: $line-height-base;
   color: $body-color;
+  overflow-x: hidden;
 }
 
-a{
+a {
   color: var(--color-primary);
 }
 
-small{
+small {
   font-size: 9px;
 }
 
-img{
-  max-width:100%;
+img {
+  max-width: 100%;
 }
 
-.container{
+.container {
   width: calc(100% - #{$grid-gutter-width} * 2);
 
-  .container{
-    width:100%;
+  .container {
+    width: 100%;
   }
 }
 
-*, *:before, *:after{
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }

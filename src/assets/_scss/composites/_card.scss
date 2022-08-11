@@ -196,6 +196,8 @@
         background: $gray-light;
         padding: $card-spacer-y $card-spacer-x;
         min-height: 105px;
+        display: flex;
+        align-items: center;
 
         .headline {
           margin-bottom: 0;
@@ -206,6 +208,23 @@
         .tab-content {
           border: none !important;
         }
+      }
+
+      &__body {
+        > p,
+        > ul {
+          &:first-of-type {
+            margin-top: 0;
+          }
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &__links {
+        margin-top: 1em;
       }
     }
   }
