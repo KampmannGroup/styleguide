@@ -260,7 +260,7 @@
             padding-right: $grid-gutter-width;
             margin-right: auto;
 
-            @include media-breakpoint-up(md) {
+            @include media-breakpoint-up(lg) {
               flex: 1;
             }
 
@@ -273,10 +273,10 @@
             display: flex;
             flex-wrap: wrap;
             flex: 0 1 auto;
-            margin: 0 $grid-gutter-width/-1;
+            margin: 0 $grid-gutter-width/-1;  
 
-            @include media-breakpoint-up(md) {
-              flex: 0 0 200px;
+            @include media-breakpoint-up(lg) {
+              flex: 0 0 240px;
               margin-left: auto;
             }
           }
@@ -337,6 +337,7 @@
 
         img {
           margin-right: $grid-gutter-width/4;
+          max-width: 40px;
         }
       }
     }
