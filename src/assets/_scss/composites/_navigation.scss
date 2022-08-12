@@ -157,6 +157,12 @@
           top: 0;
           display: none;
 
+          @include media-breakpoint-up(md) {
+            display: block !important;
+            opacity: 0;
+            pointer-events: none;
+          }
+
           .navigation__element {
           }
         }
@@ -354,6 +360,7 @@
                     opacity: 1;
                     animation: 0.4s fadeIn forwards;
                     display: block;
+                    pointer-events: all;
                   }
 
                   > .navigation__element-wrapper .navigation__subnavigation-trigger {
@@ -544,6 +551,8 @@
 
           &.isHovered {
             .subnavigation {
+              opacity: 1;
+              pointer-events: all;
               display: flex !important;
               animation: 0.3s fadeIn forwards;
             }
@@ -553,6 +562,7 @@
               opacity: 1;
               animation: 0.4s fadeIn forwards;
               display: block;
+              pointer-events: all;
             }
 
             > .navigation__element-wrapper .navigation__subnavigation-trigger {
@@ -675,10 +685,8 @@
   }
 }
 
-
-
-@include media-breakpoint-between(md, lg){
-  .subnavigation{
-    height:100vh !important;
+@include media-breakpoint-between(md, lg) {
+  .subnavigation {
+    height: 100vh !important;
   }
 }
