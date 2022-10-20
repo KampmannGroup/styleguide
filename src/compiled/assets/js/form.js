@@ -28,7 +28,7 @@ export const form = (target = document)=>{
     })
   }
   
-  const selects = target.querySelectorAll('.formelement--select')
+  const selects = target.querySelectorAll('.formelement--select:not(.formelement--init)')
   
   if (selects) {
     //Hide list on body click
@@ -43,6 +43,7 @@ export const form = (target = document)=>{
     })
   
     selects.forEach((select) => {
+      select.classList.add('formelement--init')
       const placeholder = select.querySelector('.formelement__option--placeholder')
         
       select.addEventListener('click', (e) => {
