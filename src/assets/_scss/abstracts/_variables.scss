@@ -87,11 +87,27 @@ $colors: (
   'cyan': $cyan,
   'aloevera': $aloevera,
   'white': $white,
+  'black': $black,
   'gray': $gray,
   'gray-dark': $gray-dark,
   'gray-medium': $gray-medium,
   'gray-light': $gray-light,
   'gray-beige-light': $gray-beige-light,
+);
+
+
+$theme-colors: map-merge(
+  $colors,
+  (
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+    'light': $light,
+    'dark': $dark,
+  )
 );
 
 $alert-bg-scale: 0;
