@@ -1,0 +1,11 @@
+.text-image{
+  height: 100%;
+
+  &__item{
+    &__text{
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}

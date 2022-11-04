@@ -94,6 +94,38 @@ $colors: (
   'gray-beige-light': $gray-beige-light,
 );
 
+$theme-colors: map-merge(
+  $colors,
+  (
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+    'light': $light,
+    'dark': $dark,
+  )
+);
+
+@each $name, $color in ($theme-colors){
+  .bg-#{$name}{
+    color: white;
+
+    *:not(.btn){
+      color: inherit !important;
+    }
+  }
+}
+
+@each $name, $color in ($theme-colors){
+  .text-#{$name}{
+    *:not(.btn){
+      color: inherit !important;
+    }
+  }
+}
+
 $alert-bg-scale: 0;
 $alert-color-scale: 0;
 
@@ -214,5 +246,5 @@ $nav-pills-link-active-bg: $teal;
 // TABLES
 //----------------------------------------------------------
 
-$table-cell-padding-y:        20px;
-$table-cell-padding-x:        1rem;
+$table-cell-padding-y: 20px;
+$table-cell-padding-x: 1rem;
