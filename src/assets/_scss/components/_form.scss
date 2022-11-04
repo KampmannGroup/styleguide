@@ -249,7 +249,7 @@
 
   &:placeholder-shown:not(:active):not(:focus),
   &--placeholder {
-    background-color: rgba($gray, 0.35);
+    background-color: rgba($gray-beige-light, 1);
     border-color: transparent;
 
     &:hover {

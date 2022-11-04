@@ -1,6 +1,6 @@
 {
   "name": "@kampmanngroup/styleguide",
-  "version": "1.7.4-beta",
+  "version": "1.7.5",
   "description": "Kampmann Group Digital Styleguide",
   "module": "dist/js/kampmann.esm.min.js",
   "browser": "dist/js/kampmann.umd.min.js",
