@@ -53,6 +53,14 @@ export const slider = (target = document) => {
         }
       }
 
+      if (slider.classList.contains('slider--tabs')) {
+        options = {
+          spaceBetween: 20,
+          slidesPerView: 'auto',
+          autoplay: false,
+        }
+      }
+
       new Swiper(slider, {
         speed: speed,
         autoplay: {
