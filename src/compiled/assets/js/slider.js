@@ -72,7 +72,7 @@ export const slider = (target = document) => {
           const el = e.target.closest('.nav-item')
 
           if (el && e.isTrusted) {
-            var parent = el.parentNode
+            var parent = el.parentNode 
             var index = Array.prototype.indexOf.call(parent.children, el)
 
             swiper.slideTo(index)
