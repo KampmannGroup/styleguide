@@ -30,6 +30,12 @@ export const slider = (target = document) => {
     }
   }
 
+  const changeTab = (swiper, nav) => {
+    if (nav && nav.classList.contains('tabs-container')) {
+      nav.querySelectorAll('.nav-item')[swiper.activeIndex].querySelector('.nav-link').click()
+    }
+  }
+
   const sliders = target.querySelectorAll('.slider')
 
   const autoplay = 5000
@@ -57,11 +63,24 @@ export const slider = (target = document) => {
         options = {
           spaceBetween: 20,
           slidesPerView: 'auto',
-          autoplay: false,
         }
       }
 
-      new Swiper(slider, {
+      const nav = slider.previousElementSibling
+      if (nav && nav.classList.contains('tabs-container')) {
+        nav.addEventListener('click', (e) => {
+          const el = e.target.closest('.nav-item')
+
+          if (el && e.isTrusted) {
+            var parent = el.parentNode
+            var index = Array.prototype.indexOf.call(parent.children, el)
+
+            swiper.slideTo(index)
+          }
+        })
+      }
+
+      const swiper = new Swiper(slider, {
         speed: speed,
         autoplay: {
           delay: autoplay,
@@ -79,7 +98,10 @@ export const slider = (target = document) => {
         },
         on: {
           init: (swiper) => startProgress(swiper, i, autoplay, speed),
-          slideChange: (swiper) => startProgress(swiper, i, autoplay, speed),
+          slideChange: (swiper) => {
+            startProgress(swiper, i, autoplay, speed)
+            changeTab(swiper, nav)
+          },
         },
         ...options,
       })
