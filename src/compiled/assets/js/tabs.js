@@ -35,5 +35,6 @@ export const tabs = (targetwrapper = document) => {
 
       tc.classList.add('tabs-container--init')
     })
+
   }
 }

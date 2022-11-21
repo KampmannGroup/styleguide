@@ -1,6 +1,6 @@
-@each $breakpointname, $breakpointsize in $grid-breakpoints{
-  @media (min-width: #{$breakpointsize}){
-    body{
+@each $breakpointname, $breakpointsize in $grid-breakpoints {
+  @media (min-width: #{$breakpointsize}) {
+    body {
       --current-breakpoint: #{$breakpointname};
       --current-containerwidth: #{map-get($container-max-widths, $breakpointname)};
     }
@@ -15,23 +15,25 @@
 //   }
 // }
 
-
-
-@each $name, $color in ($theme-colors){
-  .bg-#{$name}{
+@each $name, $color in ($theme-colors) {
+  .bg-#{$name} {
     color: #{color-contrast($color)};
     // color: white;
 
-    *:not(.btn){
+    *:not(.btn) {
       color: inherit !important;
     }
   }
 }
 
-@each $name, $color in ($theme-colors){
-  .text-#{$name}{
-    *:not(.btn){
+@each $name, $color in ($theme-colors) {
+  .text-#{$name} {
+    *:not(.btn) {
       color: inherit !important;
     }
   }
+}
+.container__extend {
+  width: calc(100% + ((100vw - (var(--current-containerwidth) - #{$grid-gutter-width} * 2)) / 2));
+  overflow: hidden;
 }
