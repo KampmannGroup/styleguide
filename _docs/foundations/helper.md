@@ -43,3 +43,38 @@ title: Helper Classes
 </ul>
 
 {% include pattern_block.html url='/src/patterns/foundations/bootstrap/spacing.html' %}
+
+<div style="display:block; height:5rem"></div>
+<h2>Farben</h2>
+<p>Mittels Shorthand-Klassen weisen Sie Elementen eine Text- bzw. Hintergrundfarbe zu</p>
+
+<h3>Notation</h3>
+<p>Die Klassen werden im folgenden Muster angegeben: 
+  <ul>
+    <li><code>{property}-{color}</code></li>
+  </ul>
+</p>
+
+<p><strong>PROPERTY</strong></p>
+<ul>
+  <li><code>bg</code> - für Hintergründe</li>
+  <li><code>text</code> - für Textfarben</li>
+</ul>
+
+<p><strong>COLOR</strong></p>
+<ul>
+  <li style="position: relative; padding-left: 25px;"><svg style="position:absolute; top:5px; left:0;" width="15" height="15" viewBox="0 0  15 15"><rect x="0" y="0"  width="15" height="15" fill="#0E2249"/></svg><code>primary</code> – Hauptfarbe (Dunkelblau)</li>
+  <li style="position: relative; padding-left: 25px;"><svg style="border: 1px solid #ebebeb;position:absolute; top:5px; left:0;" width="15" height="15" viewBox="0 0  15 15"><rect x="0" y="0"  width="15" height="15" fill="#FFF"/></svg><code>secondary</code> - Sekundärfarbe (Weiß)</li>
+  <li style="position: relative; padding-left: 25px;"><svg style="position:absolute; top:5px; left:0;" width="15" height="15" viewBox="0 0  15 15"><rect x="0" y="0"  width="15" height="15" fill="#0E2249"/></svg><code>blue</code></li>
+  <li style="position: relative; padding-left: 25px;"><svg style="position:absolute; top:5px; left:0;" width="15" height="15" viewBox="0 0  15 15"><rect x="0" y="0"  width="15" height="15" fill="#95C11F"/></svg><code>green</code></li>
+  <li style="position: relative; padding-left: 25px;"><svg style="position:absolute; top:5px; left:0;" width="15" height="15" viewBox="0 0  15 15"><rect x="0" y="0"  width="15" height="15" fill="#008F8C"/></svg><code>teal</code></li>
+  <li style="position: relative; padding-left: 25px;"><svg style="position:absolute; top:5px; left:0;" width="15" height="15" viewBox="0 0  15 15"><rect x="0" y="0"  width="15" height="15" fill="#79C08B"/></svg><code>aloevera</code></li>
+  <li style="position: relative; padding-left: 25px;"><svg style="position:absolute; top:5px; left:0;" width="15" height="15" viewBox="0 0  15 15"><rect x="0" y="0"  width="15" height="15" fill="#58C7DA"/></svg><code>cyan</code></li>
+  <li style="position: relative; padding-left: 25px;"><svg style="border: 1px solid #ebebeb;position:absolute; top:5px; left:0;" width="15" height="15" viewBox="0 0  15 15"><rect x="0" y="0"  width="15" height="15" fill="#FFF"/></svg><code>white</code></li>
+  <li style="position: relative; padding-left: 25px;"><svg style="position:absolute; top:5px; left:0;" width="15" height="15" viewBox="0 0  15 15"><rect x="0" y="0"  width="15" height="15" fill="#F1F0EE"/></svg><code>gray-light</code></li>
+  <li style="position: relative; padding-left: 25px;"><svg style="position:absolute; top:5px; left:0;" width="15" height="15" viewBox="0 0  15 15"><rect x="0" y="0"  width="15" height="15" fill="#F0EFEC"/></svg><code>gray-medium</code></li>
+  <li style="position: relative; padding-left: 25px;"><svg style="position:absolute; top:5px; left:0;" width="15" height="15" viewBox="0 0  15 15"><rect x="0" y="0"  width="15" height="15" fill="#D7D5CD"/></svg><code>gray-dark</code></li>
+  <li style="position: relative; padding-left: 25px;"><svg style="position:absolute; top:5px; left:0;" width="15" height="15" viewBox="0 0  15 15"><rect x="0" y="0"  width="15" height="15" fill="#000"/></svg><code>black</code></li>
+</ul>
+
+{% include pattern_block.html url='/src/patterns/foundations/bootstrap/colors.html' %}

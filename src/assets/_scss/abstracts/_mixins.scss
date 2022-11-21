@@ -14,3 +14,24 @@
 //     }
 //   }
 // }
+
+
+
+@each $name, $color in ($theme-colors){
+  .bg-#{$name}{
+    color: #{color-contrast($color)};
+    // color: white;
+
+    *:not(.btn){
+      color: inherit !important;
+    }
+  }
+}
+
+@each $name, $color in ($theme-colors){
+  .text-#{$name}{
+    *:not(.btn){
+      color: inherit !important;
+    }
+  }
+}
