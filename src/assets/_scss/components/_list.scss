@@ -120,10 +120,13 @@ ol.list,
 .list--check {
   li,
   .list__item {
-    padding-left: $grid-gutter-width * 1.5 !important;
+    padding-left: $grid-gutter-width * 1.5 !important ;
 
     &:before {
-      content: url("data:image/svg+xml,%3csvg width='10px' height='7px' viewBox='0 0 10 7' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg id='List-Item-/-Unordered-/-Check-' transform='translate(-2.000000%2c -8.000000)' fill='%230E2249' fill-rule='nonzero'%3e%3cg id='Icon-/-Check' transform='translate(-0.500000%2c 4.500000)'%3e%3cpath d='M10.7496226%2c4.15995393 C10.9134125%2c3.937631 11.2264188%2c3.89018058 11.4487417%2c4.05397045 C11.6710647%2c4.21776033 11.7185151%2c4.53076661 11.5547252%2c4.75308954 L7.67164919%2c10.0238471 C7.49174003%2c10.2687454 7.21919692%2c10.4290648 6.91811005%2c10.4672778 C6.62086136%2c10.5052314 6.320908%2c10.4212445 6.08602702%2c10.2340036 L3.53559224%2c8.19487315 C3.31991106%2c8.02243115 3.28485878%2c7.70779516 3.45730077%2c7.49211398 C3.62974276%2c7.2764328 3.94437876%2c7.24138051 4.16005993%2c7.41382251 L6.70993343%2c9.45250484 C6.73290595%2c9.47081786 6.76231314%2c9.47905187 6.79182907%2c9.47528333 C6.82138405%2c9.4715323 6.84810396%2c9.4558147 6.86614437%2c9.43125828 L10.7496226%2c4.15995393 Z' id='Path'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e") !important;
+      content:"" !important;
+      background-image: url("data:image/svg+xml,%3csvg width='10px' height='7px' viewBox='0 0 10 7' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg id='List-Item-/-Unordered-/-Check-' transform='translate(-2.000000%2c -8.000000)' fill='%230E2249' fill-rule='nonzero'%3e%3cg id='Icon-/-Check' transform='translate(-0.500000%2c 4.500000)'%3e%3cpath d='M10.7496226%2c4.15995393 C10.9134125%2c3.937631 11.2264188%2c3.89018058 11.4487417%2c4.05397045 C11.6710647%2c4.21776033 11.7185151%2c4.53076661 11.5547252%2c4.75308954 L7.67164919%2c10.0238471 C7.49174003%2c10.2687454 7.21919692%2c10.4290648 6.91811005%2c10.4672778 C6.62086136%2c10.5052314 6.320908%2c10.4212445 6.08602702%2c10.2340036 L3.53559224%2c8.19487315 C3.31991106%2c8.02243115 3.28485878%2c7.70779516 3.45730077%2c7.49211398 C3.62974276%2c7.2764328 3.94437876%2c7.24138051 4.16005993%2c7.41382251 L6.70993343%2c9.45250484 C6.73290595%2c9.47081786 6.76231314%2c9.47905187 6.79182907%2c9.47528333 C6.82138405%2c9.4715323 6.84810396%2c9.4558147 6.86614437%2c9.43125828 L10.7496226%2c4.15995393 Z' id='Path'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e") !important;
+      background-repeat: no-repeat;
+      background-position: center;
       width: 15px !important;
       padding-bottom: 3px !important;
       margin-top: 3px !important;
