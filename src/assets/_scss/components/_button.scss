@@ -57,6 +57,14 @@
     }
   }
 
+  @each $key,$color in $colors{
+    &--#{$key}{
+      background-color: $color;
+      color: #{color-contrast($color)};
+      border-color: transparent;
+    }
+  }
+
   &--secondary {
     background-color: $secondary;
     color: $primary;
