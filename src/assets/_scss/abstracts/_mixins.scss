@@ -20,8 +20,12 @@
     color: #{color-contrast($color)};
     // color: white;
 
-    *:not(.btn) {
+    *:not(.btn, [class*='bg-']) {
       color: inherit !important;
+    }
+
+    .btn:not([class*="btn--outline"]) {
+      color: $color;
     }
   }
 }
