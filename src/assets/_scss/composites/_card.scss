@@ -7,12 +7,42 @@
   background-color: var(--highlight-color, transparent);
   margin-bottom: $grid-gutter-width;
 
+  &--primary {
+    --highlight-color: #{$primary};
+    --contrast-color: #{color-contrast($primary)};
+
+    *:not(.btn) {
+      color: var(--contrast-color, $blue);
+    }
+
+    .btn{
+      color: var(--highlight-color);
+    }
+  }
+
+  &--aloevera {
+    --highlight-color: #{$aloevera};
+    --contrast-color: #{color-contrast($aloevera)};
+
+    *:not(.btn) {
+      color: var(--contrast-color, $blue);
+    }
+
+    .btn{
+      color: var(--highlight-color);
+    }
+  }
+
   &--teal {
     --highlight-color: #{$teal};
     --contrast-color: #{color-contrast($teal)};
 
-    * {
+    *:not(.btn) {
       color: var(--contrast-color, $blue);
+    }
+
+    .btn{
+      color: var(--highlight-color);
     }
   }
 
@@ -20,8 +50,12 @@
     --highlight-color: #{$green};
     --contrast-color: #{color-contrast($green)};
 
-    * {
+    *:not(.btn) {
       color: var(--contrast-color, $blue);
+    }
+
+    .btn{
+      color: var(--highlight-color);
     }
   }
 
@@ -29,8 +63,12 @@
     --highlight-color: #{$cyan};
     --contrast-color: #{color-contrast($cyan)};
 
-    * {
+    *:not(.btn) {
       color: var(--contrast-color, $blue);
+    }
+
+    .btn{
+      color: var(--highlight-color);
     }
   }
 
@@ -38,8 +76,12 @@
     --highlight-color: #{$gray-light};
     --contrast-color: #{color-contrast($gray-light)};
 
-    * {
+    *:not(.btn) {
       color: var(--contrast-color, $blue);
+    }
+
+    .btn{
+      color: var(--highlight-color);
     }
   }
 
@@ -100,7 +142,8 @@
     }
   }
 
-  &--news {
+  &--news,
+  &--colored {
     transition: 0.3s;
 
     &:hover {
@@ -163,6 +206,45 @@
 
         & > * {
           flex: 0 1 auto;
+        }
+      }
+    }
+  }
+
+  &--colored {
+    overflow: hidden;
+    height: calc(100% - 20px);
+    background: none;
+
+    .card {
+      &__wrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      &__body {
+        &__wrapper {
+          background-color: var(--highlight-color, transparent);
+          align-self: stretch;
+        }
+      }
+
+      &__image {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+
+        &__wrapper {
+          align-self: stretch;
+          background-color: var(--highlight-color, transparent);
+        }
+
+        img {
+          width: inherit;
+          height: inherit;
+          object-fit: inherit;
+          object-position: inherit;
         }
       }
     }
@@ -273,7 +355,7 @@
             display: flex;
             flex-wrap: wrap;
             flex: 0 1 auto;
-            margin: 0 $grid-gutter-width/-1;  
+            margin: 0 $grid-gutter-width/-1;
 
             @include media-breakpoint-up(lg) {
               flex: 0 0 240px;

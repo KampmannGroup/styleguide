@@ -1,0 +1,58 @@
+---
+title: Colored
+maturity: ready
+styles: ''
+script: /dist/js/kampmann.umd.min.js
+control: exclude
+---
+
+<div class="news container">
+  <div class="row align-items-stretch">
+    {% for news in site.data.news %}
+
+    {% assign image_width = 12 | minus: news.content_width %}
+    {% if news.content_width < 12 %}
+      {% assign card_width =  12 %}
+    {% else %}
+      {% assign card_width =  6 %}
+    {% endif %}
+
+    {% if news.color == 'gray-light' %}
+      {% assign btn_color =  'primary' %}
+    {% else %}
+      {% assign btn_color =  'white' %}
+    {% endif %}
+
+    <div class="col-12 col-md-{{ card_width }}">
+      <div class="card card--colored card--{{ news.color }}">
+        <div class="card__wrapper row">
+          {% if news.image_first %}
+          <div class="card__image__wrapper col-12 col-md-{{ image_width }}">
+            <div class="card__image">
+              <img src="{{ news.img }}" alt="..." />
+            </div>
+          </div>
+          {% endif %}
+          <div class="card__body__wrapper col-12 col-md-{{ news.content_width }}">
+            <div class="card__body">
+            <h2 class="news__title card-title headline headline--h2">{{ news.headline }}</h2>
+            <p class="card-text">{{ news.text }}</p>
+            <a href="javascript:void(0)" class="btn btn--{{ btn_color}}">Mehr erfahren</a>
+            </div>
+          </div>
+          {% if news.image_first != true %}
+          <div class="card__image__wrapper col-12 col-md-{{ image_width }}">
+            <div class="card__image">
+              <img src="{{ news.img }}" alt="..." />
+            </div>
+          </div>
+          {% endif %}
+          <a class="card__link" href="javascript:void(0)"></a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script type="module" src="/dist/js/kampmann.umd.min.js"></script>
