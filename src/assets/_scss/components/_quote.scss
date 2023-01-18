@@ -1,0 +1,46 @@
+.quote {
+  background: $gray-light;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+  margin-top:30px;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width:228px;
+    height:192px;
+    right: 0;
+    top: 0;
+    transform: translate(16%, -16%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background: url("data:image/svg+xml,%3c%3fxml version='1.0' encoding='utf-8'%3f%3e %3c!-- Generator: Adobe Illustrator 26.3.1%2c SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3e %3csvg version='1.1' id='quotes' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 228 192' style='enable-background:new 0 0 228 192%3b' xml:space='preserve'%3e%3cpath id='quote' style='fill:%23D7D5CD%3bfill-opacity:0.3469%3b' d='M0%2c44.3c0%2c28.1%2c19.9%2c45%2c44.3%2c45c7.4%2c0%2c12.5-2.2%2c14.8-3.7 c-0.7%2c31.8-22.9%2c64.2-55.3%2c71.6V192c41.3-5.9%2c98.1-42.1%2c98.1-129.2C101.8%2c20.7%2c76.7%2c0%2c48%2c0C20.7%2c0%2c0%2c19.9%2c0%2c44.3z M126.2%2c44.3 c0%2c28.1%2c19.9%2c45%2c44.3%2c45c7.4%2c0%2c12.5-2.2%2c14.8-3.7c-0.7%2c31.8-22.9%2c64.2-55.3%2c71.6V192c41.3-5.9%2c98.1-42.1%2c98.1-129.2 C228%2c20.7%2c202.9%2c0%2c174.1%2c0C146.8%2c0%2c126.2%2c19.9%2c126.2%2c44.3z'/%3e%3c/svg%3e");
+  }
+
+  &__wrapper {
+    width: calc(100% / 12 * 10);
+    margin-left: calc(100% / 12 * 1);
+  }
+
+  &__text {
+    font-size: $h3-font-size;
+    line-height: 1.385;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__author {
+    text-transform: uppercase;
+
+    p {
+      margin: 0;
+    }
+  }
+}
