@@ -23,6 +23,10 @@
 
   box-shadow: none !important;
 
+  img{
+    margin-left: 10px;
+  }
+
   &:before {
     content: '';
     width: calc(100% + 10px);

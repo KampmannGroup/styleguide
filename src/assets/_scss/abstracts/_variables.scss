@@ -113,7 +113,7 @@ $theme-colors: map-merge(
   .bg-#{$name} {
     color: white;
 
-    *:not(.btn) {
+    *:not(.btn,[class*="bg-"]) {
       color: inherit !important;
     }
   }
