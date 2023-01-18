@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      Select | 
+    </title>
+    <meta
+      name="description"
+      content="DESCRIPTION"
+    />
+    <meta name="author" content="AUTHOR NAME" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/_includes/assets/images/icon.ico"
+    />
+    
+    <link rel="stylesheet" href="/src/compiled/assets/css/style.css" media="screen" />
+    
+  </head>
+  <body id="content">
+    <div class="form">
+  <div class="formelement__wrapper formelement__wrapper--select">
+    <input class="formelement__value" type="hidden" />
+    <div
+      id="select"
+      class="formelement formelement--select formelement--placeholder"
+      type="text"
+      data-placeholder="Placeholder"
+    >
+      <div class="formelement__selected">
+        <div class="formelement__option formelement__option--selected formelement__option--placeholder">
+          Placeholder
+        </div>
+      </div>
+      <div class="formelement__options">
+        <div class="formelement__option" data-value="os">Osnabrück</div>
+        <div class="formelement__option" data-value="ms">Münster</div>
+      </div>
+    </div>
+
+    <label for="select" class="formelement__label">City</label>
+  </div>
+</div>
+
+<script type="module" src="/dist/js/kampmann.umd.min.js"></script>
+
+<style>.form{padding-top:30px;} .formelement__wrapper + .formelement__wrapper{margin-top:60px}</style>
+ 
+    <script src="/src/assets/js/libs/jquery-2.1.4.min.js"></script>
+    
+    <!--   iFrame Script required for Styleguide only -->
+    <script
+      src="/styleguide/js/libs/iframeResizer.contentWindow.min.js"
+      defer
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<style>
+.set {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+}
+li {
+  flex: 1 0 20%;
+  margin: 1rem;
+}
+.color {
+  width: 100%;
+  min-width: 160px;
+  height: 80px;
+  color: white;
+  border: 1px solid whitesmoke;
+  margin-bottom: 1rem;
+}
+p {
+  margin: 0;
+}
+</style>
+
+<ul class="set">
+ 
+  <li>
+    <div class="color" style="background:var(--color-blue)"></div> 
+    <p><strong>Kampmann Blau</strong></p>
+    <p><span class="label">SCSS:</span> $primary</p>
+    <p><span class="label">CSS:</span> var(--color-blue)</p>
+    <p><span class="label">HEX:</span> #0E2249</p>
+    <p><span class="label">RGB:</span> rgba(14,34,73,1)</p>
+    <p><span class="label">HSL:</span> hsla(220,68%,17%,1)</p>
+    <p><span class="label">CYMK:</span> 100/70/10/50</p>
+  </li>
+ 
+  <li>
+    <div class="color" style="background:var(--color-green)"></div> 
+    <p><strong>Frühlingsgrün</strong></p>
+    <p><span class="label">SCSS:</span> $green</p>
+    <p><span class="label">CSS:</span> var(--color-green)</p>
+    <p><span class="label">HEX:</span> #95C11F</p>
+    <p><span class="label">RGB:</span> rgba(149,193,31,1)</p>
+    <p><span class="label">HSL:</span> hsla(76,72%,44%,1)</p>
+    <p><span class="label">CYMK:</span> 50/0/100/0</p>
+  </li>
+
+</ul>

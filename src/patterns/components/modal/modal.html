@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      Modal | 
+    </title>
+    <meta
+      name="description"
+      content="DESCRIPTION"
+    />
+    <meta name="author" content="AUTHOR NAME" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/_includes/assets/images/icon.ico"
+    />
+    
+    <link rel="stylesheet" href="/src/compiled/assets/css/style.css" media="screen" />
+    
+  </head>
+  <body id="content">
+    <button class="btn btn--primary" data-bs-toggle="modal" data-bs-target="#demoModalWhite">Open Modal Demo White</button>
+<button class="btn btn--primary-outline" data-bs-toggle="modal" data-bs-target="#demoModalTeal">
+  Open Modal Demo Teal
+</button>
+
+<div class="modal fade" id="demoModalWhite" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title headline headline--h5" id="demoModalTitle">Modal Title Demo White</h4>
+        <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          This is some placeholder content of the open accordions associated content. Lorem ipsum dolor sit amet,
+          consent tetur sadipscing elitr, sed diam nonumy eirmod tempor. At vero eos et accusam et justo duo dolores et
+          ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+        <p>
+          This is some placeholder content of the open accordions associated content. Lorem ipsum dolor sit amet,
+          consent tetur sadipscing elitr, sed diam nonumy eirmod tempor. At vero eos et accusam et justo duo dolores et
+          ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn--outline-primary" data-bs-dismiss="modal">Close Modal</button>
+        <button type="button" class="btn btn--primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="demoModalTeal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-teal modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title headline headline--h5" id="demoModalTitle">Modal title Demo Teal</h4>
+        <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          This is some placeholder content of the open accordions associated content. Lorem ipsum dolor sit amet,
+          consent tetur sadipscing elitr, sed diam nonumy eirmod tempor. At vero eos et accusam et justo duo dolores et
+          ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+        <p>
+          This is some placeholder content of the open accordions associated content. Lorem ipsum dolor sit amet,
+          consent tetur sadipscing elitr, sed diam nonumy eirmod tempor. At vero eos et accusam et justo duo dolores et
+          ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn--outline-primary" data-bs-dismiss="modal">Close Modal</button>
+        <button type="button" class="btn btn--primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="/dist/js/kampmann.umd.min.js"></script>
+ 
+    <script src="/src/assets/js/libs/jquery-2.1.4.min.js"></script>
+    
+    <!--   iFrame Script required for Styleguide only -->
+    <script
+      src="/styleguide/js/libs/iframeResizer.contentWindow.min.js"
+      defer
+    ></script>
+  </body>
+</html>
