@@ -1,6 +1,6 @@
 ---
 title: Spacing
-maturity: draft
+maturity: ready
 control: exclude
 styles: ''
 inlinestyles: '
@@ -31,6 +31,7 @@ inlinestyles: '
   </style>
 '
 ---
+
 <h6 class="headline headline--h6">Margin (Abstand nach außen)</h6>
 
 <div class="wrapper row">
@@ -62,7 +63,6 @@ inlinestyles: '
     </div>
   </div>
 </div>
-
 
 <h6 class="headline headline--h6">Padding (Abstand nach innen)</h6>
 
