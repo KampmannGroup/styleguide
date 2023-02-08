@@ -1,6 +1,9 @@
 @import 'bootstrap/scss/alert.scss';
 
 .alert {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+
   &-primary {
     color: $primary-supportive;
     border-color: $primary;
