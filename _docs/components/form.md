@@ -20,3 +20,4 @@ nav: true
 {% include pattern_block.html url='/src/patterns/components/form/checkbox-horizontal.html' %}
 {% include pattern_block.html url='/src/patterns/components/form/radio.html' %}
 {% include pattern_block.html url='/src/patterns/components/form/radio-horizontal.html' %}
+{% include pattern_block.html url='/src/patterns/components/form/switch.html' %}
