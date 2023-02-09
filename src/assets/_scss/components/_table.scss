@@ -14,11 +14,9 @@
 
   &__head {
     font-size: $font-size-base;
-    padding: $grid-gutter-width 1rem;
-    text-transform: uppercase;
+    padding: $grid-gutter-width / 2 !important;
     cursor: pointer;
     font-weight: 400;
-    letter-spacing: $letter-spacing;
     border-bottom: 1px solid $primary !important;
 
     &__wrapper {
@@ -39,17 +37,22 @@
   &__sort {
     display: flex;
     flex-direction: column;
-    margin-top: -10px;
-    margin-bottom: -10px;
+    margin-left: 8px;
+    justify-content: center;
 
     &__item {
       display: flex;
-      height: 20px;
-      width: 30px;
+      height: 7px;
+      width: 12px;
       align-items: center;
       justify-content: center;
       transition: 0.3s;
-      padding-top: 10px;
+      margin: 1px 0;
+
+      svg {
+        width: 100%;
+        height: auto;
+      }
 
       &:hover,
       &--active,
@@ -65,7 +68,7 @@
   }
 
   &__content {
-    padding: $grid-gutter-width 1rem;
+    padding: $grid-gutter-width / 2 !important;
     color: $primary;
   }
 }
@@ -95,6 +98,11 @@
         color: $body-color;
         background-color: transparent;
       }
+
+      &:has(.table__content[data-title='*']) {
+        font-size: 30px;
+        color: red;
+      }
     }
 
     &__head {
@@ -112,6 +120,11 @@
       min-width: 200px;
       padding: $grid-gutter-width / 2;
       background-color: $secondary;
+
+      &[data-title]::before {
+        content: attr(data-title) ' ';
+        font-weight: 700;
+      }
     }
   }
 }
