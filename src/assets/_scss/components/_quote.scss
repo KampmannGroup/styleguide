@@ -3,14 +3,15 @@
   padding-top: 50px;
   padding-bottom: 50px;
   position: relative;
-  margin-top:30px;
+  margin-top: 30px;
 
-  &:after {
+  &::before {
     content: '';
     display: block;
     position: absolute;
-    width:228px;
-    height:192px;
+    z-index: 0;
+    width: 228px;
+    height: 192px;
     right: 0;
     top: 0;
     transform: translate(16%, -16%);
@@ -23,6 +24,8 @@
   &__wrapper {
     width: calc(100% / 12 * 10);
     margin-left: calc(100% / 12 * 1);
+    position: relative;
+    z-index: 1;
   }
 
   &__text {
@@ -37,8 +40,6 @@
   }
 
   &__author {
-    text-transform: uppercase;
-
     p {
       margin: 0;
     }
