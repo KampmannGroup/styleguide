@@ -113,7 +113,7 @@ $theme-colors: map-merge(
   .bg-#{$name} {
     color: white;
 
-    *:not(.btn,[class*="bg-"]) {
+    *:not(.btn, [class*='bg-']) {
       color: inherit !important;
     }
   }
@@ -134,12 +134,11 @@ $alert-color-scale: 0;
 // FONT FAMILIES & SIZES
 //----------------------------------------------------------
 
-$font-family-sans-serif: 'Circular', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-  'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji',
-  sans-serif;
+$font-family-sans-serif: 'Circular', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans',
+  sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', sans-serif;
 $font-family-base: $font-family-sans-serif;
 
-$line-height-base: 1.5;
+$line-height-base: 1.7;
 
 $font-size-root: 16px;
 $font-size-base: 0.875rem;

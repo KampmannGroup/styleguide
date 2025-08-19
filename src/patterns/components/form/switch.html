@@ -1,0 +1,44 @@
+---
+title: Switch
+styles: assets/_scss/components/_switch.scss
+script: /src/assets/js/form.js
+maturity: draft
+inlinestyles: '<style>.form{padding-top:30px;}</style>'
+---
+
+<div class="form">
+  <div class="formelement__wrapper">
+    <div class="formelement formelement--switch switch">
+      <input type="checkbox" class="formelement__option" id="switchDefault" />
+      <label for="switchDefault" class="formelement__label">Toggle switchDefault</label>
+      <span class="formelement__switchlabel">Kühlung aktivieren?</span>
+    </div>
+    <div class="formelement formelement--switch switch">
+      <input type="checkbox" class="formelement__option" id="switchChecked" checked="checked" />
+      <label for="switchChecked" class="formelement__label">Toggle switchChecked</label>
+      <span class="formelement__switchlabel">Ventilator aktivieren?</span>
+    </div>
+    <div class="formelement formelement--switch switch switch--teal">
+      <input type="checkbox" class="formelement__option" id="switchTeal" checked="checked" />
+      <label for="switchTeal" class="formelement__label">Toggle switchChecked</label>
+      <span class="formelement__switchlabel">Like Teal?</span>
+    </div>
+    <div class="formelement formelement--switch switch switch--green">
+      <input type="checkbox" class="formelement__option" id="switchGreen" checked="checked" />
+      <label for="switchGreen" class="formelement__label">Toggle switchChecked</label>
+      <span class="formelement__switchlabel">Like Green?</span>
+    </div>
+    <div class="formelement formelement--switch switch switch--aloevera">
+      <input type="checkbox" class="formelement__option" id="switchAloeVera" checked="checked" />
+      <label for="switchAloeVera" class="formelement__label">Toggle switchChecked</label>
+      <span class="formelement__switchlabel">Like Aloevera?</span>
+    </div>
+    <div class="formelement formelement--switch switch switch--cyan">
+      <input type="checkbox" class="formelement__option" id="switchCyan" checked="checked" />
+      <label for="switchCyan" class="formelement__label">Toggle switchChecked</label>
+      <span class="formelement__switchlabel">Like Cyan?</span>
+    </div>
+  </div>
+</div>
+
+{{ page.inlinestyles }}

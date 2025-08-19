@@ -35,3 +35,11 @@ img {
 *:after {
   box-sizing: border-box;
 }
+
+hr.styled {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  background-image: linear-gradient(to right, #ccc);
+  margin: 40px 0;
+}

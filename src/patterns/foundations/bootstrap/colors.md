@@ -1,6 +1,6 @@
 ---
 title: Colors
-maturity: draft
+maturity: ready
 control: exclude
 styles: ''
 inlinestyles: '
@@ -8,6 +8,7 @@ inlinestyles: '
   </style>
 '
 ---
+
 <h6 class="headline headline--h6">Text</h6>
 
 <div><p class="text-primary">text-primary</p></div>
@@ -37,7 +38,5 @@ inlinestyles: '
 <div style="display:block; margin-bottom: 10px" class="bg-gray-medium"><p>bg-gray-medium</p></div>
 <div style="display:block; margin-bottom: 10px" class="bg-gray-dark"><p>bg-gray-dark</p></div>
 <div style="display:block; margin-bottom: 10px" class="bg-black"><p>bg-black</p></div>
-
-
 
 {{ page.inlinestyles }}

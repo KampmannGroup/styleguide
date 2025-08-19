@@ -10,9 +10,8 @@
 
   &--headline {
     margin-bottom: 0;
-    font-size: $font-size-sm;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: $letter-spacing;
+    font-size: $font-size-xl;
+    text-transform: none;
+    letter-spacing: 0;
   }
 }

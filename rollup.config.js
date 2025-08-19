@@ -14,30 +14,29 @@ export default {
       'process.env.NODE_ENV': JSON.stringify('production'),
       __buildDate__: () => JSON.stringify(new Date()),
       __buildVersion: 15,
+      preventAssignment: true
     }),
     resolve(),
     terser(),
     scss({
       output: 'dist/css/kampmann.min.css',
-      outputStyle: 'compressed',
+      outputStyle: 'compressed'
     }),
     copy({
-      targets: [
-        { src: ['src/assets/fonts/circular/*.woff', 'src/assets/fonts/circular/*.woff2'], dest: 'dist/fonts/circular' },
-      ],
+      targets: [{ src: ['src/assets/fonts/circular/*.woff', 'src/assets/fonts/circular/*.woff2'], dest: 'dist/fonts/circular' }]
     }),
     commonjs(),
-    babel({ babelHelpers: 'bundled' }),
+    babel({ babelHelpers: 'bundled' })
   ],
   output: [
     {
       name: 'kampmann',
       file: pkg.browser,
-      format: 'umd',
+      format: 'umd'
     },
     {
       file: pkg.module,
-      format: 'es',
-    },
-  ],
+      format: 'es'
+    }
+  ]
 }

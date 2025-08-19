@@ -33,7 +33,7 @@
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@rollup/plugin-replace": "^3.0.0",
-    "core-js": "^2.6.12",
+    "core-js": "^3.27.2",
     "rollup": "^2.52.7",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-scss": "^3.0.0",
@@ -43,7 +43,7 @@
   "browserslist": "> 0.25%, not dead",
   "dependencies": {
     "@rollup/plugin-node-resolve": "^13.0.5",
-    "bootstrap": "^5.1.1",
+    "bootstrap": "^5.2.3",
     "datatables.net": "^1.11.4",
     "jquery": "^3.6.0",
     "masonry-layout": "^4.2.2",
