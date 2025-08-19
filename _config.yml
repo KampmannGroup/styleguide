@@ -73,6 +73,11 @@ defaults:
       layout: doc
       type: template
   - scope:
+      path: '_docs/impressum'
+    values:
+      layout: doc
+      type: sample
+  - scope:
       path: '_docs/sample-pages'
     values:
       layout: doc
